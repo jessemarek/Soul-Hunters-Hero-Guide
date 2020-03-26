@@ -1,0 +1,26 @@
+/********************** General Styles ************************/
+body {
+    position: relative;
+    padding: 2%;
+    font-family: @main-font;
+    background: @white;
+    color: @black;
+    font-size: 1.6rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: @heading-font;
+}
+
+a {
+    text-decoration: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+ul {
+    list-style-type: none;
+    .flexBox(row wrap, start, center);
+}

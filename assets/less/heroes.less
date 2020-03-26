@@ -1,0 +1,54 @@
+/********************** Heroes Page Styles ************************/
+header {
+    h3 {
+        font-size: 2.4rem;
+        border-bottom: 1px solid @black;
+        margin: 0 0 2% 0;
+        text-align: center;
+    }
+
+    h4 {
+        margin: 0 0 1% 0;
+    }
+
+    .filter-btns {
+
+        .filter-btn {
+            .custom-btn(22%);
+            background: radial-gradient(@grey, @black);
+            border-color: @black;
+    
+            &:hover {
+                border-color: @orange;
+            }
+        }
+    
+        .active-btn {
+            .custom-btn(22%);
+            background: radial-gradient(@orange, @red-orange);
+            border-color: @orange;
+        }
+    
+        .filter-form {
+            width: 50%;
+            margin: 1% auto;
+    
+            input {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.hero-page {
+    margin: 0 0 10% 0;
+
+    .hero-card {
+        .card(30%, 1.66%, 7px);
+    }
+
+    .hidden {
+        display: none;
+    }
+}
