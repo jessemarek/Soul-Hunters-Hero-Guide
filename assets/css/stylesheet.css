@@ -45,6 +45,9 @@ ul {
   justify-content: start;
   align-items: center;
 }
+.wrapper {
+  margin: 0 0 10% 0;
+}
 .hero-card {
   position: relative;
   width: 30%;
@@ -68,6 +71,12 @@ ul {
   bottom: 1rem;
   background: transparent;
 }
+@media (min-width: 1000px) {
+  .hero-card {
+    width: 20%;
+    border-radius: 15px;
+  }
+}
 .hero-card .card-back {
   position: absolute;
   z-index: 1;
@@ -82,6 +91,11 @@ footer {
   color: #efefef;
   text-align: center;
   font-size: 1.2rem;
+}
+@media (min-width: 1000px) {
+  footer {
+    padding: 1%;
+  }
 }
 /********************** Front Page Styles ************************/
 .navbar {
@@ -102,11 +116,23 @@ header {
   margin: 5% 0 0 0;
   text-align: center;
 }
+@media (min-width: 1000px) {
+  header {
+    width: 33%;
+    margin: 0 auto;
+  }
+}
 header img {
   width: 50%;
 }
-.front-page {
-  margin: 0 0 10% 0;
+@media (min-width: 1000px) {
+  .front-page {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 0 3% 0;
+  }
 }
 .front-page section {
   width: 100%;
@@ -116,11 +142,35 @@ header img {
   align-items: center;
   margin: 2% 0;
 }
+@media (min-width: 1000px) {
+  .front-page section {
+    width: 45%;
+    justify-content: space-evenly;
+    margin: 2%;
+  }
+}
+@media (min-width: 1000px) {
+  .front-page section h4 {
+    text-align: center;
+  }
+}
 .front-page section .date-updated {
   width: 100%;
   margin: 2%;
   text-align: center;
   font-size: 1.2rem;
+}
+@media (min-width: 1000px) {
+  .front-page section ul {
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 1000px) {
+  .front-page .menu-box {
+    width: 100%;
+    margin: 0 2%;
+  }
 }
 /********************** Heroes Page Styles ************************/
 header h3 {
@@ -194,7 +244,32 @@ header .filter-btns .filter-form input {
 .credits-page h4 {
   border-color: #efefef;
 }
+@media (min-width: 1000px) {
+  .credits-page header {
+    margin: 0;
+  }
+}
+.credits-page section {
+  margin: 15% 0;
+}
+@media (min-width: 1000px) {
+  .credits-page section {
+    margin: 0 0 5% 0;
+  }
+}
+.credits-page section p {
+  padding: 3%;
+  font-size: 1.4rem;
+}
+@media (min-width: 1000px) {
+  .credits-page section p {
+    padding: 0;
+  }
+}
 .credits-page .tiny-text {
   display: block;
   font-size: 1.2rem;
+}
+.credits-page footer {
+  border-top: 1px solid #444444;
 }
