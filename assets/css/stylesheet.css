@@ -17,6 +17,10 @@ body {
   color: #101010;
   font-size: 1.6rem;
 }
+header {
+  width: 100%;
+  text-align: center;
+}
 h1,
 h2,
 h3,
@@ -47,6 +51,21 @@ ul {
 }
 .wrapper {
   margin: 0 0 10% 0;
+}
+.grn-txt {
+  color: #228b22;
+}
+.blu-txt {
+  color: #4169e1;
+}
+.prp-txt {
+  color: #8a2be2;
+}
+.org-txt {
+  color: #ff8c00;
+}
+.red-txt {
+  color: #ff0000;
 }
 .hero-card {
   position: relative;
@@ -111,18 +130,17 @@ footer {
   position: relative;
   color: #efefef;
 }
-header {
+.logo {
   width: 100%;
   margin: 5% 0 0 0;
-  text-align: center;
 }
 @media (min-width: 1000px) {
-  header {
+  .logo {
     width: 33%;
     margin: 0 auto;
   }
 }
-header img {
+.logo img {
   width: 50%;
 }
 @media (min-width: 1000px) {
@@ -186,6 +204,12 @@ header h4 {
 header .filter-btns {
   margin: 2% 0 0 0;
 }
+@media (min-width: 1000px) {
+  header .filter-btns {
+    width: 70%;
+    margin: 2% auto;
+  }
+}
 header .filter-btns .filter-btn {
   width: 22%;
   border: 2px solid;
@@ -230,8 +254,18 @@ header .filter-btns .filter-form input {
   width: 100%;
   text-align: center;
 }
+@media (min-width: 1000px) {
+  header .filter-btns .filter-form input {
+    width: 60%;
+  }
+}
 .hero-page {
   margin: 0 0 10% 0;
+}
+@media (min-width: 1000px) {
+  .hero-page .hero-card {
+    width: 13%;
+  }
 }
 .hero-page .hidden {
   display: none;

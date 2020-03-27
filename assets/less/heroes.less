@@ -16,6 +16,11 @@ header {
 
         margin: 2% 0 0 0;
 
+        @media @desktop {
+            width: 70%;
+            margin: 2% auto;
+        }
+
         .filter-btn {
             .custom-btn(22%);
             background: radial-gradient(@grey, @black);
@@ -40,6 +45,10 @@ header {
             input {
                 width: 100%;
                 text-align: center;
+
+                @media @desktop {
+                    width: 60%;
+                }
             }
         }
     }
@@ -47,6 +56,13 @@ header {
 
 .hero-page {
     margin: 0 0 10% 0;
+
+    .hero-card {
+
+        @media @desktop {
+            width: 13%;
+        }
+    }
 
     .hidden {
         display: none;
