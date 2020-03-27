@@ -1,7 +1,7 @@
 /********************** General Styles ************************/
 body {
     position: relative;
-    padding: 2%;
+    padding: 5%;
     font-family: @main-font;
     background: @white;
     color: @black;
@@ -10,6 +10,14 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: @heading-font;
+}
+
+h4 {
+    width: 100%;
+    margin: 0 0 2% 0;
+    border-bottom: 1px solid @black;
+    padding: 1%;
+    font-size: 2rem;
 }
 
 a {
@@ -23,4 +31,13 @@ a {
 ul {
     list-style-type: none;
     .flexBox(row wrap, start, center);
+}
+
+.hero-card {
+    .card(30%, 1.66%, 7px);
+
+    .card-back {
+        position: absolute;
+        z-index: 1;
+    }
 }

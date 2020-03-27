@@ -11,7 +11,7 @@ html {
 /********************** General Styles ************************/
 body {
   position: relative;
-  padding: 2%;
+  padding: 5%;
   font-family: 'Open Sans', sans-serif;
   background: #efefef;
   color: #101010;
@@ -25,6 +25,13 @@ h5,
 h6 {
   font-family: 'Noto Sans', sans-serif;
 }
+h4 {
+  width: 100%;
+  margin: 0 0 2% 0;
+  border-bottom: 1px solid #101010;
+  padding: 1%;
+  font-size: 2rem;
+}
 a {
   text-decoration: none;
 }
@@ -37,6 +44,33 @@ ul {
   flex-flow: row wrap;
   justify-content: start;
   align-items: center;
+}
+.hero-card {
+  position: relative;
+  width: 30%;
+  margin: 1.66%;
+  border-radius: 7px;
+}
+.hero-card img {
+  border-radius: 7px;
+}
+.hero-card .card-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #332412;
+  color: #efefef;
+  border-radius: 0 0 7px 7px;
+  padding: 1%;
+  text-align: center;
+}
+.hero-card .cardback-title {
+  bottom: 1rem;
+  background: transparent;
+}
+.hero-card .card-back {
+  position: absolute;
+  z-index: 1;
 }
 footer {
   width: 100%;
@@ -74,11 +108,6 @@ header img {
 .front-page {
   margin: 0 0 10% 0;
 }
-.front-page h4 {
-  width: 100%;
-  margin: 0 0 2% 0;
-  border-bottom: 1px solid #101010;
-}
 .front-page section {
   width: 100%;
   display: flex;
@@ -86,33 +115,6 @@ header img {
   justify-content: start;
   align-items: center;
   margin: 2% 0;
-}
-.front-page section .hero-card {
-  position: relative;
-  width: 30%;
-  margin: 1.66%;
-  border-radius: 7px;
-}
-.front-page section .hero-card img {
-  border-radius: 7px;
-}
-.front-page section .hero-card .card-title {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: #332412;
-  color: #efefef;
-  border-radius: 0 0 7px 7px;
-  padding: 1%;
-  text-align: center;
-}
-.front-page section .hero-card .cardback-title {
-  bottom: 1rem;
-  background: transparent;
-}
-.front-page section .hero-card .card-back {
-  position: absolute;
-  z-index: 1;
 }
 .front-page section .date-updated {
   width: 100%;
@@ -122,13 +124,17 @@ header img {
 }
 /********************** Heroes Page Styles ************************/
 header h3 {
-  font-size: 2.4rem;
-  border-bottom: 1px solid #101010;
   margin: 0 0 2% 0;
+  border-bottom: 1px solid #101010;
+  padding: 1%;
+  font-size: 2.4rem;
   text-align: center;
 }
 header h4 {
   margin: 0 0 1% 0;
+}
+header .filter-btns {
+  margin: 2% 0 0 0;
 }
 header .filter-btns .filter-btn {
   width: 22%;
@@ -139,6 +145,7 @@ header .filter-btns .filter-btn {
   font-size: 1.6rem;
   background: radial-gradient(#909090, #101010);
   border-color: #101010;
+  margin: 1%;
 }
 header .filter-btns .filter-btn:focus {
   outline: none;
@@ -167,7 +174,7 @@ header .filter-btns .active-btn:active {
 }
 header .filter-btns .filter-form {
   width: 50%;
-  margin: 1% auto;
+  margin: 3% auto;
 }
 header .filter-btns .filter-form input {
   width: 100%;
@@ -176,29 +183,18 @@ header .filter-btns .filter-form input {
 .hero-page {
   margin: 0 0 10% 0;
 }
-.hero-page .hero-card {
-  position: relative;
-  width: 30%;
-  margin: 1.66%;
-  border-radius: 7px;
-}
-.hero-page .hero-card img {
-  border-radius: 7px;
-}
-.hero-page .hero-card .card-title {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: #332412;
-  color: #efefef;
-  border-radius: 0 0 7px 7px;
-  padding: 1%;
-  text-align: center;
-}
-.hero-page .hero-card .cardback-title {
-  bottom: 1rem;
-  background: transparent;
-}
 .hero-page .hidden {
   display: none;
+}
+/********************** Credits Page Styles ************************/
+.credits-page {
+  background: #101010;
+  color: #efefef;
+}
+.credits-page h4 {
+  border-color: #efefef;
+}
+.credits-page .tiny-text {
+  display: block;
+  font-size: 1.2rem;
 }

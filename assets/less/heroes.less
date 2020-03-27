@@ -1,9 +1,10 @@
 /********************** Heroes Page Styles ************************/
 header {
     h3 {
-        font-size: 2.4rem;
-        border-bottom: 1px solid @black;
         margin: 0 0 2% 0;
+        border-bottom: 1px solid @black;
+        padding: 1%;
+        font-size: 2.4rem;
         text-align: center;
     }
 
@@ -13,10 +14,13 @@ header {
 
     .filter-btns {
 
+        margin: 2% 0 0 0;
+
         .filter-btn {
             .custom-btn(22%);
             background: radial-gradient(@grey, @black);
             border-color: @black;
+            margin: 1%;
     
             &:hover {
                 border-color: @orange;
@@ -31,7 +35,7 @@ header {
     
         .filter-form {
             width: 50%;
-            margin: 1% auto;
+            margin: 3% auto;
     
             input {
                 width: 100%;
@@ -43,10 +47,6 @@ header {
 
 .hero-page {
     margin: 0 0 10% 0;
-
-    .hero-card {
-        .card(30%, 1.66%, 7px);
-    }
 
     .hidden {
         display: none;
