@@ -9,25 +9,25 @@ const searchInput = document.getElementById("searchInput");
 const activeBtn = document.getElementsByClassName("active-btn");
 
 //Listeners for each filter button
-const allBtn = document.getElementById("filter-all").addEventListener("click", () => {
+const allBtn = document.getElementById("filter-all").addEventListener("click", function() {
     activeBtn[0].classList.remove("active-btn");
     this.classList.add("active-btn");
     filterAll();
 });
 
-const frontBtn = document.getElementById("filter-front").addEventListener("click", () => {
+const frontBtn = document.getElementById("filter-front").addEventListener("click", function() {
     activeBtn[0].classList.remove("active-btn");
     this.classList.add("active-btn");
     filterFront();
 });
 
-const midBtn = document.getElementById("filter-mid").addEventListener("click", () => {
+const midBtn = document.getElementById("filter-mid").addEventListener("click", function() {
     activeBtn[0].classList.remove("active-btn");
    this.classList.add("active-btn");
     filterMid();
 });
 
-const backBtn = document.getElementById("filter-back").addEventListener("click", () => {
+const backBtn = document.getElementById("filter-back").addEventListener("click", function() {
     activeBtn[0].classList.remove("active-btn");
     this.classList.add("active-btn");
     filterBack();
