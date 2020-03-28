@@ -159,8 +159,8 @@ ul {
   flex-flow: column;
   justify-content: space-evenly;
   align-items: center;
-  width: 40%;
-  height: 90vh;
+  width: 66%;
+  height: 80vh;
   position: fixed;
   bottom: 100%;
   left: 0;
