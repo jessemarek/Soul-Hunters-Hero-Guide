@@ -20,6 +20,7 @@ body {
 header {
   width: 100%;
   text-align: center;
+  margin: 5% 0 0 0;
 }
 h1,
 h2,
@@ -132,7 +133,6 @@ footer {
 }
 .logo {
   width: 100%;
-  margin: 5% 0 0 0;
 }
 @media (min-width: 1000px) {
   .logo {
@@ -228,6 +228,9 @@ header .filter-btns .filter-btn:active {
   outline: none;
 }
 header .filter-btns .filter-btn:hover {
+  cursor: pointer;
+}
+header .filter-btns .filter-btn:hover {
   border-color: #ffa500;
 }
 header .filter-btns .active-btn {
@@ -245,6 +248,9 @@ header .filter-btns .active-btn:focus {
 }
 header .filter-btns .active-btn:active {
   outline: none;
+}
+header .filter-btns .active-btn:hover {
+  cursor: pointer;
 }
 header .filter-btns .filter-form {
   width: 50%;
@@ -284,7 +290,7 @@ header .filter-btns .filter-form input {
   }
 }
 .credits-page section {
-  margin: 15% 0;
+  margin: 8% 0 8%;
 }
 @media (min-width: 1000px) {
   .credits-page section {

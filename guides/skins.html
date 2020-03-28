@@ -8,7 +8,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans&display=swap" rel="stylesheet">
 
-	<link rel="icon" href="../assets../assets/images/icons/equipment/lost-epic.png">
+	<link rel="icon" href="../assets/images/icons/equipment/lost-epic.png">
 	<link rel="stylesheet" href="../assets/css/stylesheet.css">
 </head>
 
@@ -28,7 +28,7 @@
 			<button id="filter-back" class="filter-btn" type="button">Back</button>
 
 			<form class="filter-form" action="#">
-				<input class="filter-input" type="text" placeholder="Enter Hero Name">
+				<input id="searchInput" class="filter-input" type="text" placeholder="Enter Hero Name" onkeyup="searchByName()">
 			</form>
 		</div>
 
@@ -39,59 +39,59 @@
 		<ul id="hero-list" class="hero-menus">
 
 			<li class="hero-card front-hero">
-				<a href="/aqua-skin#hero-skin"><img src="../assets/images/hero-cards-skins/aqua-genie.jpg" /></a><p class="card-title">Aqua</p>
+				<a href="#"><img src="../assets/images/hero-cards-skins/aqua-genie.jpg" /></a><p class="card-title">Aqua</p>
 			</li>
 	
 			<li class="hero-card mid-hero">
-				<a href="/ethera-skin#hero-skin"><img src="../assets/images/hero-cards-skins/ethera-galactic-explorer.jpg" /></a><p class="card-title">Ethera</p>
+				<a href="#"><img src="../assets/images/hero-cards-skins/ethera-galactic-explorer.jpg" /></a><p class="card-title">Ethera</p>
 			</li>
 	
 			<li class="hero-card mid-hero">
-				<a href="/firehawk-skin#hero-skin"><img src="../assets/images/hero-cards-skins/firehawk-radiant-wings.jpg" /></a><p class="card-title">Firehawk</p>
+				<a href="#"><img src="../assets/images/hero-cards-skins/firehawk-radiant-wings.jpg" /></a><p class="card-title">Firehawk</p>
 			</li>
 	
 			<li class="hero-card back-hero">
-				<a href="/gale-skin#hero-skin"><img src="../assets/images/hero-cards-skins/gale-cyberpunk.jpg" /></a><p class="card-title">Gale</p>
+				<a href="#"><img src="../assets/images/hero-cards-skins/gale-cyberpunk.jpg" /></a><p class="card-title">Gale</p>
 			</li>
 	
 			<li class="hero-card mid-hero">
-				<a href="/garrick-skin#hero-skin"><img src="../assets/images/hero-cards-skins/garrick-soldier-of-anarchy.jpg" /></a><p class="card-title">Garrick</p>
+				<a href="#"><img src="../assets/images/hero-cards-skins/garrick-soldier-of-anarchy.jpg" /></a><p class="card-title">Garrick</p>
 			</li>
 	
 			<li class="hero-card mid-hero">
-				<a href="/kong-skin#hero-skin"><img src="../assets/images/hero-cards-skins/kong-monkey-emperor.jpg" /></a><p class="card-title">Kong</p>
+				<a href="#"><img src="../assets/images/hero-cards-skins/kong-monkey-emperor.jpg" /></a><p class="card-title">Kong</p>
 			</li>
 	
 			<li class="hero-card mid-hero">
-				<a href="/lucius-skin#hero-skin"><img src="../assets/images/hero-cards-skins/lucius-cyborg.jpg" /></a><p class="card-title">Lucius</p>
+				<a href="#"><img src="../assets/images/hero-cards-skins/lucius-cyborg.jpg" /></a><p class="card-title">Lucius</p>
 			</li>
 	
 			<li class="hero-card back-hero">
-				<a href="/magnus-skin#hero-skin"><img src="../assets/images/hero-cards-skins/magnus-arctic-warfare.jpg" /></a><p class="card-title">Magnus</p>
+				<a href="#"><img src="../assets/images/hero-cards-skins/magnus-arctic-warfare.jpg" /></a><p class="card-title">Magnus</p>
 			</li>
 	
 			<li class="hero-card mid-hero">
-				<a href="/nightshade-skin#hero-skin"><img src="../assets/images/hero-cards-skins/nightshade-eagle-wings.jpg" /></a><p class="card-title">Nightshade</p>
+				<a href="#"><img src="../assets/images/hero-cards-skins/nightshade-eagle-wings.jpg" /></a><p class="card-title">Nightshade</p>
 			</li>
 	
 			<li class="hero-card mid-hero">
-				<a href="/osiris-skin#hero-skin"><img src="../assets/images/hero-cards-skins/osiris-candy-queen.jpg" /></a><p class="card-title">Osiris</p>
+				<a href="#"><img src="../assets/images/hero-cards-skins/osiris-candy-queen.jpg" /></a><p class="card-title">Osiris</p>
 			</li>
 	
 			<li class="hero-card front-hero">
-				<a href="/salus-skin#hero-skin"><img src="../assets/images/hero-cards-skins/salus-crystal-warrior.jpg" /></a><p class="card-title">Salus</p>
+				<a href="#"><img src="../assets/images/hero-cards-skins/salus-crystal-warrior.jpg" /></a><p class="card-title">Salus</p>
 			</li>
 	
 			<li class="hero-card mid-hero">
-				<a href="/sarya-skin#hero-skin"><img src="../assets/images/hero-cards-skins/sarya-night-raider.jpg" /></a><p class="card-title">Sarya</p>
+				<a href="#"><img src="../assets/images/hero-cards-skins/sarya-night-raider.jpg" /></a><p class="card-title">Sarya</p>
 			</li>
 	
 			<li class="hero-card mid-hero">
-				<a href="/sylphi-skin#hero-skin"><img src="../assets/images/hero-cards-skins/sylphi-song-of-the-dead.jpg" /></a><p class="card-title">Sylphi</p>
+				<a href="#"><img src="../assets/images/hero-cards-skins/sylphi-song-of-the-dead.jpg" /></a><p class="card-title">Sylphi</p>
 			</li>
 	
 			<li class="hero-card front-hero">
-				<a href="/valan-skin#hero-skin"><img src="../assets/images/hero-cards-skins/valan-knight's-armor.jpg" /></a><p class="card-title">Valan</p>
+				<a href="#"><img src="../assets/images/hero-cards-skins/valan-knight's-armor.jpg" /></a><p class="card-title">Valan</p>
 			</li>
 	
 		</ul>
