@@ -230,6 +230,7 @@ ul {
   transition: width 0.5s ease 0s;
 }
 .navbar .nav-links .nav-dropdown .down-arrow {
+  font-weight: bold;
   transition: all 0.5s ease;
 }
 .navbar .nav-links .sub-links {
