@@ -9,6 +9,9 @@ const navLinks = document.getElementsByClassName("nav-links");
 const bookmarksBtn = document.getElementById("bookmarks-btn");
 const sectionBookmarks = document.getElementsByClassName("section-bookmarks");
 
+//Settings Btn and Settings menu
+const settingsBtn = document.getElementById("settings-btn");
+
 
 //Nav Btn Animation
 mobileNavBtn.addEventListener("click", () => {
@@ -20,14 +23,19 @@ mobileNavBtn.addEventListener("click", () => {
 
     //Close bookmarks if open
     if(bookmarksBtn){
+        bookmarksBtn.classList.remove("change");
         sectionBookmarks[0].classList.remove("change");
     }
+
+     //Close Settings menu if open
+     settingsBtn.classList.remove("change");
 });
 
 //Guide Bookmarks Animation
 if(bookmarksBtn){
     bookmarksBtn.addEventListener("click", () => {
         //Open the bookmarks menu
+        bookmarksBtn.classList.toggle("change");
         sectionBookmarks[0].classList.toggle("change");
     
         //Close Nav menu if open
@@ -35,5 +43,26 @@ if(bookmarksBtn){
         barTwo.classList.remove("change");
         barThree.classList.remove("change");
         navLinks[0].classList.remove("change");
+
+        //Close Settings menu if open
+        settingsBtn.classList.remove("change");
     });
 }
+
+//Settings Menu Animation
+settingsBtn.addEventListener("click", () => {
+    //Open the Settings menu
+    settingsBtn.classList.toggle("change");
+
+    //Close Nav menu if open
+    barOne.classList.remove("change");
+    barTwo.classList.remove("change");
+    barThree.classList.remove("change");
+    navLinks[0].classList.remove("change");
+
+    //Close bookmarks if open
+    if(bookmarksBtn){
+        bookmarksBtn.classList.remove("change");
+        sectionBookmarks[0].classList.remove("change");
+    }
+});

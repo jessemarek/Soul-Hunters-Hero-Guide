@@ -35,15 +35,36 @@
         }
     }
 
-    #options-btn {
+    #bookmarks-btn.mobile-menu-btn {
+        right: 6rem;
+        left: initial;
+        margin: 0 2% 0 0;
+
+        img:nth-child(1) {
+            position: absolute;
+            transition: all 0.5s ease;
+        }
+
+        img:nth-child(2) {
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+    }
+
+    #settings-btn.mobile-menu-btn {
         right: 0;
         left: initial;
         margin: 0 2% 0 0;
-    }
 
-    #bookmarks-btn {
-        right: 6rem;
-        left: initial;
+        img:nth-child(1) {
+            position: absolute;
+            transition: all 0.5s ease;
+        }
+
+        img:nth-child(2) {
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
     }
 
     #bar-one.change {
@@ -67,12 +88,11 @@
         justify-content: space-evenly;
         align-items: center;
         width: 66%;
-        height: 80vh;
         position: fixed;
         bottom: 100%;
         left: 0;
         z-index: 5;
-        padding: 3%;
+        padding: 10% 3% 3% 3%;
         border-radius: 7px 0;
         background: @black;
         opacity: 0.9;
@@ -80,15 +100,58 @@
 
         li {
             width: 80%;
+            margin: 5% auto;
         }
 
         a {
             color: @white;
-            //.link-animation(@white, 0.5s);
         }
 
         .nav-dropdown{
             color: @white;
+           
+            &:hover{
+
+                p{
+                    &::after {
+                        width: 100%;
+                    }
+                }
+
+                .down-arrow {
+                    opacity: 0;
+                }
+
+                .sub-links {
+                    height: 15rem;
+                }
+            }
+
+            p {
+                position: relative;
+
+                &::after {
+                    content: ""; 
+                    display: block;  
+                    width: 0;
+                    height: 0.2rem;
+                    position: absolute;
+                    left: 0;
+                    bottom: -0.6rem;
+                    background: @white;
+                    transition: width 0.5s ease 0s;
+                }
+            }
+
+            .down-arrow {
+                transition: all 0.5s ease;
+            }
+        }
+
+        .sub-links {
+            height: 0;
+            overflow: hidden;
+            transition: height 0.5s ease;
         }
     }
 
@@ -96,39 +159,59 @@
         transform: translate(0, 100%);
     }
 
-}
+    #bookmarks-btn.mobile-menu-btn.change {
 
-aside {
-    width: 66%;
-    height: 80vh;
-    position: fixed;
-    bottom: 100%;
-    right: 0;
-    z-index: 5;
-    padding: 3%;
-    border-radius: 0 7px;
-    background: @black;
-    opacity: 0.9;
-    transition: all 0.5s ease;
+        img:nth-child(1) {
+            opacity: 0;
+        }
 
-    h4 {
-        margin: 10% 0 0 0;
-        color: @white;
-        border-color: @white;
-    }
-
-    .bookmark-list {
-        .flexBox(column nowrap, space-evenly, initial);
-    
-        a {
-            width: 80%;
-            margin: 3% auto;
-            padding: 3%;
-            color: @white;
+        img:nth-child(2) {
+            opacity: 1;
         }
     }
-}
 
-aside.change {
-    transform: translate(0, 100%);
+    #settings-btn.mobile-menu-btn.change {
+
+        img:nth-child(1) {
+            opacity: 0;
+        }
+
+        img:nth-child(2) {
+            opacity: 1;
+        }
+    }
+
+    aside {
+        width: 66%;
+        position: fixed;
+        bottom: 100%;
+        right: 0;
+        z-index: 5;
+        padding: 3%;
+        border-radius: 0 7px;
+        background: @black;
+        opacity: 0.9;
+        transition: all 0.5s ease;
+    
+        h4 {
+            margin: 10% 0 0 0;
+            color: @white;
+            border-color: @white;
+        }
+    
+        .bookmark-list {
+            .flexBox(column nowrap, space-evenly, initial);
+        
+            a {
+                width: 80%;
+                margin: 3% auto;
+                padding: 3%;
+                color: @white;
+            }
+        }
+    }
+    
+    aside.change {
+        transform: translate(0, 100%);
+    }
 }

@@ -142,14 +142,31 @@ ul {
   height: 0.5rem;
   transition: all 0.5s ease;
 }
-.navbar #options-btn {
+.navbar #bookmarks-btn.mobile-menu-btn {
+  right: 6rem;
+  left: initial;
+  margin: 0 2% 0 0;
+}
+.navbar #bookmarks-btn.mobile-menu-btn img:nth-child(1) {
+  position: absolute;
+  transition: all 0.5s ease;
+}
+.navbar #bookmarks-btn.mobile-menu-btn img:nth-child(2) {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.navbar #settings-btn.mobile-menu-btn {
   right: 0;
   left: initial;
   margin: 0 2% 0 0;
 }
-.navbar #bookmarks-btn {
-  right: 6rem;
-  left: initial;
+.navbar #settings-btn.mobile-menu-btn img:nth-child(1) {
+  position: absolute;
+  transition: all 0.5s ease;
+}
+.navbar #settings-btn.mobile-menu-btn img:nth-child(2) {
+  opacity: 0;
+  transition: all 0.5s ease;
 }
 .navbar #bar-one.change {
   width: 85%;
@@ -169,12 +186,11 @@ ul {
   justify-content: space-evenly;
   align-items: center;
   width: 66%;
-  height: 80vh;
   position: fixed;
   bottom: 100%;
   left: 0;
   z-index: 5;
-  padding: 3%;
+  padding: 10% 3% 3% 3%;
   border-radius: 7px 0;
   background: #101010;
   opacity: 0.9;
@@ -182,6 +198,7 @@ ul {
 }
 .navbar .nav-links li {
   width: 80%;
+  margin: 5% auto;
 }
 .navbar .nav-links a {
   color: #efefef;
@@ -189,12 +206,54 @@ ul {
 .navbar .nav-links .nav-dropdown {
   color: #efefef;
 }
+.navbar .nav-links .nav-dropdown:hover p::after {
+  width: 100%;
+}
+.navbar .nav-links .nav-dropdown:hover .down-arrow {
+  opacity: 0;
+}
+.navbar .nav-links .nav-dropdown:hover .sub-links {
+  height: 15rem;
+}
+.navbar .nav-links .nav-dropdown p {
+  position: relative;
+}
+.navbar .nav-links .nav-dropdown p::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0.2rem;
+  position: absolute;
+  left: 0;
+  bottom: -0.6rem;
+  background: #efefef;
+  transition: width 0.5s ease 0s;
+}
+.navbar .nav-links .nav-dropdown .down-arrow {
+  transition: all 0.5s ease;
+}
+.navbar .nav-links .sub-links {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
 .navbar .nav-links.change {
   transform: translate(0, 100%);
 }
-aside {
+.navbar #bookmarks-btn.mobile-menu-btn.change img:nth-child(1) {
+  opacity: 0;
+}
+.navbar #bookmarks-btn.mobile-menu-btn.change img:nth-child(2) {
+  opacity: 1;
+}
+.navbar #settings-btn.mobile-menu-btn.change img:nth-child(1) {
+  opacity: 0;
+}
+.navbar #settings-btn.mobile-menu-btn.change img:nth-child(2) {
+  opacity: 1;
+}
+.navbar aside {
   width: 66%;
-  height: 80vh;
   position: fixed;
   bottom: 100%;
   right: 0;
@@ -205,24 +264,24 @@ aside {
   opacity: 0.9;
   transition: all 0.5s ease;
 }
-aside h4 {
+.navbar aside h4 {
   margin: 10% 0 0 0;
   color: #efefef;
   border-color: #efefef;
 }
-aside .bookmark-list {
+.navbar aside .bookmark-list {
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-evenly;
   align-content: initial;
 }
-aside .bookmark-list a {
+.navbar aside .bookmark-list a {
   width: 80%;
   margin: 3% auto;
   padding: 3%;
   color: #efefef;
 }
-aside.change {
+.navbar aside.change {
   transform: translate(0, 100%);
 }
 footer {
