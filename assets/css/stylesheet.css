@@ -140,7 +140,16 @@ ul {
   width: 100%;
   background: #efefef;
   height: 0.5rem;
-  transition: all 1s ease;
+  transition: all 0.5s ease;
+}
+.navbar #options-btn {
+  right: 0;
+  left: initial;
+  margin: 0 2% 0 0;
+}
+.navbar #bookmarks-btn {
+  right: 6rem;
+  left: initial;
 }
 .navbar #bar-one.change {
   width: 85%;
@@ -169,31 +178,51 @@ ul {
   border-radius: 7px 0;
   background: #101010;
   opacity: 0.9;
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
 .navbar .nav-links li {
   width: 80%;
 }
 .navbar .nav-links a {
   color: #efefef;
-  position: relative;
 }
-.navbar .nav-links a:after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0.2rem;
-  position: absolute;
-  left: 50%;
-  bottom: -0.6rem;
-  background: #efefef;
-  transition: width 0.5s ease 0s, left 0.5s ease 0s;
-}
-.navbar .nav-links a:hover:after {
-  width: 100%;
-  left: 0;
+.navbar .nav-links .nav-dropdown {
+  color: #efefef;
 }
 .navbar .nav-links.change {
+  transform: translate(0, 100%);
+}
+aside {
+  width: 66%;
+  height: 80vh;
+  position: fixed;
+  bottom: 100%;
+  right: 0;
+  z-index: 5;
+  padding: 3%;
+  border-radius: 0 7px;
+  background: #101010;
+  opacity: 0.9;
+  transition: all 0.5s ease;
+}
+aside h4 {
+  margin: 10% 0 0 0;
+  color: #efefef;
+  border-color: #efefef;
+}
+aside .bookmark-list {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-content: initial;
+}
+aside .bookmark-list a {
+  width: 80%;
+  margin: 3% auto;
+  padding: 3%;
+  color: #efefef;
+}
+aside.change {
   transform: translate(0, 100%);
 }
 footer {
