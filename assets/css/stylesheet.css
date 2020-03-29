@@ -255,6 +255,8 @@ ul {
 }
 .navbar aside {
   width: 66%;
+  max-height: 90vh;
+  overflow: scroll;
   position: fixed;
   bottom: 100%;
   right: 0;
