@@ -1,4 +1,12 @@
 /* Custom Button */
+/*   HTML Structure
+            
+<label>
+    <input type="checkbox">
+    <span></span>
+</label>
+
+*/
 /* Nav Links Animation */
 /************************ Reset ************************/
 * {
@@ -22,7 +30,7 @@ body {
 header {
   width: 100%;
   text-align: center;
-  margin: 5% 0 0 0;
+  margin: 10% 0 0 0;
 }
 @media (min-width: 1000px) {
   header {
@@ -256,7 +264,7 @@ ul {
 .navbar aside {
   width: 66%;
   max-height: 90vh;
-  overflow: scroll;
+  overflow-y: auto;
   position: fixed;
   bottom: 100%;
   right: 0;
@@ -268,7 +276,7 @@ ul {
   transition: all 0.5s ease;
 }
 .navbar aside h4 {
-  margin: 10% 0 0 0;
+  margin: 13% 0 0 0;
   color: #efefef;
   border-color: #efefef;
 }
@@ -286,6 +294,64 @@ ul {
 }
 .navbar aside.change {
   transform: translate(0, 100%);
+}
+.navbar .settings-menu {
+  width: 66%;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 100%;
+  right: 0;
+  z-index: 5;
+  padding: 5%;
+  border-radius: 0 7px;
+  background: #101010;
+  color: #efefef;
+  opacity: 0.9;
+  transition: all 0.5s ease;
+}
+.navbar .settings-menu .slider-switch {
+  display: inline-block;
+  width: 3rem;
+  height: 1.5rem;
+  position: relative;
+}
+.navbar .settings-menu .slider-switch input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.navbar .settings-menu .slider-switch input:checked + span {
+  background: #ffa500;
+}
+.navbar .settings-menu .slider-switch input:checked + span::before {
+  transform: translateX(1.5rem);
+}
+.navbar .settings-menu .slider-switch span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 1.5rem;
+  background: #444444;
+  transition: 0.4s;
+}
+.navbar .settings-menu .slider-switch span::before {
+  content: "";
+  width: 1.2rem;
+  height: 1.2rem;
+  position: absolute;
+  left: 0.15rem;
+  bottom: 0.15rem;
+  border-radius: 50%;
+  background: #efefef;
+  transition: 0.4s;
+}
+.navbar .settings-menu li {
+  margin: 2% 0;
+}
+.navbar .settings-menu.change {
+  transform: translate(0, 130%);
 }
 footer {
   width: 100%;

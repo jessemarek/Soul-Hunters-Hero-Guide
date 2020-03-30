@@ -11,6 +11,7 @@ const sectionBookmarks = document.getElementsByClassName("section-bookmarks");
 
 //Settings Btn and Settings menu
 const settingsBtn = document.getElementById("settings-btn");
+const settingsMenu = document.getElementsByClassName("settings-menu");
 
 
 //Nav Btn Animation
@@ -29,6 +30,7 @@ mobileNavBtn.addEventListener("click", () => {
 
      //Close Settings menu if open
      settingsBtn.classList.remove("change");
+     settingsMenu[0].classList.remove("change");
 });
 
 //Guide Bookmarks Animation
@@ -46,6 +48,7 @@ if(bookmarksBtn){
 
         //Close Settings menu if open
         settingsBtn.classList.remove("change");
+        settingsMenu[0].classList.remove("change");
     });
 }
 
@@ -53,6 +56,7 @@ if(bookmarksBtn){
 settingsBtn.addEventListener("click", () => {
     //Open the Settings menu
     settingsBtn.classList.toggle("change");
+    settingsMenu[0].classList.toggle("change");
 
     //Close Nav menu if open
     barOne.classList.remove("change");
