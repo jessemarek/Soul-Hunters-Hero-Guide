@@ -224,8 +224,10 @@ ul {
   bottom: 100%;
   left: 0;
   z-index: 5;
-  padding: 10% 3% 3% 3%;
+  border-right: 1px solid #444444;
+  border-bottom: 1px solid #444444;
   border-radius: 7px 0;
+  padding: 10% 3% 3% 3%;
   background: #101010;
   opacity: 0.9;
   transition: all 0.5s ease;
@@ -296,6 +298,8 @@ ul {
   right: 0;
   z-index: 5;
   padding: 3%;
+  border-bottom: 1px solid #444444;
+  border-left: 1px solid #444444;
   border-radius: 0 7px;
   background: #101010;
   opacity: 0.9;
@@ -312,6 +316,8 @@ ul {
     bottom: initial;
     left: 0;
     border-right: 1px solid #efefef;
+    border-bottom: none;
+    border-left: none;
     border-radius: 0;
     padding: 5rem 0 0 0;
     opacity: 1;
@@ -372,6 +378,8 @@ ul {
   right: 0;
   z-index: 5;
   padding: 5%;
+  border-bottom: 1px solid #444444;
+  border-left: 1px solid #444444;
   border-radius: 0 7px;
   background: #101010;
   color: #efefef;
@@ -432,6 +440,7 @@ footer {
   position: absolute;
   bottom: 0;
   left: 0;
+  border-top: 1px solid #efefef;
   padding: 2%;
   background: #101010;
   color: #efefef;
@@ -441,6 +450,17 @@ footer {
 @media (min-width: 1000px) {
   footer {
     padding: 1%;
+  }
+}
+@media (min-width: 1000px) {
+  .side-footer {
+    width: 15%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    border-top: none;
+    border-right: 1px solid #efefef;
   }
 }
 /********************** Front Page Styles ************************/
@@ -769,7 +789,4 @@ body.dark-mode #forge-bonus-example th {
 body.dark-mode table tr:nth-child(even),
 body.dark-mode #forge-bonus-example tr:nth-child(even) {
   background: #444444;
-}
-body.dark-mode footer {
-  border-top: 1px solid #efefef;
 }

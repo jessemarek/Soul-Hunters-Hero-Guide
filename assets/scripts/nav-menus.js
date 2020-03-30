@@ -8,6 +8,8 @@ const navLinks = document.getElementsByClassName("nav-links");
 //Bookmarks Btn and Bookmarks menu
 const bookmarksBtn = document.getElementById("bookmarks-btn");
 const sectionBookmarks = document.getElementsByClassName("section-bookmarks");
+//Side Footer on pages with a bookmarks at Desktop screen
+const sideFooter = document.getElementsByTagName("footer");
 
 //Settings Btn and Settings menu
 const settingsBtn = document.getElementById("settings-btn");
@@ -37,6 +39,9 @@ mobileNavBtn.addEventListener("click", () => {
 
 //Guide Bookmarks Animation
 if(bookmarksBtn){
+    //Change Footer to Side Footer
+    sideFooter[0].classList.add("side-footer");
+
     bookmarksBtn.addEventListener("click", () => {
         //Open the bookmarks menu
         bookmarksBtn.classList.toggle("change");

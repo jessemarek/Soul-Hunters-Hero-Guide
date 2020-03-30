@@ -3,6 +3,7 @@ footer {
     position: absolute;
     bottom: 0;
     left: 0;
+    border-top: 1px solid @white;
     padding: 2%;
     background: @black;
     color: @white;
@@ -11,5 +12,18 @@ footer {
 
     @media @desktop {
         padding: 1%;
+    }
+}
+
+.side-footer {
+
+    @media @desktop {
+        width: 15%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        border-top: none;
+        border-right: 1px solid @white;
     }
 }
