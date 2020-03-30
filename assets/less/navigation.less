@@ -23,6 +23,10 @@
         left: 0.5rem;
         z-index: 100;
 
+        @media @desktop {
+            display: none;
+        }
+
         &:hover {
             cursor: pointer;
         }
@@ -40,6 +44,10 @@
         left: initial;
         margin: 0 2% 0 0;
 
+        @media @desktop {
+            display: none;
+        }
+
         img:nth-child(1) {
             position: absolute;
             transition: all 0.5s ease;
@@ -52,6 +60,7 @@
     }
 
     #settings-btn.mobile-menu-btn {
+        display: block;
         right: 0;
         left: initial;
         margin: 0 2% 0 0;
@@ -195,21 +204,62 @@
         background: @black;
         opacity: 0.9;
         transition: all 0.5s ease;
+
+        @media @desktop {
+            width: 15%;
+            max-height: 100vh;
+            height: 100vh;
+            overflow-x: hidden;
+            top: 0;
+            right: initial;
+            bottom: initial;
+            left: 0;
+            border-right: 1px solid @white;
+            border-radius: 0;
+            padding: 5rem 0 0 0;
+            opacity: 1;
+            transition: none;
+        }
     
         h4 {
             margin: 13% 0 0 0;
-            color: @white;
             border-color: @white;
+            color: @white;
+            font-size: 1.6rem;
+            text-align: center;
+
+            @media @desktop {
+                margin: 4%;
+            }
         }
     
         .bookmark-list {
             .flexBox(column nowrap, space-evenly, initial);
+
+            
+            @media @desktop {
+                flex-flow: row wrap;
+                justify-content: flex-end;
+            }
         
             a {
                 width: 80%;
                 margin: 3% auto;
                 padding: 3%;
                 color: @white;
+
+                @media @desktop {
+                    margin: 3% 0;
+                    border: 2px solid @white;
+                    border-right: none;
+                    border-radius: 12px 0 0 12px;
+                    text-align: center;
+
+                    &:hover {
+                        background: @white;
+                        color: @black;
+                    }
+                }
             }
         }
     }
@@ -232,6 +282,12 @@
         opacity: 0.9;
         transition: all 0.5s ease;
 
+        h4 {
+            border-bottom: 1px solid @white;
+            font-size: 1.6rem;
+            text-align: center;
+        }
+
         .slider-switch{
             .toggle-switch(3rem, @dark-grey, @orange, @white);
         }
@@ -242,6 +298,6 @@
     }
 
     .settings-menu.change {
-        transform: translate(0, 130%);
+        transform: translate(0, 120%);
     }
 }

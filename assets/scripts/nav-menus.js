@@ -12,6 +12,8 @@ const sectionBookmarks = document.getElementsByClassName("section-bookmarks");
 //Settings Btn and Settings menu
 const settingsBtn = document.getElementById("settings-btn");
 const settingsMenu = document.getElementsByClassName("settings-menu");
+const darkModeToggle = document.getElementById("dark-mode-toggle");
+const spoilerToggle = document.getElementById("spoiler-toggle");
 
 
 //Nav Btn Animation
@@ -69,4 +71,10 @@ settingsBtn.addEventListener("click", () => {
         bookmarksBtn.classList.remove("change");
         sectionBookmarks[0].classList.remove("change");
     }
+});
+
+//Dark Mode On/Off
+darkModeToggle.addEventListener("click", () => {
+    console.log("box is checked");
+    document.getElementsByTagName("body")[0].classList.toggle("dark-mode");
 });

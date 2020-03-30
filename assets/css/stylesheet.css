@@ -59,6 +59,10 @@ h4 {
   padding: 1%;
   font-size: 2rem;
 }
+h5 {
+  border-bottom: 1px solid #101010;
+  text-align: center;
+}
 a {
   text-decoration: none;
 }
@@ -74,6 +78,11 @@ ul {
 }
 .wrapper {
   margin: 0 0 10% 0;
+}
+@media (min-width: 1000px) {
+  .wrapper {
+    padding-left: 20%;
+  }
 }
 .grn-txt {
   color: #228b22;
@@ -147,6 +156,11 @@ ul {
   left: 0.5rem;
   z-index: 100;
 }
+@media (min-width: 1000px) {
+  .navbar .mobile-menu-btn {
+    display: none;
+  }
+}
 .navbar .mobile-menu-btn:hover {
   cursor: pointer;
 }
@@ -161,6 +175,11 @@ ul {
   left: initial;
   margin: 0 2% 0 0;
 }
+@media (min-width: 1000px) {
+  .navbar #bookmarks-btn.mobile-menu-btn {
+    display: none;
+  }
+}
 .navbar #bookmarks-btn.mobile-menu-btn img:nth-child(1) {
   position: absolute;
   transition: all 0.5s ease;
@@ -170,6 +189,7 @@ ul {
   transition: all 0.5s ease;
 }
 .navbar #settings-btn.mobile-menu-btn {
+  display: block;
   right: 0;
   left: initial;
   margin: 0 2% 0 0;
@@ -281,10 +301,34 @@ ul {
   opacity: 0.9;
   transition: all 0.5s ease;
 }
+@media (min-width: 1000px) {
+  .navbar aside {
+    width: 15%;
+    max-height: 100vh;
+    height: 100vh;
+    overflow-x: hidden;
+    top: 0;
+    right: initial;
+    bottom: initial;
+    left: 0;
+    border-right: 1px solid #efefef;
+    border-radius: 0;
+    padding: 5rem 0 0 0;
+    opacity: 1;
+    transition: none;
+  }
+}
 .navbar aside h4 {
   margin: 13% 0 0 0;
-  color: #efefef;
   border-color: #efefef;
+  color: #efefef;
+  font-size: 1.6rem;
+  text-align: center;
+}
+@media (min-width: 1000px) {
+  .navbar aside h4 {
+    margin: 4%;
+  }
 }
 .navbar aside .bookmark-list {
   display: flex;
@@ -292,11 +336,30 @@ ul {
   justify-content: space-evenly;
   align-content: initial;
 }
+@media (min-width: 1000px) {
+  .navbar aside .bookmark-list {
+    flex-flow: row wrap;
+    justify-content: flex-end;
+  }
+}
 .navbar aside .bookmark-list a {
   width: 80%;
   margin: 3% auto;
   padding: 3%;
   color: #efefef;
+}
+@media (min-width: 1000px) {
+  .navbar aside .bookmark-list a {
+    margin: 3% 0;
+    border: 2px solid #efefef;
+    border-right: none;
+    border-radius: 12px 0 0 12px;
+    text-align: center;
+  }
+  .navbar aside .bookmark-list a:hover {
+    background: #efefef;
+    color: #101010;
+  }
 }
 .navbar aside.change {
   transform: translate(0, 100%);
@@ -314,6 +377,11 @@ ul {
   color: #efefef;
   opacity: 0.9;
   transition: all 0.5s ease;
+}
+.navbar .settings-menu h4 {
+  border-bottom: 1px solid #efefef;
+  font-size: 1.6rem;
+  text-align: center;
 }
 .navbar .settings-menu .slider-switch {
   display: inline-block;
@@ -357,7 +425,7 @@ ul {
   margin: 2% 0;
 }
 .navbar .settings-menu.change {
-  transform: translate(0, 130%);
+  transform: translate(0, 120%);
 }
 footer {
   width: 100%;
@@ -387,6 +455,11 @@ footer {
 }
 .logo img {
   width: 50%;
+}
+@media (min-width: 1000px) {
+  .front-page.wrapper {
+    padding: 0;
+  }
 }
 @media (min-width: 1000px) {
   .front-page {
@@ -527,7 +600,8 @@ header .filter-btns .filter-form input {
   margin: 3% auto 5%;
 }
 .guide-section {
-  margin: 10% 0 0 0;
+  margin: 0 0 10% 0;
+  padding: 5rem 0 0 0;
 }
 .example-image-box .example-image {
   width: fit-content;
@@ -535,8 +609,8 @@ header .filter-btns .filter-form input {
 }
 .example-image-box .example-image img {
   margin: 0 auto;
-  border: 2px solid #101010;
-  border-radius: 7px;
+  border: 4px solid #332412;
+  border-radius: 8px;
 }
 .example-image-box .example-image .image-note {
   font-size: 1.2rem;
@@ -550,21 +624,14 @@ header .filter-btns .filter-form input {
   width: 75%;
   margin: 2% auto 8%;
 }
-#forge-bonus-example h5,
-.forge-table h5,
-.forge-upgrade-table h5,
-.forge-type-table h5 {
-  border-bottom: 1px solid #101010;
-  text-align: center;
-}
 #forge-bonus-example table,
 .forge-table table,
 .forge-upgrade-table table,
 .forge-type-table table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 1.3rem;
-  line-height: 1.5;
+  font-size: 1.2rem;
+  line-height: 2;
 }
 #forge-bonus-example table th,
 .forge-table table th,
@@ -578,7 +645,7 @@ header .filter-btns .filter-form input {
 .forge-table table tr td,
 .forge-upgrade-table table tr td,
 .forge-type-table table tr td {
-  padding: 1% 0 0 0;
+  padding: 1%;
   text-align: left;
 }
 #forge-bonus-example table tr:nth-child(even),
@@ -599,43 +666,40 @@ header .filter-btns .filter-form input {
 .forge-upgrade-table table tr td:nth-child(1),
 .forge-upgrade-table table tr td:nth-child(2),
 .forge-upgrade-table table tr td:nth-child(3) {
-  padding: 1% 4% 0 0;
+  padding-right: 4%;
   text-align: right;
 }
 .forge-upgrade-table table tr td:nth-child(4) {
-  padding: 1% 0 0 4%;
+  padding-left: 4%;
   text-align: left;
 }
 .forge-type-table {
   width: 95%;
 }
 .forge-type-table table tr td:nth-child(1) {
-  padding: 1% 0 0 4%;
+  padding-left: 4%;
   text-align: left;
 }
 .forge-type-table table tr td:nth-child(2),
 .forge-type-table table tr td:nth-child(3) {
-  padding: 1% 4% 0 0;
+  padding-right: 4%;
   text-align: right;
 }
 .forge-type-table table tr td:nth-child(4) {
-  padding: 1% 0 0 10%;
+  padding-left: 10%;
   text-align: left;
 }
 .forge-range-table {
   width: 95%;
 }
 .forge-range-table table tr td:nth-child(1) {
-  padding: 1% 0 0 4%;
+  padding-left: 4%;
   text-align: left;
 }
 .forge-range-table table tr td:nth-child(2),
-.forge-range-table table tr td:nth-child(3) {
-  padding: 1% 10% 0 0;
-  text-align: right;
-}
+.forge-range-table table tr td:nth-child(3),
 .forge-range-table table tr td:nth-child(4) {
-  padding: 1% 10% 0 0;
+  padding-right: 10%;
   text-align: right;
 }
 /********************** Credits Page Styles ************************/
@@ -669,4 +733,43 @@ header .filter-btns .filter-form input {
 }
 .credits-page footer {
   border-top: 1px solid #444444;
+}
+/********************** Dark Mode Styles ************************/
+body.dark-mode {
+  background: #101010;
+  color: #efefef;
+}
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  border-color: #efefef;
+}
+body.dark-mode .grn-txt {
+  color: #adff2f;
+}
+body.dark-mode .blu-txt {
+  color: #00adff;
+}
+body.dark-mode .prp-txt {
+  color: #c42be0;
+}
+body.dark-mode .org-txt {
+  color: #ffb100;
+}
+body.dark-mode .red-txt {
+  color: #ff522b;
+}
+body.dark-mode table th,
+body.dark-mode #forge-bonus-example th {
+  border-color: #efefef;
+}
+body.dark-mode table tr:nth-child(even),
+body.dark-mode #forge-bonus-example tr:nth-child(even) {
+  background: #444444;
+}
+body.dark-mode footer {
+  border-top: 1px solid #efefef;
 }
