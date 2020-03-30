@@ -109,19 +109,43 @@
         opacity: 0.9;
         transition: all 0.5s ease;
 
+        @media @desktop {
+            flex-flow: row;
+            justify-content: space-between;
+            height: 4rem;
+            top: 0;
+            left: 20%;
+            z-index: 500;
+            border: none;
+            padding: 0;
+            background: transparent;
+            opacity: 1;
+        }
+
         li {
             width: 80%;
             margin: 5% auto;
+
+            @media @desktop {
+                width: 15%;
+                margin: 0;
+            }
         }
 
         a {
             color: @white;
+
+            @media @desktop {
+                .link-animation(@white, 0.5s);
+            }
         }
 
         .nav-dropdown{
+            position: relative;
             color: @white;
            
             &:hover{
+                cursor: pointer;
 
                 p{
                     &::after {
@@ -139,19 +163,7 @@
             }
 
             p {
-                position: relative;
-
-                &::after {
-                    content: ""; 
-                    display: block;  
-                    width: 0;
-                    height: 0.2rem;
-                    position: absolute;
-                    left: 0;
-                    bottom: -0.6rem;
-                    background: @white;
-                    transition: width 0.5s ease 0s;
-                }
+                .link-animation(@white, 0.5s);
             }
 
             .down-arrow {
@@ -164,6 +176,34 @@
             height: 0;
             overflow: hidden;
             transition: height 0.5s ease;
+
+            @media @desktop {
+                width: 100%;
+                justify-content: space-evenly;
+                position: absolute;
+                top: 3.1rem;
+                border-radius: 0 0 7px 7px;
+                background: linear-gradient(to bottom right, @lite-black, @grey);
+            }
+
+            li {
+                width: 100%;
+
+                a {
+                    display: inline-block;
+                    width: 100%;
+                    padding: 5% 10%;
+
+                    &:hover {
+                        background: @black;
+                        padding: 5% 5% 5% 15%; 
+
+                        &::after {
+                            width: 0;
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -289,6 +329,11 @@
         color: @white;
         opacity: 0.9;
         transition: all 0.5s ease;
+
+        @media @desktop {
+            width: 20%;
+            padding: 2%;
+        }
 
         h4 {
             border-bottom: 1px solid @white;

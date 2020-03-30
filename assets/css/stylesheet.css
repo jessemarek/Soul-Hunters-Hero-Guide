@@ -232,15 +232,58 @@ ul {
   opacity: 0.9;
   transition: all 0.5s ease;
 }
+@media (min-width: 1000px) {
+  .navbar .nav-links {
+    flex-flow: row;
+    justify-content: space-between;
+    height: 4rem;
+    top: 0;
+    left: 20%;
+    z-index: 500;
+    border: none;
+    padding: 0;
+    background: transparent;
+    opacity: 1;
+  }
+}
 .navbar .nav-links li {
   width: 80%;
   margin: 5% auto;
 }
+@media (min-width: 1000px) {
+  .navbar .nav-links li {
+    width: 15%;
+    margin: 0;
+  }
+}
 .navbar .nav-links a {
   color: #efefef;
 }
+@media (min-width: 1000px) {
+  .navbar .nav-links a {
+    position: relative;
+  }
+  .navbar .nav-links a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0.2rem;
+    position: absolute;
+    left: 0;
+    bottom: -0.25rem;
+    background: #efefef;
+    transition: width 0.5s ease 0s;
+  }
+  .navbar .nav-links a:hover::after {
+    width: 100%;
+  }
+}
 .navbar .nav-links .nav-dropdown {
+  position: relative;
   color: #efefef;
+}
+.navbar .nav-links .nav-dropdown:hover {
+  cursor: pointer;
 }
 .navbar .nav-links .nav-dropdown:hover p::after {
   width: 100%;
@@ -261,9 +304,12 @@ ul {
   height: 0.2rem;
   position: absolute;
   left: 0;
-  bottom: -0.6rem;
+  bottom: -0.25rem;
   background: #efefef;
   transition: width 0.5s ease 0s;
+}
+.navbar .nav-links .nav-dropdown p:hover::after {
+  width: 100%;
 }
 .navbar .nav-links .nav-dropdown .down-arrow {
   font-weight: bold;
@@ -273,6 +319,31 @@ ul {
   height: 0;
   overflow: hidden;
   transition: height 0.5s ease;
+}
+@media (min-width: 1000px) {
+  .navbar .nav-links .sub-links {
+    width: 100%;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 3.1rem;
+    border-radius: 0 0 7px 7px;
+    background: linear-gradient(to bottom right, #202020, #909090);
+  }
+}
+.navbar .nav-links .sub-links li {
+  width: 100%;
+}
+.navbar .nav-links .sub-links li a {
+  display: inline-block;
+  width: 100%;
+  padding: 5% 10%;
+}
+.navbar .nav-links .sub-links li a:hover {
+  background: #101010;
+  padding: 5% 5% 5% 15%;
+}
+.navbar .nav-links .sub-links li a:hover::after {
+  width: 0;
 }
 .navbar .nav-links.change {
   transform: translate(0, 100%);
@@ -385,6 +456,12 @@ ul {
   color: #efefef;
   opacity: 0.9;
   transition: all 0.5s ease;
+}
+@media (min-width: 1000px) {
+  .navbar .settings-menu {
+    width: 20%;
+    padding: 2%;
+  }
 }
 .navbar .settings-menu h4 {
   border-bottom: 1px solid #efefef;

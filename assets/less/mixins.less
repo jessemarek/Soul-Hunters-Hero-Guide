@@ -130,16 +130,15 @@
          width: 0;
          height: 0.2rem;
          position: absolute;
-         left: 50%;
-         bottom: -0.6rem;
+         left: 0;
+         bottom: -0.25rem;
          background: @color;
-         transition: width @speed ease 0s, left @speed ease 0s;
+         transition: width @speed ease 0s,;
      }
  
      &:hover {
          &::after {
              width: 100%; 
-             left: 0; 
          }
      }
  }
