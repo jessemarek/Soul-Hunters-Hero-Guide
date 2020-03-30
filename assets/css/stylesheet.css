@@ -46,6 +46,12 @@ h5,
 h6 {
   font-family: 'Noto Sans', sans-serif;
 }
+h2 {
+  width: 100%;
+  margin: 0 0 2% 0;
+  border-bottom: 1px solid #101010;
+  padding: 1%;
+}
 h4 {
   width: 100%;
   margin: 0 0 2% 0;
@@ -514,6 +520,123 @@ header .filter-btns .filter-form input {
 }
 .hero-page .hidden {
   display: none;
+}
+/********************** Forge Page Styles ************************/
+.intro-text {
+  width: 95%;
+  margin: 3% auto 5%;
+}
+.guide-section {
+  margin: 10% 0 0 0;
+}
+.example-image-box .example-image {
+  width: fit-content;
+  margin: 8% auto;
+}
+.example-image-box .example-image img {
+  margin: 0 auto;
+  border: 2px solid #101010;
+  border-radius: 7px;
+}
+.example-image-box .example-image .image-note {
+  font-size: 1.2rem;
+  font-style: italic;
+  text-align: center;
+}
+#forge-bonus-example,
+.forge-table,
+.forge-upgrade-table,
+.forge-type-table {
+  width: 75%;
+  margin: 2% auto 8%;
+}
+#forge-bonus-example h5,
+.forge-table h5,
+.forge-upgrade-table h5,
+.forge-type-table h5 {
+  border-bottom: 1px solid #101010;
+  text-align: center;
+}
+#forge-bonus-example table,
+.forge-table table,
+.forge-upgrade-table table,
+.forge-type-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+#forge-bonus-example table th,
+.forge-table table th,
+.forge-upgrade-table table th,
+.forge-type-table table th {
+  border-bottom: 1px solid #101010;
+  padding: 1%;
+  text-align: center;
+}
+#forge-bonus-example table tr td,
+.forge-table table tr td,
+.forge-upgrade-table table tr td,
+.forge-type-table table tr td {
+  padding: 1% 0 0 0;
+  text-align: left;
+}
+#forge-bonus-example table tr:nth-child(even),
+.forge-table table tr:nth-child(even),
+.forge-upgrade-table table tr:nth-child(even),
+.forge-type-table table tr:nth-child(even) {
+  background: #c7c7c7;
+}
+.forge-table {
+  width: 75%;
+}
+.forge-table table tr td {
+  text-align: center;
+}
+.forge-upgrade-table {
+  width: 95%;
+}
+.forge-upgrade-table table tr td:nth-child(1),
+.forge-upgrade-table table tr td:nth-child(2),
+.forge-upgrade-table table tr td:nth-child(3) {
+  padding: 1% 4% 0 0;
+  text-align: right;
+}
+.forge-upgrade-table table tr td:nth-child(4) {
+  padding: 1% 0 0 4%;
+  text-align: left;
+}
+.forge-type-table {
+  width: 95%;
+}
+.forge-type-table table tr td:nth-child(1) {
+  padding: 1% 0 0 4%;
+  text-align: left;
+}
+.forge-type-table table tr td:nth-child(2),
+.forge-type-table table tr td:nth-child(3) {
+  padding: 1% 4% 0 0;
+  text-align: right;
+}
+.forge-type-table table tr td:nth-child(4) {
+  padding: 1% 0 0 10%;
+  text-align: left;
+}
+.forge-range-table {
+  width: 95%;
+}
+.forge-range-table table tr td:nth-child(1) {
+  padding: 1% 0 0 4%;
+  text-align: left;
+}
+.forge-range-table table tr td:nth-child(2),
+.forge-range-table table tr td:nth-child(3) {
+  padding: 1% 10% 0 0;
+  text-align: right;
+}
+.forge-range-table table tr td:nth-child(4) {
+  padding: 1% 10% 0 0;
+  text-align: right;
 }
 /********************** Credits Page Styles ************************/
 .credits-page {
