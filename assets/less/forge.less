@@ -2,6 +2,10 @@
 .intro-text {
     width: 95%;
     margin: 3% auto 5%;
+
+    @media @desktop {
+        margin: 0;
+    }
 }
 
 .guide-section {
@@ -10,6 +14,12 @@
 }
 
 .example-image-box {
+
+    @media @desktop {
+        .flexBox(row nowrap, center, center);
+        width: 70%;
+        margin: 0 auto;
+    }
 
     .example-image {
         width: fit-content;
@@ -42,8 +52,19 @@
     }
 }
 
+#forge-bonus-example {
+
+    @media @desktop {
+        width: 35%;
+    }
+}
+
 .forge-table {
     width: 75%;
+
+    @media @desktop {
+        width: 35%;
+    }
 
     table {
         tr {
@@ -57,62 +78,100 @@
 .forge-upgrade-table {
     width: 95%;
 
+    @media @desktop {
+        width: 60%;
+    }
+
     table {
         tr {
             td {
                 &:nth-child(1), &:nth-child(2), &:nth-child(3) {
                     padding-right: 4%;
                     text-align: right;
+
+                    @media @desktop {
+                        padding-right: 8%;
+                    }
                 }
 
                 &:nth-child(4) {
                     padding-left: 4%;
                     text-align: left;
+
+                    @media @desktop {
+                        padding-left: 8%;
+                    }
                 }
             }
         }
     }
 }
 
-.forge-type-table {
-    width: 95%;
+.intro-table{
 
-    table {
-        tr {
-            td {
-                &:nth-child(1) {
-                    padding-left: 4%;
-                    text-align: left;
-                }
+    @media @desktop {
+        .flexBox(row nowrap, space-evenly, center);
+    }
 
-                &:nth-child(2), &:nth-child(3) {
-                    padding-right: 4%;
-                    text-align: right;
-                }
+    .forge-type-table {
+        width: 95%;
 
-                &:nth-child(4) {
-                    padding-left: 10%;
-                    text-align: left;
+        @media @desktop {
+            width: 48%;
+        }
+    
+        table {
+            tr {
+                td {
+                    &:nth-child(1) {
+                        padding-left: 4%;
+                        text-align: left;
+                    }
+    
+                    &:nth-child(2), &:nth-child(3) {
+                        padding-right: 4%;
+                        text-align: right;
+
+                        @media @desktop {
+                            padding-right: 10%;
+                        }
+                    }
+    
+                    &:nth-child(4) {
+                        padding-left: 10%;
+                        text-align: left;
+                    }
                 }
             }
         }
     }
-}
+    
+    .forge-range-table {
+        width: 95%;
 
-.forge-range-table {
-    width: 95%;
+        @media @desktop {
+            width: 48%;
+        }
+    
+        table {
+            tr {
+                td {
+                    &:nth-child(1) {
+                        padding-left: 4%;
+                        text-align: left;
+                    }
+    
+                    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+                        padding-right: 10%;
+                        text-align: right;
+                    }
 
-    table {
-        tr {
-            td {
-                &:nth-child(1) {
-                    padding-left: 4%;
-                    text-align: left;
-                }
+                    &:nth-child(4) {
 
-                &:nth-child(2), &:nth-child(3), &:nth-child(4) {
-                    padding-right: 10%;
-                    text-align: right;
+                        @media @desktop {
+                            padding-left: 2%;
+                        }
+                    }
                 }
             }
         }

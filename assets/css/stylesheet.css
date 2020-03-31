@@ -713,9 +713,24 @@ header .filter-btns .filter-form input {
   width: 95%;
   margin: 3% auto 5%;
 }
+@media (min-width: 1000px) {
+  .intro-text {
+    margin: 0;
+  }
+}
 .guide-section {
   margin: 0 0 10% 0;
   padding: 5rem 0 0 0;
+}
+@media (min-width: 1000px) {
+  .example-image-box {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+    width: 70%;
+    margin: 0 auto;
+  }
 }
 .example-image-box .example-image {
   width: fit-content;
@@ -745,8 +760,18 @@ header .filter-btns .filter-form input {
   border-bottom: 1px solid #101010;
   text-align: center;
 }
+@media (min-width: 1000px) {
+  #forge-bonus-example {
+    width: 35%;
+  }
+}
 .forge-table {
   width: 75%;
+}
+@media (min-width: 1000px) {
+  .forge-table {
+    width: 35%;
+  }
 }
 .forge-table table tr td {
   text-align: center;
@@ -754,44 +779,90 @@ header .filter-btns .filter-form input {
 .forge-upgrade-table {
   width: 95%;
 }
+@media (min-width: 1000px) {
+  .forge-upgrade-table {
+    width: 60%;
+  }
+}
 .forge-upgrade-table table tr td:nth-child(1),
 .forge-upgrade-table table tr td:nth-child(2),
 .forge-upgrade-table table tr td:nth-child(3) {
   padding-right: 4%;
   text-align: right;
 }
+@media (min-width: 1000px) {
+  .forge-upgrade-table table tr td:nth-child(1),
+  .forge-upgrade-table table tr td:nth-child(2),
+  .forge-upgrade-table table tr td:nth-child(3) {
+    padding-right: 8%;
+  }
+}
 .forge-upgrade-table table tr td:nth-child(4) {
   padding-left: 4%;
   text-align: left;
 }
-.forge-type-table {
+@media (min-width: 1000px) {
+  .forge-upgrade-table table tr td:nth-child(4) {
+    padding-left: 8%;
+  }
+}
+@media (min-width: 1000px) {
+  .intro-table {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-content: center;
+  }
+}
+.intro-table .forge-type-table {
   width: 95%;
 }
-.forge-type-table table tr td:nth-child(1) {
+@media (min-width: 1000px) {
+  .intro-table .forge-type-table {
+    width: 48%;
+  }
+}
+.intro-table .forge-type-table table tr td:nth-child(1) {
   padding-left: 4%;
   text-align: left;
 }
-.forge-type-table table tr td:nth-child(2),
-.forge-type-table table tr td:nth-child(3) {
+.intro-table .forge-type-table table tr td:nth-child(2),
+.intro-table .forge-type-table table tr td:nth-child(3) {
   padding-right: 4%;
   text-align: right;
 }
-.forge-type-table table tr td:nth-child(4) {
+@media (min-width: 1000px) {
+  .intro-table .forge-type-table table tr td:nth-child(2),
+  .intro-table .forge-type-table table tr td:nth-child(3) {
+    padding-right: 10%;
+  }
+}
+.intro-table .forge-type-table table tr td:nth-child(4) {
   padding-left: 10%;
   text-align: left;
 }
-.forge-range-table {
+.intro-table .forge-range-table {
   width: 95%;
 }
-.forge-range-table table tr td:nth-child(1) {
+@media (min-width: 1000px) {
+  .intro-table .forge-range-table {
+    width: 48%;
+  }
+}
+.intro-table .forge-range-table table tr td:nth-child(1) {
   padding-left: 4%;
   text-align: left;
 }
-.forge-range-table table tr td:nth-child(2),
-.forge-range-table table tr td:nth-child(3),
-.forge-range-table table tr td:nth-child(4) {
+.intro-table .forge-range-table table tr td:nth-child(2),
+.intro-table .forge-range-table table tr td:nth-child(3),
+.intro-table .forge-range-table table tr td:nth-child(4) {
   padding-right: 10%;
   text-align: right;
+}
+@media (min-width: 1000px) {
+  .intro-table .forge-range-table table tr td:nth-child(4) {
+    padding-left: 2%;
+  }
 }
 /********************** Runestone Page Styles ************************/
 .runestone-triad {
