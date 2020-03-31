@@ -125,20 +125,21 @@
     position: relative;
  
      &::after { 
-         content: ""; 
-         display: block;  
-         width: 0;
-         height: 0.2rem;
-         position: absolute;
-         left: 0;
-         bottom: -0.25rem;
-         background: @color;
-         transition: width @speed ease 0s,;
+        content: ""; 
+        display: block;  
+        width: 0;
+        height: 0.2rem;
+        position: absolute;
+        left: 0;
+        bottom: -0.25rem;
+        background: @color;
+        transition: width @speed ease 0s,;
      }
  
      &:hover {
-         &::after {
-             width: 100%; 
-         }
+
+        &::after {
+            width: 100%; 
+        }
      }
  }

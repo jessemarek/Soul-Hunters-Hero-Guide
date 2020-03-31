@@ -59,10 +59,6 @@ h4 {
   padding: 1%;
   font-size: 2rem;
 }
-h5 {
-  border-bottom: 1px solid #101010;
-  text-align: center;
-}
 a {
   text-decoration: none;
 }
@@ -81,7 +77,7 @@ ul {
 }
 @media (min-width: 1000px) {
   .wrapper {
-    padding-left: 20%;
+    padding-left: 15%;
   }
 }
 .grn-txt {
@@ -235,7 +231,6 @@ ul {
 @media (min-width: 1000px) {
   .navbar .nav-links {
     flex-flow: row;
-    justify-content: space-between;
     height: 4rem;
     top: 0;
     left: 20%;
@@ -329,21 +324,22 @@ ul {
     border-radius: 0 0 7px 7px;
     background: linear-gradient(to bottom right, #202020, #909090);
   }
-}
-.navbar .nav-links .sub-links li {
-  width: 100%;
-}
-.navbar .nav-links .sub-links li a {
-  display: inline-block;
-  width: 100%;
-  padding: 5% 10%;
-}
-.navbar .nav-links .sub-links li a:hover {
-  background: #101010;
-  padding: 5% 5% 5% 15%;
-}
-.navbar .nav-links .sub-links li a:hover::after {
-  width: 0;
+  .navbar .nav-links .sub-links li {
+    width: 100%;
+  }
+  .navbar .nav-links .sub-links li a {
+    display: inline-block;
+    width: 100%;
+    padding: 5% 10%;
+    transition: all 0.5s ease;
+  }
+  .navbar .nav-links .sub-links li a:hover {
+    background: #101010;
+    padding: 5% 5% 5% 15%;
+  }
+  .navbar .nav-links .sub-links li a:hover::after {
+    width: 0;
+  }
 }
 .navbar .nav-links.change {
   transform: translate(0, 100%);
@@ -632,8 +628,8 @@ header .filter-btns .filter-btn {
   padding: 1% 2%;
   color: #efefef;
   font-size: 1.6rem;
-  background: radial-gradient(#909090, #101010);
-  border-color: #101010;
+  background: radial-gradient(#909090, #202020);
+  border-color: #202020;
   margin: 1%;
 }
 header .filter-btns .filter-btn:focus {
@@ -720,6 +716,13 @@ header .filter-btns .filter-form input {
 .forge-type-table {
   width: 75%;
   margin: 2% auto 8%;
+}
+#forge-bonus-example h5,
+.forge-table h5,
+.forge-upgrade-table h5,
+.forge-type-table h5 {
+  border-bottom: 1px solid #101010;
+  text-align: center;
 }
 #forge-bonus-example table,
 .forge-table table,

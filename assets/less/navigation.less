@@ -111,7 +111,6 @@
 
         @media @desktop {
             flex-flow: row;
-            justify-content: space-between;
             height: 4rem;
             top: 0;
             left: 20%;
@@ -184,26 +183,28 @@
                 top: 3.1rem;
                 border-radius: 0 0 7px 7px;
                 background: linear-gradient(to bottom right, @lite-black, @grey);
-            }
 
-            li {
-                width: 100%;
-
-                a {
-                    display: inline-block;
+                li {
                     width: 100%;
-                    padding: 5% 10%;
-
-                    &:hover {
-                        background: @black;
-                        padding: 5% 5% 5% 15%; 
-
-                        &::after {
-                            width: 0;
+    
+                    a {
+                        display: inline-block;
+                        width: 100%;
+                        padding: 5% 10%;
+                        transition: all 0.5s ease;
+    
+                        &:hover {
+                            background: @black;
+                            padding: 5% 5% 5% 15%; 
+    
+                            &::after {
+                                width: 0;
+                            }
                         }
                     }
                 }
             }
+           
         }
     }
 
