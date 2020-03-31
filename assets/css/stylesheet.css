@@ -146,6 +146,18 @@ table tr:nth-child(even) {
   position: absolute;
   z-index: 1;
 }
+.front-page .hero-card,
+.hero-page .hero-card {
+  transition: all 0.3s ease 0s;
+}
+.front-page .hero-card:hover,
+.hero-page .hero-card:hover {
+  transform: scale(1.1, 1.1);
+}
+.front-page .hero-card:hover img,
+.hero-page .hero-card:hover img {
+  box-shadow: 5px 5px 15px #101010;
+}
 /********************** Navigation Styles ************************/
 .navbar .menubar {
   width: 100%;
@@ -156,6 +168,10 @@ table tr:nth-child(even) {
   z-index: 100;
   background: linear-gradient(to right, #ffa500, #ff4500);
   color: #efefef;
+}
+.navbar .menubar.shadowbox {
+  z-index: 4;
+  box-shadow: 10px 10px 30px 10px #efefef;
 }
 .navbar .mobile-menu-btn {
   display: flex;
@@ -1012,4 +1028,7 @@ body.dark-mode #forge-bonus-example th {
 body.dark-mode table tr:nth-child(even),
 body.dark-mode #forge-bonus-example tr:nth-child(even) {
   background: #444444;
+}
+body.dark-mode .menubar.shadowbox {
+  box-shadow: 10px 10px 30px 10px #101010;
 }
