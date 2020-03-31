@@ -502,6 +502,9 @@ ul {
   background: #efefef;
   transition: 0.4s;
 }
+.navbar .settings-menu .slider-switch:hover {
+  cursor: pointer;
+}
 .navbar .settings-menu li {
   margin: 2% 0;
 }
@@ -801,6 +804,43 @@ header .filter-btns .filter-form input {
 .forge-range-table table tr td:nth-child(4) {
   padding-right: 10%;
   text-align: right;
+}
+/********************** Runestone Page Styles ************************/
+.runestone-triad {
+  display: grid;
+  grid-auto-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 1.5fr 1fr 1fr;
+  grid-template-areas: "... top ..." "lft ... rgt" "txt txt txt";
+  margin: 10% 0 0 0;
+}
+@media (min-width: 1000px) {
+  .runestone-triad {
+    width: 60%;
+    grid-auto-rows: 2fr 1fr 1fr;
+    margin: 3% auto 0;
+  }
+}
+.runestone-triad > :nth-child(1) {
+  grid-area: top;
+}
+.runestone-triad > :nth-child(2) {
+  grid-area: lft;
+}
+.runestone-triad > :nth-child(3) {
+  grid-area: rgt;
+}
+.runestone-triad > :nth-child(4) {
+  grid-area: txt;
+}
+.runestone-triad .reward-runestone {
+  margin: 2%;
+  text-align: center;
+}
+.runestone-triad .reward-note {
+  margin: 5%;
+  text-align: center;
+  font-size: 1.2rem;
+  font-style: italic;
 }
 /********************** Credits Page Styles ************************/
 .credits-page {

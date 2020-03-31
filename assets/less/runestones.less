@@ -1,0 +1,46 @@
+/********************** Runestone Page Styles ************************/
+.runestone-triad {
+    display: grid;
+    grid-auto-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1.5fr 1fr 1fr;
+    grid-template-areas: 
+    "... top ..."
+    "lft ... rgt"
+    "txt txt txt";
+    margin: 10% 0 0 0;
+
+    @media @desktop {
+        width: 60%;
+        grid-auto-rows: 2fr 1fr 1fr;
+        margin: 3% auto 0;
+    }
+
+    >:nth-child(1) {
+        grid-area: top;
+    }
+
+    >:nth-child(2) {
+        grid-area: lft;
+    }
+
+    >:nth-child(3) {
+        grid-area: rgt;
+    }
+
+    >:nth-child(4) {
+        grid-area: txt;
+    }
+
+    .reward-runestone {
+        margin: 2%;
+        text-align: center;
+    }
+
+    .reward-note {
+        margin: 5%;
+        text-align: center;
+        font-size: 1.2rem;
+        font-style: italic;
+    }
+
+}
