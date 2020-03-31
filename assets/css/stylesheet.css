@@ -72,6 +72,24 @@ ul {
   justify-content: start;
   align-content: center;
 }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.2rem;
+  line-height: 2;
+}
+table th {
+  border-bottom: 1px solid #101010;
+  padding: 1%;
+  text-align: center;
+}
+table tr td {
+  padding: 1%;
+  text-align: left;
+}
+table tr:nth-child(even) {
+  background: #c7c7c7;
+}
 .wrapper {
   margin: 0 0 10% 0;
 }
@@ -726,36 +744,6 @@ header .filter-btns .filter-form input {
 .forge-type-table h5 {
   border-bottom: 1px solid #101010;
   text-align: center;
-}
-#forge-bonus-example table,
-.forge-table table,
-.forge-upgrade-table table,
-.forge-type-table table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 1.2rem;
-  line-height: 2;
-}
-#forge-bonus-example table th,
-.forge-table table th,
-.forge-upgrade-table table th,
-.forge-type-table table th {
-  border-bottom: 1px solid #101010;
-  padding: 1%;
-  text-align: center;
-}
-#forge-bonus-example table tr td,
-.forge-table table tr td,
-.forge-upgrade-table table tr td,
-.forge-type-table table tr td {
-  padding: 1%;
-  text-align: left;
-}
-#forge-bonus-example table tr:nth-child(even),
-.forge-table table tr:nth-child(even),
-.forge-upgrade-table table tr:nth-child(even),
-.forge-type-table table tr:nth-child(even) {
-  background: #c7c7c7;
 }
 .forge-table {
   width: 75%;

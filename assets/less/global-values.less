@@ -51,6 +51,31 @@ ul {
     .flexBox(row wrap, start, center);
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.2rem;
+    line-height: 2;
+
+    th {
+        border-bottom: 1px solid @black;
+        padding: 1%;
+        text-align: center;
+    }
+
+    tr {
+        td {
+            padding: 1%;
+            text-align: left;
+        }
+
+        &:nth-child(even) {
+            background: @lite-grey;
+        }
+    }
+    
+}
+
 .wrapper{
     margin: 0 0 10% 0;
 
