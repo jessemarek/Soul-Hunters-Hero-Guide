@@ -719,7 +719,6 @@ header .filter-btns .filter-form input {
   }
 }
 .guide-section {
-  margin: 0 0 10% 0;
   padding: 5rem 0 0 0;
 }
 @media (min-width: 1000px) {
@@ -834,7 +833,7 @@ header .filter-btns .filter-form input {
 @media (min-width: 1000px) {
   .intro-table .forge-type-table table tr td:nth-child(2),
   .intro-table .forge-type-table table tr td:nth-child(3) {
-    padding-right: 10%;
+    padding-right: 8%;
   }
 }
 .intro-table .forge-type-table table tr td:nth-child(4) {
@@ -900,6 +899,51 @@ header .filter-btns .filter-form input {
   text-align: center;
   font-size: 1.2rem;
   font-style: italic;
+}
+@media (min-width: 1000px) {
+  .runestone-crafting-cost,
+  .runestone-dissolve-refund,
+  .runestone-polish-cost,
+  .runestone-equip-stars {
+    width: 35%;
+    margin: 5% auto;
+  }
+}
+.runestone-crafting-cost h5,
+.runestone-dissolve-refund h5,
+.runestone-polish-cost h5,
+.runestone-equip-stars h5 {
+  border-bottom: 1px solid #101010;
+  text-align: center;
+}
+.stat-table-box {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: initial;
+  margin: 5% auto 0;
+}
+@media (min-width: 1000px) {
+  .stat-table-box {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+.stat-table-box .runestone-stat-table {
+  width: 95%;
+  margin: 5% auto;
+}
+.stat-table-box .runestone-stat-table table tr td:nth-child(2),
+.stat-table-box .runestone-stat-table table tr td:nth-child(3),
+.stat-table-box .runestone-stat-table table tr td:nth-child(4) {
+  text-align: right;
+  padding-right: 6%;
+}
+@media (min-width: 1000px) {
+  .stat-table-box .runestone-stat-table {
+    width: 30%;
+    margin: 0;
+  }
 }
 /********************** Credits Page Styles ************************/
 .credits-page {
