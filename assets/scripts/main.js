@@ -210,29 +210,46 @@ const searchInput = document.getElementById("searchInput");
 const activeBtn = document.getElementsByClassName("active-btn");
 
 //Listeners for each filter button
-const allBtn = document.getElementById("filter-all").addEventListener("click", function() {
-    activeBtn[0].classList.remove("active-btn");
-    this.classList.add("active-btn");
-    filterAll();
-});
+const allBtn = document.getElementById("filter-all")
 
-const frontBtn = document.getElementById("filter-front").addEventListener("click", function() {
-    activeBtn[0].classList.remove("active-btn");
-    this.classList.add("active-btn");
-    filterFront();
-});
+if(allBtn) {
+    allBtn.addEventListener("click", function() {
+        activeBtn[0].classList.remove("active-btn");
+        this.classList.add("active-btn");
+        filterAll();
+    });
+}
 
-const midBtn = document.getElementById("filter-mid").addEventListener("click", function() {
-    activeBtn[0].classList.remove("active-btn");
-   this.classList.add("active-btn");
-    filterMid();
-});
 
-const backBtn = document.getElementById("filter-back").addEventListener("click", function() {
-    activeBtn[0].classList.remove("active-btn");
-    this.classList.add("active-btn");
-    filterBack();
-});
+const frontBtn = document.getElementById("filter-front")
+
+if(frontBtn) {
+    frontBtn.addEventListener("click", function() {
+        activeBtn[0].classList.remove("active-btn");
+        this.classList.add("active-btn");
+        filterFront();
+    });
+}
+
+const midBtn = document.getElementById("filter-mid")
+
+if(midBtn) {
+    midBtn.addEventListener("click", function() {
+        activeBtn[0].classList.remove("active-btn");
+       this.classList.add("active-btn");
+        filterMid();
+    });
+}
+
+const backBtn = document.getElementById("filter-back");
+    
+if(backBtn) {
+    backBtn.addEventListener("click", function() {
+        activeBtn[0].classList.remove("active-btn");
+        this.classList.add("active-btn");
+        filterBack();
+    });
+}
 
 //Functions
 
