@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soul Hunters Hero Guide</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="assets/images/icons/equipment/lost-epic.png">
+    <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="menubar"></div>
+        <div class="menubar shadowbox"></div>
+
+        <div id="mobile-nav-btn" class="mobile-menu-btn">
+            <div id="bar-one" class="menu-bar"></div>
+            <div id="bar-two" class="menu-bar"></div>
+            <div id="bar-three" class="menu-bar"></div>
+        </div>
+
+        <div id="settings-btn" class="mobile-menu-btn">
+            <img src="assets/images/icons/cog-icon.png" alt="Button Icon resembling a Cog">
+            <img src="assets/images/icons/x-icon.png" alt="Button Icon resembling an X">
+        </div>
+
+        <ul class="nav-links">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li  class="nav-dropdown" onclick="">
+                <p>Heroes <span class="down-arrow">+</span></p>
+                <ul class="sub-links">
+                    <li><a href="guides/heroes.html">Heroes</a></li>
+                    <li><a href="guides/awakenings.html">Awakenings</a></li>
+                    <li><a href="guides/skins.html">Skins</a></li>
+                </ul>
+            </li>
+            <li  class="nav-dropdown" onclick="">
+                <p>The Forge <span class="down-arrow">+</span></p>
+                <ul class="sub-links">
+                    <li><a href="guides/soulstones.html">Soulstones</a></li>
+                    <li><a href="guides/forge.html">Forge</a></li>
+                    <li><a href="guides/runestones.html">Runestones</a></li>
+                </ul>
+            </li>
+            <li  class="nav-dropdown" onclick="">
+                <p>Heroes Village <span class="down-arrow">+</span></p>
+                <ul class="sub-links">
+                    <li><a href="guides/furnace.html">Furnace</a></li>
+                    <li><a href="guides/academy.html">Academy</a></li>
+                    <li><a href="guides/workshop.html">Workshop</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="credits.html">Credits</a>
+            </li>
+        </ul>
+
+        <ul class="settings-menu">
+            <h4>Settings</h4>
+            <li>
+                <p>Dark Mode</p>
+            </li>
+            <li>
+                <label class="slider-switch"><input id="darkMode" class="settingsCheckbox" name="dark mode toggle" type="checkbox"><span></span></label>
+            </li>
+            <li>
+                <p>Awakening Spoilers</p>
+            </li>
+            <li>
+                <label class="slider-switch"><input id="spoilerMode" class="settingsCheckbox" name="awakening spoiler toggle" type="checkbox" checked><span></span></label>
+            </li>
+        </ul>
+    </nav>
+
+    <header class="logo">
+        <img src="assets/images/sh-logo.png" alt="Soul Hunters logo image"/>
+    </header>
+
+    <div class="front-page wrapper">
+    
+        <section class="new-heroes">
+            <h4>New Heroes</h4>
+    
+            <ul>
+                <li class="hero-card">
+                    <a href="guides/heroes/mog.html#hero-info"><img src="assets/images/hero-cards/mog.jpg" alt="Hero artwork card for Mog. Link to this hero's guide"/></a><p class="card-title">Mog</p>
+                </li>
+                
+                <li class="hero-card">
+                    <a href="guides/heroes/morfir.html#hero-info"><img src="assets/images/hero-cards/morfir.jpg"  alt="Hero artwork card for Morfir. Link to this hero's guide"/></a><p class="card-title">Morfir</p>
+                </li>
+                
+                <li class="hero-card">
+                    <a href="guides/heroes/kasar.html#hero-info"><img src="assets/images/hero-cards/kasar.jpg"  alt="Hero artwork card for Kasar. Link to this hero's guide"/></a><p class="card-title">Kasar</p>
+                </li>
+            </ul>
+    
+            <div class="date-updated">
+                <p>*Updated: 22 October 2017<p>
+            </div>
+    
+        </section>
+    
+        <section class="new-awakenings">
+                <h4>New Awakenings</h4>
+    
+            <ul>
+                <li class="hero-card spoiler-card">
+                    <div class="card-back">
+                        <img src="assets/images/awakenings-card.png" alt="Awakening Artwork Spoiler Card"/><p class="card-title cardback-title">Alice</p>
+                    </div>
+                
+                    <div class="card-face">
+                        <a href="#"><img src="assets/images/hero-cards-aw/alice-aw.jpg"  alt="Hero awakening card for Alice. Link to this hero's guide"/></a><p class="card-title">Alice</p>
+                    </div>
+                </li>
+                
+                <li class="hero-card spoiler-card">
+                    <div class="card-back">
+                        <img src="assets/images/awakenings-card.png" alt="Awakening Artwork Spoiler Card"/><p class="card-title cardback-title">Morfir</p>
+                    </div>
+                
+                    <div class="card-face">
+                        <a href="#"><img src="assets/images/hero-cards-aw/morfir-aw.jpg" alt="Hero awakening card for Morfir. Link to this hero's guide"/></a><p class="card-title">Morfir</p>
+                    </div>
+                </li>
+                
+                <li class="hero-card spoiler-card">
+                    <div class="card-back">
+                        <img src="assets/images/awakenings-card.png" alt="Awakening Artwork Spoiler Card"/><p class="card-title cardback-title">Kasar</p>
+                    </div>
+                
+                    <div class="card-face">
+                        <a href="#"><img src="assets/images/hero-cards-aw/kasar-aw.jpg" alt="Hero awakening card for Kasar. Link to this hero's guide"/></a><p class="card-title">Kasar</p>
+                    </div>
+                </li>
+            </ul>
+    
+            <div class="date-updated">
+                <p>New Feature Coming Soon...<p>
+            </div>
+    
+        </section>
+    
+        <section class="menu-box">
+    
+            <h4>Guides</h4>
+    
+            <ul>
+                <li class="hero-card">
+                    <a href="guides/heroes.html"><img src="assets/images/heroes-card.png" alt="Artwork card and link for Heroes Menu."/></a><p class="card-title cardback-title">Heroes</p>
+                </li>
+                
+                <li class="hero-card">
+                    <a href="guides/awakenings.html"><img src="assets/images/awakenings-card.png" alt="Artwork card and link for Awakenings Menu."/></a><p class="card-title cardback-title">Awakenings</p>
+                </li>
+
+                <li class="hero-card">
+                    <a href="guides/skins.html"><img src="assets/images/goblin-card.png" alt="Artwork card and link for Skins Menu."/></a><p class="card-title cardback-title">Skins</p>
+                </li>
+
+                <li class="hero-card">
+                    <a href="guides/soulstones.html"><img src="assets/images/summon-card.png" alt="Artwork card and link for Soulstones Guide."/></a><p class="card-title cardback-title">Soulstones</p>
+                </li>
+                
+                <li class="hero-card">
+                    <a href="guides/forge.html"><img src="assets/images/forge-card.png" alt="Artwork card and link for Forge Guide."/></a><p class="card-title cardback-title">Forge</p>
+                </li>
+                
+                <li class="hero-card">
+                    <a href="guides/runestones.html"><img src="assets/images/runestone-card.png" alt="Artwork card and link for Runestones Guide."/></a><p class="card-title card-title cardback-title">Runestones</p>
+                </li>
+                
+                <li class="hero-card">
+                    <a href="guides/furnace.html"><img src="assets/images/furnace-card.png" alt="Artwork card and link for Furnace Guide."/></a><p class="card-title cardback-title">Furnace</p>
+                </li>
+                
+                <li class="hero-card">
+                    <a href="guides/academy.html"><img src="assets/images/academy-card.png" alt="Artwork card and link for Academy Guide."/></a><p class="card-title cardback-title">Academy</p>
+                </li>
+                
+                <li class="hero-card">
+                    <a href="guides/workshop.html"><img src="assets/images/workshop-card.png" alt="Artwork card and link for Workshop Guide."/></a><p class="card-title cardback-title">Workshop</p>
+                </li>
+                
+            </ul>
+    
+        </section>
+    </div>
+
+    <footer>
+        <p>Copyright 2020 The Last Sentinel™ -- All Rights Reserved</p>
+    </footer>
+
+    <script src="assets/scripts/nav-menus.js"></script>
+</body>
+</html>
