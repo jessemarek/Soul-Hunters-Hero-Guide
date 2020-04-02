@@ -141,5 +141,6 @@ function setDarkMode(option) {
 
 document.addEventListener("DOMContentLoaded", () => {
     const cookie = getCookie("darkMode");
+    console.log(`Cookie darkMode: ${cookie}`);
     setDarkMode(cookie);
 });
