@@ -143,7 +143,6 @@ function setMode(mname, mvalue) {
 
         case "spoilerMode": {
             mode.checked = mvalue;
-            console.log(`spoilerMode: ${mvalue}`);
             const spoilers = document.getElementsByClassName("spoiler-card");
             
             if(mvalue){
@@ -187,7 +186,6 @@ function loadPrefs(cvalue){
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    console.log(`The Document is loaded!`);
     
     let cvalue = getCookie("userPrefs");
     
