@@ -147,12 +147,12 @@ function setMode(mname, mvalue) {
             
             if(mvalue){
                for(let i = 0; i < spoilers.length; i++){
-                   spoilers[i].classList.remove("spoiler-off");
+                   spoilers[i].classList.add("spoiler-off");
                }
             }
             else {
                 for(let i = 0; i < spoilers.length; i++){
-                    spoilers[i].classList.add("spoiler-off");
+                    spoilers[i].classList.remove("spoiler-off");
                 }
             }
         } 
