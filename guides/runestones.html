@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Soul Hunters Hero Guide - Runestones</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans&display=swap" rel="stylesheet">
+
+	<link rel="icon" href="/assets/images/icons/equipment/lost-epic.png">
+	<link rel="stylesheet" href="/assets/css/stylesheet.css">
+</head>
+<body>
+	<nav class="navbar">
+         <div class="menubar"></div>
+        <div class="menubar shadowbox"></div>
+
+        <div id="mobile-nav-btn" class="mobile-menu-btn">
+            <div id="bar-one" class="menu-bar"></div>
+            <div id="bar-two" class="menu-bar"></div>
+            <div id="bar-three" class="menu-bar"></div>
+		</div>
+		
+		<div id="bookmarks-btn" class="mobile-menu-btn">
+			<img src="/assets/images/icons/bookmark-icon.png">
+			<img src="/assets/images/icons/x-icon.png">
+        </div>
+
+        <div id="settings-btn" class="mobile-menu-btn">
+			<img src="/assets/images/icons/cog-icon.png"/>
+			<img src="/assets/images/icons/x-icon.png">
+		</div>
+
+        <ul class="nav-links">
+            <li>
+                <a href="/index.html">Home</a>
+            </li>
+            <li  class="nav-dropdown" onclick="">
+                <p>Heroes <span class="down-arrow">+</span></p>
+                <ul class="sub-links">
+                    <li><a href="/guides/heroes.html">Heroes</a></li>
+                    <li><a href="/guides/awakenings.html">Awakenings</a></li>
+                    <li><a href="/guides/skins.html">Skins</a></li>
+                </ul>
+            </li>
+            <li  class="nav-dropdown" onclick="">
+                <p>The Forge <span class="down-arrow">+</span></p>
+                <ul class="sub-links">
+                    <li><a href="/guides/soulstones.html">Soulstones</a></li>
+                    <li><a href="/guides/forge.html">Forge</a></li>
+                    <li><a href="/guides/runestones.html">Runestones</a></li>
+                </ul>
+            </li>
+            <li  class="nav-dropdown" onclick="">
+                <p>Heroes Village <span class="down-arrow">+</span></p>
+                <ul class="sub-links">
+                    <li><a href="/guides/furnace.html">Furnace</a></li>
+                    <li><a href="/guides/academy.html">Academy</a></li>
+                    <li><a href="/guides/workshop.html">Workshop</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="/credits.html">Credits</a>
+            </li>
+		</ul>
+		
+        <ul class="settings-menu">
+            <h4>Settings</h4>
+            <li>
+                <p>Dark Mode</p>
+            </li>
+            <li>
+                <label class="slider-switch"><input id="darkMode" class="settingsCheckbox" name="dark mode toggle" type="checkbox"><span></span></label>
+            </li>
+            <li>
+                <p>Awakening Spoilers</p>
+            </li>
+            <li>
+                <label class="slider-switch"><input id="spoilerMode" class="settingsCheckbox" name="awakening spoiler toggle" type="checkbox" checked><span></span></label>
+            </li>
+        </ul>
+		
+		<aside class="section-bookmarks">
+
+			<h4>Guide Bookmarks</h4>
+			
+			<div class="bookmark-list">
+				<a class="bookmark-link" href="#overview">Runestone Overview</a>
+				<a class="bookmark-link" href="#crafting">Crafting</a>
+				<a class="bookmark-link" href="#equipping">Equipping</a>
+				<a class="bookmark-link" href="#polishing">Polishing</a>
+				<a class="bookmark-link" href="#stat-tables">Stat Tables</a>
+			</div>
+		
+		</aside>
+	</nav>
+
+	<div class="runestones wrapper">
+	
+		<section id="overview" class="guide-section">										<!-- Runestone Overview Section -->
+			
+			<div class="section-header">
+				<h2>Runestone Overview</h2>
+			</div>
+	
+			<div class="intro-text">
+				<p>Runestones are a further extension of the Upgrade and Customization Features that Soul Hunters offers. Once a player has completed Chapter 16 of the Campaign, Runestones can be Crafted and Polished at The Forge. Runestones add various Bonus Stats that can be customized. There are 3 types of Runestones: <span class="red-txt"><b>Sunstones</b></span>, <span class="blu-txt"><b>Moonstones</b></span> and <span class="grn-txt"><b>Starstones</b></span>. In addition, there are also 3 different Quality Levels: <span class="blu-txt"><b>Common</b></span>, <span class="prp-txt"><b>Rare</b></span> and <span class="org-txt"><b>Precious</b></span>.</p>
+				<br>
+				<p>The Crafting and Polishing process can be thought of as a combination of Forge Bonus Stats on a Signature Item and Heroic Academy Trees that can be equipped on any Awakened Hero. <img src="/assets/images/icons/forge/gold.png" width="16" height="16" /> or <img src="/assets/images/icons/forge/diamond.png" width="16" height="16" /> can be spent for a chance at changing the Runestone Bonus, but instead of static Stat Boosts, like on a Signature Item, you will be able to choose which bonuses get applied to the Awakened Hero you want.</p>
+				<br>
+				<p>The Stat Boosts are the same types offered by the Heroic Academy and Runestone Bonuses stack in addition to those applied from the Academy Talents. Imagine combining the +21% Crit Damage from the Academy with the +22% Crit Damage from a <span class="org-txt"><b>Precious</b></span> <span class="red-txt"><b>Sunstone</b></span>! Now you can turn your Glass Cannon into a Glass Thermonuclear ICBM or further bolster your Front Line Tank's Armor and Health. Upon completing all Chapter 17 Stages with 3 Stars you will receive a reward of 3 Runestones:</p>
+	
+				<div class="runestone-triad">
+					<div class="reward-runestone">
+						<img src="/assets/images/icons/forge/precious-sunstone.png" width="60" height="60" /><br>
+						<p class="image-note"><span class="org-txt"><b>Precious</b></span> <span class="red-txt"><b>Sunstone</b></span></p>
+					</div>
+	
+					<div class="reward-runestone">
+						<img src="/assets/images/icons/forge/rare-moonstone.png" width="60" height="60" /><br>
+						<p class="image-note"><span class="prp-txt"><b>Rare</b></span> <span class="blu-txt"><b>Moonstone</b></span></p>
+					</div>
+	
+					<div class="reward-runestone">
+						<img src="/assets/images/icons/forge/common-starstone.png" width="60" height="60" /><br>
+						<p class="image-note"><span class="blu-txt"><b>Common</b></span> <span class="grn-txt"><b>Starstone</b></span></p>
+					</div>
+	
+					<p class="reward-note">Runestones awarded for 21 Stars on Chapter 17</p>
+				</div>
+	
+			</div>
+	
+		</section>
+	
+		<section id="crafting" class="guide-section">										<!-- Crafting Section -->
+			
+			<div class="section-header">
+				<h2>Crafting Runestones</h2>
+			</div>
+	
+			<div class="intro-text">
+				<p>Crafting Runestones requires special resources called Essences. Each type of Runestone requires a different type of Essence. The Essence types are: <span class="red-txt"><b>Sunlight</b></span> <img src="/assets/images/icons/forge/sunlight-essence.png" width="16" height="16" />, <span class="blu-txt"><b>Moonbeam</b></span> <img src="/assets/images/icons/forge/moonbeam-essence.png" width="16" height="16" /> and <span class="grn-txt"><b>Stardust</b></span> <img src="/assets/images/icons/forge/stardust-essence.png" width="16" height="16" />. Runestone Essences can be farmed from certain Stages in Chapter 17 and are also available via both Free and Purchase Events. Crafting a Runestone is instantaneous with no wait time and no cooldown period. <span class="org-txt"><b>Precious</b></span> Runestones also require another resource in addition to the Runestone Essence called <b>Gaia Stones</b> <img src="/assets/images/icons/forge/gaia-stone-resource.png" width="16" height="16" />. Gaia Stones can be crafted by collecting 60 Gaia Stone Fragments. Currently the fragments are only available by completing the Daily Raid Quest. Occasionally, Gaia Stones are also available via both Free and Purchase Events. When a Runestone is crafted it will be assigned a random Stat Boost which can be modified by Polishing the Runestone.</p>
+			</div>
+	
+			<div class="runestone-crafting-cost">
+				<h5>Runestone Crafting Costs</h5>
+				<table>
+					<tr>
+						<th></th>
+						<th><span class="red-txt">Sunstone</span></th>
+						<th><span class="blu-txt">Moonstone</span></th>
+						<th><span class="grn-txt">Starstone</span></th>
+					</tr>
+					<tr>
+						<td><span class="blu-txt"><b>Common</b></span></td>
+						<td>&nbsp;&nbsp;300 <img src="/assets/images/icons/forge/sunlight-essence.png" width="16" height="16" /><br>300k <img src="/assets/images/icons/forge/gold.png" width="16" height="16" /></td>
+						<td>&nbsp;&nbsp;300 <img src="/assets/images/icons/forge/moonbeam-essence.png" width="16" height="16" /><br>300k <img src="/assets/images/icons/forge/gold.png" width="16" height="16" /></td>
+						<td>&nbsp;&nbsp;300 <img src="/assets/images/icons/forge/stardust-essence.png" width="16" height="16" /><br>300k <img src="/assets/images/icons/forge/gold.png" width="16" height="16" /></td>
+					</tr>
+					<tr>
+						<td><span class="prp-txt"><b>Rare</b></span></td>
+						<td>&nbsp;&nbsp;900 <img src="/assets/images/icons/forge/sunlight-essence.png" width="16" height="16" /><br>900k <img src="/assets/images/icons/forge/gold.png" width="16" height="16" /></td>
+						<td>&nbsp;&nbsp;900 <img src="/assets/images/icons/forge/moonbeam-essence.png" width="16" height="16" /><br>900k <img src="/assets/images/icons/forge/gold.png" width="16" height="16" /></td>
+						<td>&nbsp;&nbsp;900 <img src="/assets/images/icons/forge/stardust-essence.png" width="16" height="16" /><br>900k <img src="/assets/images/icons/forge/gold.png" width="16" height="16" /></td>
+					</tr>
+					<tr>
+						<td><span class="org-txt"><b>Precious</b></span></td>
+						<td>1800 <img src="/assets/images/icons/forge/sunlight-essence.png" width="16" height="16" /><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 <img src="/assets/images/icons/forge/gaia-stone-resource.png" width="16" height="16" /></td>
+						<td>1800 <img src="/assets/images/icons/forge/moonbeam-essence.png" width="16" height="16" /><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 <img src="/assets/images/icons/forge/gaia-stone-resource.png" width="16" height="16" /></td>
+						<td>1800 <img src="/assets/images/icons/forge/stardust-essence.png" width="16" height="16" /><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 <img src="/assets/images/icons/forge/gaia-stone-resource.png" width="16" height="16" /></td>
+					</tr>
+				</table>
+			</div>
+	
+			<div class="intro-text">
+				<p>Runestones may also be dissolved into its base essence. To dissolve a Runestone it must be removed from a Hero or already in your bag. From the bag, simply tap the dissolve button and the Runestone will be permanently destroyed and you will be returned a portion of the correspoding essence. Currently, there is no way to fuse or upgrade the quality of Runestones. Due to the significantly greater Stat Boosts, it is recommended to save and craft only <span class="org-txt"><b>Precious</b></span> Runestones.</p>
+			</div>
+	
+			<div class="runestone-dissolve-refund">
+				<h5>Runestone Dissolve Refund</h5>
+				<table>
+					<tr>
+						<th></th>
+						<th><span class="red-txt">Sunstone</span></th>
+						<th><span class="blu-txt">Moonstone</span></th>
+						<th><span class="grn-txt">Starstone</span></th>
+					</tr>
+					<tr>
+						<td><span class="blu-txt"><b>Common</b></span></td>
+						<td>&nbsp;210 <img src="/assets/images/icons/forge/sunlight-essence.png" width="16" height="16" /></td>
+						<td>&nbsp;210 <img src="/assets/images/icons/forge/moonbeam-essence.png" width="16" height="16" /></td>
+						<td>&nbsp;210 <img src="/assets/images/icons/forge/stardust-essence.png" width="16" height="16" /></td>
+					</tr>
+					<tr>
+						<td><span class="prp-txt"><b>Rare</b></span></td>
+						<td>&nbsp;420 <img src="/assets/images/icons/forge/sunlight-essence.png" width="16" height="16" /></td>
+						<td>&nbsp;420 <img src="/assets/images/icons/forge/moonbeam-essence.png" width="16" height="16" /></td>
+						<td>&nbsp;420 <img src="/assets/images/icons/forge/stardust-essence.png" width="16" height="16" /></td>
+					</tr>
+					<tr>
+						<td><span class="org-txt"><b>Precious</b></span></td>
+						<td>1260 <img src="/assets/images/icons/forge/sunlight-essence.png" width="16" height="16" /></td>
+						<td>1260 <img src="/assets/images/icons/forge/moonbeam-essence.png" width="16" height="16" /></td>
+						<td>1260 <img src="/assets/images/icons/forge/stardust-essence.png" width="16" height="16" /></td>
+					</tr>
+				</table>
+			</div>
+	
+		</section>
+	
+		<section id="equipping" class="guide-section">										<!-- Equipping Section -->
+			
+			<div class="section-header">
+				<h2>Equipping Runestones</h2>
+			</div>
+	
+			<div class="intro-text">
+				<p>Runestones can only be equipped by Awakened Heroes. There is also a Star Rating requirement as well. 3 Star Heroes can equip 1 Runestone, 4 Star Heroes can equip 2 Runestones and 5 Star Heroes can equip all 3 Runestones. Each Runestone type is also assigned to the same slot and as such not only are 3 and 4 Star Heroes limited to the number of Runestones, but also the type of Runestones.</p>
+				<br>
+				<p>Runestones, unlike other equippable items, are not bound to the Hero once equipped. This means you can remove them if needed. The cost to remove is 20 <img src="/assets/images/icons/forge/diamond.png" width="16" height="16" /> per Runestone. Runestones must be removed in order to be polished. Because it takes a great amount of time to acquire the necessary components to craft Runestones, one great benefit to this feature is being able to rotate the same stone to different Heroes for Raids or Hall of Legends Bosses.</p>
+			</div>
+	
+			<div class="example-image-box">
+	
+				<div class="example-image">
+					<img src="/assets/images/icons/forge/runestone-example1.jpg" width="300" /><p class="image-note">Runestone Equip Slots</p>
+				</div>
+	
+				<div class="example-image">
+					<img src="/assets/images/icons/forge/runestone-example2.jpg" width="300" /><p class="image-note">Example: Hero with 3 <span class="org-txt"><b>Precious</b></span> Runestones equipped</p>
+				</div>
+	
+			</div>
+	
+			<div class="runestone-equip-stars">
+				<table>
+					<tr>
+						<th><img src="/assets/images/icons/hero-info/star.png" width="16" height="16" /><img src="/assets/images/icons/hero-info/star.png" width="16" height="16" /><img src="/assets/images/icons/hero-info/star.png" width="16" height="16" /></th>
+						<th><img src="/assets/images/icons/hero-info/star.png" width="16" height="16" /><img src="/assets/images/icons/hero-info/star.png" width="16" height="16" /><img src="/assets/images/icons/hero-info/star.png" width="16" height="16" /><img src="/assets/images/icons/hero-info/star.png" width="16" height="16" /></th>
+						<th><img src="/assets/images/icons/hero-info/star.png" width="16" height="16" /><img src="/assets/images/icons/hero-info/star.png" width="16" height="16" /><img src="/assets/images/icons/hero-info/star.png" width="16" height="16" /><img src="/assets/images/icons/hero-info/star.png" width="16" height="16" /><img src="/assets/images/icons/hero-info/star.png" width="16" height="16" /></th>
+					</tr>
+					<tr>
+						<td><span class="red-txt"><b>Sunstone</b></span></td>
+						<td><span class="red-txt"><b>Sunstone</b></span></td>
+						<td><span class="red-txt"><b>Sunstone</b></span></td>
+					</tr>
+					<tr>
+						<td>--</td>
+						<td><span class="blu-txt"><b>Moonstone</b></span></td>
+						<td><span class="blu-txt"><b>Moonstone</b></span></td>
+					</tr>
+					<tr>
+						<td>--</td>
+						<td>--</td>
+						<td><span class="grn-txt"><b>Starstone</b></span></td>
+					</tr>
+				</table>
+			</div>
+	
+		</section>
+	
+		<section id="polishing" class="guide-section">										<!-- Polishing Section -->
+			
+			<div class="section-header">
+				<h2>Polishing Runestones</h2>
+			</div>
+	
+			<div class="intro-text">
+				<p>Polishing allows you to change the Stat Bonus of the Runestone. This process is similar to using The Forge to upgrade a Hero's Signature Item. When you polish a Runestone you can choose to spend either <img src="/assets/images/icons/forge/gold.png" width="16" height="16" /> or <img src="/assets/images/icons/forge/diamond.png" width="16" height="16" /> for a new random Stat Bonus. A different Stat Boost is not guarenteed, however, and as such Polishing can be quite costly. Spending <img src="/assets/images/icons/forge/diamond.png" width="16" height="16" /> has a better chance of receiving a rarer Stat Boost. Once you tap the polish button there is no going back. The price will be deducted and the new Stat Bonus(if one is rolled) will be applied.</p>
+			</div>
+	
+			<div class="runestone-polish-cost">
+				<table>
+					<tr>
+						<th>Polishing Cost</th>
+						<th><img src="/assets/images/icons/forge/gold.png" width="24" height="24" /></th>
+						<th><img src="/assets/images/icons/forge/diamond.png" width="24" height="24" /></th>
+					</tr>
+					<tr>
+						<td><span class="blu-txt"><b>Common</b></span></td>
+						<td>300k</td>
+						<td>20</td>
+					</tr>
+					<tr>
+						<td><span class="prp-txt"><b>Rare</b></span></td>
+						<td>600k</td>
+						<td>25</td>
+					</tr>
+					<tr>
+						<td><span class="org-txt"><b>Precious</b></span></td>
+						<td>900k</td>
+						<td>30</td>
+					</tr>
+				</table>
+			</div>
+	
+			<div class="intro-text">
+				<p>Multi-Polish is similar to the Auto-Forge. You can select several parameters and execute a series of polishes auto-magically! The options that can be decided upon for Multi-Polish are: 10, 20 or 50 polishes; <img src="/assets/images/icons/forge/gold.png" width="16" height="16" /> or <img src="/assets/images/icons/forge/diamond.png" width="16" height="16" /> cost; and also an optional stopping condition. If no condition is selected or the condition is not met before all the polishes are used, a list of all the unique Stat Boosts that were rolled will be displayed. The Stat Boost you want can be selected and applied or discarded. If the condition is met before all the polishes are used, however, only the cost per polish performed will be deducted. Polishing a Runestone can be quite costly, but Multi-Polish offers more benefits than regular polishing.</p>
+			</div>
+	
+			<div class="example-image-box">
+	
+				<div class="example-image">
+					<img src="/assets/images/icons/forge/runestone-example3.jpg" width="300" /><p class="image-note">Select a desired Stat Bonus</p>
+				</div>
+	
+				<div class="example-image">
+					<img src="/assets/images/icons/forge/runestone-example4.jpg" width="300" /><p class="image-note">Example: Multi-Polish stops if condition is met</p>
+				</div>
+	
+			</div>
+	
+		</section>
+	
+		<section id="stat-tables" class="guide-section">										<!-- Stat Tables Section -->
+			
+			<div class="section-header">
+				<h2>Stat Tables</h2>
+			</div>
+	
+			<div class="intro-text">
+				<p>Each type of Runestone has a specific range of Stat Boosts available. All 3 types share the 3 Basic Stat Boosts of Max Health, Physical Attack and Magic Attack. These are the only 3 Stats that can be increased up to 3 times by equipping more than one Runestone, however, the specific Stat Boosts available to each Runestone type will be more useful. Stat Boosts have rarities as noted by the color of the values in the tables. <span class="grn-txt"><b>Common</b></span>, <span class="blu-txt"><b>Rare</b></span> and <span class="prp-txt"><b>Very Rare</b></span>. The more rare the Stat Boost, the less likely each Polish will provide that type of Boost.</p>
+			</div>
+	
+			<div class="stat-table-box">
+
+				<div id="sunstone-stats" class="runestone-stat-table">
+					<table>
+						<tr>
+							<th><span class="red-txt">Sunstone</span> Stats</th>
+							<th><img src="/assets/images/icons/forge/common-sunstone.png" width="48" height="48" /></th>
+							<th><img src="/assets/images/icons/forge/rare-sunstone.png" width="48" height="48" /></th>
+							<th><img src="/assets/images/icons/forge/precious-sunstone.png" width="48" height="48" /></th>
+						</tr>
+						<tr>
+							<td>Max Health</td>
+							<td><span class="grn-txt">600</span></td>
+							<td><span class="grn-txt">1500</span></td>
+							<td><span class="blu-txt">3000</span></td>
+						</tr>
+						<tr>
+							<td>Physical Attack</td>
+							<td><span class="grn-txt">50</span></td>
+							<td><span class="grn-txt">120</span></td>
+							<td><span class="blu-txt">260</span></td>
+						</tr>
+						<tr>
+							<td>Magic Attack</td>
+							<td><span class="grn-txt">50</span></td>
+							<td><span class="grn-txt">120</span></td>
+							<td><span class="blu-txt">260</span></td>
+						</tr>
+						<tr>
+							<td>Lifesteal</td>
+							<td><span class="blu-txt">6</span></td>
+							<td><span class="blu-txt">12</span></td>
+							<td><span class="prp-txt">22</span></td>
+						</tr>
+						<tr>
+							<td>Physical Crit Damage</td>
+							<td><span class="blu-txt">8%</span></td>
+							<td><span class="blu-txt">16%</span></td>
+							<td><span class="prp-txt">22%</span></td>
+						</tr>
+						<tr>
+							<td>Magic Crit Damage</td>
+							<td><span class="blu-txt">8%</span></td>
+							<td><span class="blu-txt">16%</span></td>
+							<td><span class="prp-txt">22%</span></td>
+						</tr>
+						<tr>
+							<td>DoT Bonus</td>
+							<td><span class="blu-txt">4%</span></td>
+							<td><span class="blu-txt">8%</span></td>
+							<td><span class="prp-txt">14%</span></td>
+						</tr>
+						<tr>
+							<td>Physical Toughness</td>
+							<td><span class="blu-txt">5%</span></td>
+							<td><span class="blu-txt">9%</span></td>
+							<td><span class="prp-txt">15%</span></td>
+						</tr>
+						<tr>
+							<td>Magic Toughness</td>
+							<td><span class="blu-txt">5%</span></td>
+							<td><span class="blu-txt">9%</span></td>
+							<td><span class="prp-txt">15%</span></td>
+						</tr>
+					</table>
+				</div>
+				
+				<div id="moonstone-stats" class="runestone-stat-table">
+					<table>
+						<tr>
+							<th><span class="blu-txt">Moonstone</span> Stats</th>
+							<th><img src="/assets/images/icons/forge/common-moonstone.png" width="48" height="48" /></th>
+							<th><img src="/assets/images/icons/forge/rare-moonstone.png" width="48" height="48" /></th>
+							<th><img src="/assets/images/icons/forge/precious-moonstone.png" width="48" height="48" /></th>
+						</tr>
+						<tr>
+							<td>Max Health</td>
+							<td><span class="grn-txt">600</span></td>
+							<td><span class="grn-txt">1500</span></td>
+							<td><span class="blu-txt">3000</span></td>
+						</tr>
+						<tr>
+							<td>Physical Attack</td>
+							<td><span class="grn-txt">50</span></td>
+							<td><span class="grn-txt">120</span></td>
+							<td><span class="blu-txt">260</span></td>
+						</tr>
+						<tr>
+							<td>Magic Attack</td>
+							<td><span class="grn-txt">50</span></td>
+							<td><span class="grn-txt">120</span></td>
+							<td><span class="blu-txt">260</span></td>
+						</tr>
+						<tr>
+							<td>Physical Pierce</td>
+							<td><span class="blu-txt">65</span></td>
+							<td><span class="blu-txt">110</span></td>
+							<td><span class="prp-txt">200</span></td>
+						</tr>
+						<tr>
+							<td>Magic Pierce</td>
+							<td><span class="blu-txt">65</span></td>
+							<td><span class="blu-txt">110</span></td>
+							<td><span class="prp-txt">200</span></td>
+						</tr>
+						<tr>
+							<td>Physical Resistance</td>
+							<td><span class="blu-txt">2%</span></td>
+							<td><span class="blu-txt">4.5%</span></td>
+							<td><span class="prp-txt">7.5%</span></td>
+						</tr>
+						<tr>
+							<td>Magic Resistance</td>
+							<td><span class="blu-txt">2%</span></td>
+							<td><span class="blu-txt">4.5%</span></td>
+							<td><span class="prp-txt">7.5%</span></td>
+						</tr>
+						<tr>
+							<td>Silence Resistance</td>
+							<td><span class="blu-txt">12%</span></td>
+							<td><span class="blu-txt">18%</span></td>
+							<td><span class="prp-txt">28%</span></td>
+						</tr>
+						<tr>
+							<td>Time Under Control</td>
+							<td><span class="blu-txt">-8%</span></td>
+							<td><span class="blu-txt">-12%</span></td>
+							<td><span class="prp-txt">-18%</span></td>
+						</tr>
+						<tr>
+							<td>Energy Bonus</td>
+							<td><span class="blu-txt">4%</span></td>
+							<td><span class="blu-txt">6%</span></td>
+							<td><span class="prp-txt">10%</span></td>
+						</tr>
+						<tr>
+							<td>Energy Efficiency</td>
+							<td><span class="blu-txt">4%</span></td>
+							<td><span class="blu-txt">6%</span></td>
+							<td><span class="prp-txt">10%</span></td>
+						</tr>
+					</table>
+				</div>
+				
+				<div id="starstone-stats" class="runestone-stat-table">
+					<table>
+						<tr>
+							<th><span class="grn-txt">Starstone</span> Stats</th>
+							<th><img src="/assets/images/icons/forge/common-starstone.png" width="48" height="48" /></th>
+							<th><img src="/assets/images/icons/forge/rare-starstone.png" width="48" height="48" /></th>
+							<th><img src="/assets/images/icons/forge/precious-starstone.png" width="48" height="48" /></th>
+						</tr>
+						<tr>
+							<td>Max Health</td>
+							<td><span class="grn-txt">600</span></td>
+							<td><span class="grn-txt">1500</span></td>
+							<td><span class="blu-txt">3000</span></td>
+						</tr>
+						<tr>
+							<td>Physical Attack</td>
+							<td><span class="grn-txt">50</span></td>
+							<td><span class="grn-txt">120</span></td>
+							<td><span class="blu-txt">260</span></td>
+						</tr>
+						<tr>
+							<td>Magic Attack</td>
+							<td><span class="grn-txt">50</span></td>
+							<td><span class="grn-txt">120</span></td>
+							<td><span class="blu-txt">260</span></td>
+						</tr>
+						<tr>
+							<td>Physical Crit Rate</td>
+							<td><span class="grn-txt">60</span></td>
+							<td><span class="blu-txt">100</span></td>
+							<td><span class="prp-txt">160</span></td>
+						</tr>
+						<tr>
+							<td>Magic Crit Rate</td>
+							<td><span class="grn-txt">60</span></td>
+							<td><span class="blu-txt">100</span></td>
+							<td><span class="prp-txt">160</span></td>
+						</tr>
+						<tr>
+							<td>Accuracy (Hit Bonus)</td>
+							<td><span class="grn-txt">25</span></td>
+							<td><span class="blu-txt">50</span></td>
+							<td><span class="prp-txt">100</span></td>
+						</tr>
+						<tr>
+							<td>Physical Armor</td>
+							<td><span class="grn-txt">65</span></td>
+							<td><span class="blu-txt">110</span></td>
+							<td><span class="prp-txt">200</span></td>
+						</tr>
+						<tr>
+							<td>Magic Armor</td>
+							<td><span class="grn-txt">65</span></td>
+							<td><span class="blu-txt">110</span></td>
+							<td><span class="prp-txt">200</span></td>
+						</tr>
+						<tr>
+							<td>Dodge Rating</td>
+							<td><span class="grn-txt">25</span></td>
+							<td><span class="blu-txt">50</span></td>
+							<td><span class="prp-txt">100</span></td>
+						</tr>
+						<tr>
+							<td>Healing</td>
+							<td><span class="grn-txt">4</span></td>
+							<td><span class="blu-txt">8</span></td>
+							<td><span class="prp-txt">14</span></td>
+						</tr>
+					</table>
+				</div>
+			</div class="stat-table-box">
+	
+		</section>
+	
+	</div>
+
+	<footer>
+        <p>Copyright 2020 The Last Sentinel™ -- All Rights Reserved</p>
+	</footer>
+	
+	<script src="/assets/scripts/nav-menus.js"></script>
+</body>
+</html>
