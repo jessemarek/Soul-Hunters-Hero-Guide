@@ -96,7 +96,7 @@ function setCookie(cname, cvalue) {
     const expires = `expires=${date.toUTCString()};`;
 
     //Sets the cookie value and expiration
-    document.cookie = `${cname}=${cvalue}; ${expires}`;
+    document.cookie = `${cname}=${cvalue}; ${expires}; path=/`;
 }
 
 //Gets the cookies for the site if any exist
