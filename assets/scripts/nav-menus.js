@@ -175,7 +175,7 @@ function loadPrefs(cvalue){
 document.addEventListener("DOMContentLoaded", () => {
     console.log(`The Document is loaded!`);
     
-    const cvalue = getCookie("userPrefs");
+    let cvalue = getCookie("userPrefs");
     
     //If cookie exists load it else create a new cookie with default prefs
     if(cvalue != ""){
