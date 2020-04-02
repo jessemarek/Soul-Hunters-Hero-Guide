@@ -82,6 +82,13 @@ settingsBtn.addEventListener("click", () => {
 });
 
 
+//Settings Toggle Switch Listeners
+for(let i = 0; i < settingsCheckbox.length; i++) {
+    settingsCheckbox[i].addEventListener("change", function() {
+        console.log(`The value of ${this.id} has changed to ${this.checked}`);
+    });
+}
+
 //Dark Mode On/Off
 darkMode.addEventListener("change", function() {
     if(this.checked) {
@@ -145,6 +152,6 @@ function setDarkMode(option) {
 document.addEventListener("DOMContentLoaded", () => {
     const cookie = getCookie("darkMode");
     if(cookie === true) {
-        darkMode.checked = true;
+       setDarkMode(cookie);
     }
 });
