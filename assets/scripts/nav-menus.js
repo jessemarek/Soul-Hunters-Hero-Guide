@@ -136,3 +136,8 @@ function setDarkMode(option) {
         setCookie("darkMode", false);
     }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const cookie = getCookie("darkMode");
+    setDarkMode(cookie);
+});
