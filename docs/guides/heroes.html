@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Soul Hunters Hero Guide - Heroes</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans&display=swap" rel="stylesheet">
+
+	<link rel="icon" href="/assets/images/icons/equipment/lost-epic.png">
+	<link rel="stylesheet" href="/assets/css/stylesheet.css">
+</head>
+
+<body>
+    <nav class="navbar">
+         <div class="menubar"></div>
+        <div class="menubar shadowbox"></div>
+
+        <div id="mobile-nav-btn" class="mobile-menu-btn">
+            <div id="bar-one" class="menu-bar"></div>
+            <div id="bar-two" class="menu-bar"></div>
+            <div id="bar-three" class="menu-bar"></div>
+        </div>
+
+        <div id="settings-btn" class="mobile-menu-btn">
+            <img src="/assets/images/icons/cog-icon.png"/>
+            <img src="/assets/images/icons/x-icon.png">
+        </div>
+
+        <ul class="nav-links">
+            <li>
+                <a href="/index.html">Home</a>
+            </li>
+            <li  class="nav-dropdown" onclick="">
+                <p>Heroes <span class="down-arrow">+</span></p>
+                <ul class="sub-links">
+                    <li><a href="/guides/heroes.html">Heroes</a></li>
+                    <li><a href="/guides/awakenings.html">Awakenings</a></li>
+                    <li><a href="/guides/skins.html">Skins</a></li>
+                </ul>
+            </li>
+            <li  class="nav-dropdown" onclick="">
+                <p>The Forge <span class="down-arrow">+</span></p>
+                <ul class="sub-links">
+                    <li><a href="/guides/soulstones.html">Soulstones</a></li>
+                    <li><a href="/guides/forge.html">Forge</a></li>
+                    <li><a href="/guides/runestones.html">Runestones</a></li>
+                </ul>
+            </li>
+            <li  class="nav-dropdown" onclick="">
+                <p>Heroes Village <span class="down-arrow">+</span></p>
+                <ul class="sub-links">
+                    <li><a href="/guides/furnace.html">Furnace</a></li>
+                    <li><a href="/guides/academy.html">Academy</a></li>
+                    <li><a href="/guides/workshop.html">Workshop</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="/credits.html">Credits</a>
+            </li>
+		</ul>
+		
+        <ul class="settings-menu">
+            <h4>Settings</h4>
+            <li>
+                <p>Dark Mode</p>
+            </li>
+            <li>
+                <label class="slider-switch"><input id="darkMode" class="settingsCheckbox" name="dark mode toggle" type="checkbox"><span></span></label>
+            </li>
+            <li>
+                <p>Awakening Spoilers</p>
+            </li>
+            <li>
+                <label class="slider-switch"><input id="spoilerMode" class="settingsCheckbox" name="awakening spoiler toggle" type="checkbox" checked><span></span></label>
+            </li>
+        </ul>
+    </nav>
+	
+	<header>
+		<h3>Hero Guides</h3>
+
+		<h5>Select a Hero</h5>
+
+		<div id="hero-filters" class="filter-btns">
+			<button id="filter-all" class="filter-btn active-btn" type="button">All</button>
+
+			<button id="filter-front" class="filter-btn" type="button">Front</button>
+
+			<button id="filter-mid" class="filter-btn" type="button">Mid</button>
+
+			<button id="filter-back" class="filter-btn" type="button">Back</button>
+
+			<form class="filter-form" action="#">
+				<input id="searchInput" class="filter-input" type="text" placeholder="Enter Hero Name" onkeyup="searchByName()">
+			</form>
+		</div>
+
+	</header>
+
+	<section class="hero-page">
+
+		<ul id="hero-list" class="hero-menus">
+
+			<li class="hero-card front-hero">
+				<a href="heroes/adeline.html"><img src="/assets/images/hero-cards/adeline.jpg" /></a>
+				<p class="card-title">Adeline</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/alana.html"><img src="/assets/images/hero-cards/alana.jpg" /></a>
+				<p class="card-title">Alana</p>
+			</li>
+
+			<li class="hero-card back-hero">
+				<a href="heroes/alastair.html"><img src="/assets/images/hero-cards/alastair.jpg" /></a>
+				<p class="card-title">Alastair</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/alice.html"><img src="/assets/images/hero-cards/alice.jpg" /></a>
+				<p class="card-title">Alice</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/aqua.html"><img src="/assets/images/hero-cards/aqua.jpg" /></a>
+				<p class="card-title">Aqua</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/arachna.html"><img src="/assets/images/hero-cards/arachna.jpg" /></a>
+				<p class="card-title">Arachna</p>
+			</li>
+
+			<li class="hero-card back-hero">
+				<a href="heroes/arcturus.html"><img src="/assets/images/hero-cards/arcturus.jpg" /></a>
+				<p class="card-title">Arcturus</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/ariel.html"><img src="/assets/images/hero-cards/ariel.jpg" /></a>
+				<p class="card-title">Ariel</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/avior.html"><img src="/assets/images/hero-cards/avior.jpg" /></a>
+				<p class="card-title">Avior</p>
+			</li>
+
+			<li class="hero-card back-hero">
+				<a href="heroes/baltor.html"><img src="/assets/images/hero-cards/baltor.jpg" /></a>
+				<p class="card-title">Baltor</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/bloodspear.html"><img src="/assets/images/hero-cards/bloodspear.jpg" /></a>
+				<p class="card-title">Bloodspear</p>
+			</li>
+
+			<li class="hero-card back-hero">
+				<a href="heroes/boomer.html"><img src="/assets/images/hero-cards/boomer.jpg" /></a>
+				<p class="card-title">Boomer</p>
+			</li>
+
+			<li class="hero-card back-hero">
+				<a href="heroes/boreas.html"><img src="/assets/images/hero-cards/boreas.jpg" /></a>
+				<p class="card-title">Boreas</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/cara.html"><img src="/assets/images/hero-cards/cara.jpg" /></a>
+				<p class="card-title">Cara</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/chrona.html"><img src="/assets/images/hero-cards/chrona.jpg" /></a>
+				<p class="card-title">Chrona</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/crusher.html"><img src="/assets/images/hero-cards/crusher.jpg" /></a>
+				<p class="card-title">Crusher</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/cyana.html"><img src="/assets/images/hero-cards/cyana.jpg" /></a>
+				<p class="card-title">Cyana</p>
+			</li>
+
+			<li class="hero-card back-hero">
+				<a href="heroes/dalton.html"><img src="/assets/images/hero-cards/dalton.jpg" /></a>
+				<p class="card-title">Dalton</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/daphne.html"><img src="/assets/images/hero-cards/daphne.jpg" /></a>
+				<p class="card-title">Daphne</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/desmond.html"><img src="/assets/images/hero-cards/desmond.jpg" /></a>
+				<p class="card-title">Desmond</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/dina.html"><img src="/assets/images/hero-cards/dina.jpg" /></a>
+				<p class="card-title">Dina</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/dokras.html"><img src="/assets/images/hero-cards/dokras.jpg" /></a>
+				<p class="card-title">Dokras</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/drago.html"><img src="/assets/images/hero-cards/drago.jpg" /></a>
+				<p class="card-title">Drago</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/driller.html"><img src="/assets/images/hero-cards/driller.jpg" /></a>
+				<p class="card-title">Driller</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/dr-zeno.html"><img src="/assets/images/hero-cards/dr-zeno.jpg" /></a>
+				<p class="card-title">Dr Zeno</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/elric.html"><img src="/assets/images/hero-cards/elric.jpg" /></a>
+				<p class="card-title">Elric</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/ember.html"><img src="/assets/images/hero-cards/ember.jpg" /></a>
+				<p class="card-title">Ember</p>
+			</li>
+
+			<li class="hero-card back-hero">
+				<a href="heroes/embrael.html"><img src="/assets/images/hero-cards/embrael.jpg" /></a>
+				<p class="card-title">Embrael</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/enrique.html"><img src="/assets/images/hero-cards/enrique.jpg" /></a>
+				<p class="card-title">Enrique</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/esabel.html"><img src="/assets/images/hero-cards/esabel.jpg" /></a>
+				<p class="card-title">Esabel</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/ethera.html"><img src="/assets/images/hero-cards/ethera.jpg" /></a>
+				<p class="card-title">Ethera</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/ezio.html"><img src="/assets/images/hero-cards/ezio.jpg" /></a>
+				<p class="card-title">Ezio</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/firehawk.html"><img src="/assets/images/hero-cards/firehawk.jpg" /></a>
+				<p class="card-title">Firehawk</p>
+			</li>
+
+			<li class="hero-card back-hero">
+				<a href="heroes/flora.html"><img src="/assets/images/hero-cards/flora.jpg" /></a>
+				<p class="card-title">Flora</p>
+			</li>
+
+			<li class="hero-card back-hero">
+				<a href="heroes/gale.html"><img src="/assets/images/hero-cards/gale.jpg" /></a>
+				<p class="card-title">Gale</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/garrick.html"><img src="/assets/images/hero-cards/garrick.jpg" /></a>
+				<p class="card-title">Garrick</p>
+			</li>
+
+			<li class="hero-card back-hero">
+				<a href="heroes/gizmo.html"><img src="/assets/images/hero-cards/gizmo.jpg" /></a>
+				<p class="card-title">Gizmo</p>
+			</li>
+
+			<li class="hero-card back-hero">
+				<a href="heroes/goblin-squad.html"><img src="/assets/images/hero-cards/goblin-squad.jpg" /></a>
+				<p class="card-title">Goblin Squad</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/goram.html"><img src="/assets/images/hero-cards/goram.jpg" /></a>
+				<p class="card-title">Goram</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/gus.html"><img src="/assets/images/hero-cards/gus.jpg" /></a>
+				<p class="card-title">Gus</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/hanzo.html"><img src="/assets/images/hero-cards/hanzo.jpg" /></a>
+				<p class="card-title">Hanzo</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/havoc.html"><img src="/assets/images/hero-cards/havoc.jpg" /></a>
+				<p class="card-title">Havoc</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/hurok.html"><img src="/assets/images/hero-cards/hurok.jpg" /></a>
+				<p class="card-title">Hurok</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/jasmine.html"><img src="/assets/images/hero-cards/jasmine.jpg" /></a>
+				<p class="card-title">Jasmine</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/jasper.html"><img src="/assets/images/hero-cards/jasper.jpg" /></a>
+				<p class="card-title">Jasper</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/kaneq.html"><img src="/assets/images/hero-cards/kaneq.jpg" /></a>
+				<p class="card-title">Kaneq</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/kasar.html"><img src="/assets/images/hero-cards/kasar.jpg" /></a>
+				<p class="card-title">Kasar</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/killjoy.html"><img src="/assets/images/hero-cards/killjoy.jpg" /></a>
+				<p class="card-title">Killjoy</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/kong.html"><img src="/assets/images/hero-cards/kong.jpg" /></a>
+				<p class="card-title">Kong</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/konrad.html"><img src="/assets/images/hero-cards/konrad.jpg" /></a>
+				<p class="card-title">Konrad</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/lars.html"><img src="/assets/images/hero-cards/lars.jpg" /></a>
+				<p class="card-title">Lars</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/leah.html"><img src="/assets/images/hero-cards/leah.jpg" /></a>
+				<p class="card-title">Leah</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/leon.html"><img src="/assets/images/hero-cards/leon.jpg" /></a>
+				<p class="card-title">Leon</p>
+			</li>
+
+			<li class="hero-card back-hero">
+				<a href="heroes/ling-ling.html"><img src="/assets/images/hero-cards/ling-ling.jpg" /></a>
+				<p class="card-title">Ling Ling</p>
+			</li>
+
+			<li class="hero-card back-hero">
+				<a href="heroes/li-twins.html"><img src="/assets/images/hero-cards/li-twins.jpg" /></a>
+				<p class="card-title">Li Twins</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/lucius.html"><img src="/assets/images/hero-cards/lucius.jpg" /></a>
+				<p class="card-title">Lucius</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/lumos.html"><img src="/assets/images/hero-cards/lumos.jpg" /></a>
+				<p class="card-title">Lumos</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/magdor.html"><img src="/assets/images/hero-cards/magdor.jpg" /></a>
+				<p class="card-title">Magdor</p>
+			</li>
+
+			<li class="hero-card back-hero">
+				<a href="heroes/magnus.html"><img src="/assets/images/hero-cards/magnus.jpg" /></a>
+				<p class="card-title">Magnus</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/malrath.html"><img src="/assets/images/hero-cards/malrath.jpg" /></a>
+				<p class="card-title">Malrath</p>
+			</li>
+
+			<li class="hero-card back-hero">
+				<a href="heroes/mariana.html"><img src="/assets/images/hero-cards/mariana.jpg" /></a>
+				<p class="card-title">Mariana</p>
+			</li>
+
+			<li class="hero-card back-hero">
+				<a href="heroes/mazir.html"><img src="/assets/images/hero-cards/mazir.jpg" /></a>
+				<p class="card-title">Mazir</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/mirielle.html"><img src="/assets/images/hero-cards/mirielle.jpg" /></a>
+				<p class="card-title">Mirielle</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/mog.html"><img src="/assets/images/hero-cards/mog.jpg" /></a>
+				<p class="card-title">Mog</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/morfir.html"><img src="/assets/images/hero-cards/morfir.jpg" /></a>
+				<p class="card-title">Morfir</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/mortus.html"><img src="/assets/images/hero-cards/mortus.jpg" /></a>
+				<p class="card-title">Mortus</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/musashi.html"><img src="/assets/images/hero-cards/musashi.jpg" /></a>
+				<p class="card-title">Musashi</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/namtar.html"><img src="/assets/images/hero-cards/namtar.jpg" /></a>
+				<p class="card-title">Namtar</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/nightshade.html"><img src="/assets/images/hero-cards/nightshade.jpg" /></a>
+				<p class="card-title">Nightshade</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/nilya.html"><img src="/assets/images/hero-cards/nilya.jpg" /></a>
+				<p class="card-title">Nilya</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/octo.html"><img src="/assets/images/hero-cards/octo.jpg" /></a>
+				<p class="card-title">Octo</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/orkon.html"><img src="/assets/images/hero-cards/orkon.jpg" /></a>
+				<p class="card-title">Orkon</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/osiris.html"><img src="/assets/images/hero-cards/osiris.jpg" /></a>
+				<p class="card-title">Osiris</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/petros.html"><img src="/assets/images/hero-cards/petros.jpg" /></a>
+				<p class="card-title">Petros</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/prince-of-persia.html"><img src="/assets/images/hero-cards/prince-of-persia.jpg" /></a>
+				<p class="card-title">Prince</p>
+			</li>
+
+			<li class="hero-card back-hero">
+				<a href="heroes/radulf.html"><img src="/assets/images/hero-cards/radulf.jpg" /></a>
+				<p class="card-title">Radulf</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/rayman.html"><img src="/assets/images/hero-cards/rayman.jpg" /></a>
+				<p class="card-title">Rayman</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/riley.html"><img src="/assets/images/hero-cards/riley.jpg" /></a>
+				<p class="card-title">Riley</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/salus.html"><img src="/assets/images/hero-cards/salus.jpg" /></a>
+				<p class="card-title">Salus</p>
+			</li>
+
+			<li class="hero-card back-hero">
+				<a href="heroes/sagar.html"><img src="/assets/images/hero-cards/sagar.jpg" /></a>
+				<p class="card-title">Sagar</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/sarya.html"><img src="/assets/images/hero-cards/sarya.jpg" /></a>
+				<p class="card-title">Sarya</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/selene.html"><img src="/assets/images/hero-cards/selene.jpg" /></a>
+				<p class="card-title">Selene</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/serafine.html"><img src="/assets/images/hero-cards/serafine.jpg" /></a>
+				<p class="card-title">Serafine</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/shirley.html"><img src="/assets/images/hero-cards/shirley.jpg" /></a>
+				<p class="card-title">Shirley</p>
+			</li>
+
+			<li class="hero-card back-hero">
+				<a href="heroes/slim.html"><img src="/assets/images/hero-cards/slim.jpg" /></a>
+				<p class="card-title">Slim</p>
+			</li>
+
+			<li class="hero-card back-hero">
+				<a href="heroes/solomon.html"><img src="/assets/images/hero-cards/solomon.jpg" /></a>
+				<p class="card-title">Solomon</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/sumiko.html"><img src="/assets/images/hero-cards/sumiko.jpg" /></a>
+				<p class="card-title">Sumiko</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/sylphi.html"><img src="/assets/images/hero-cards/sylphi.jpg" /></a>
+				<p class="card-title">Sylphi</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/tanya.html"><img src="/assets/images/hero-cards/tanya.jpg" /></a>
+				<p class="card-title">Tanya</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/tareth.html"><img src="/assets/images/hero-cards/tareth.jpg" /></a>
+				<p class="card-title">Tareth</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/tashi.html"><img src="/assets/images/hero-cards/tashi.jpg" /></a>
+				<p class="card-title">Tashi</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/taurus.html"><img src="/assets/images/hero-cards/taurus.jpg" /></a>
+				<p class="card-title">Taurus</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/tholin.html"><img src="/assets/images/hero-cards/tholin.jpg" /></a>
+				<p class="card-title">Tholin</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/torsen.html"><img src="/assets/images/hero-cards/torsen.jpg" /></a>
+				<p class="card-title">Torsen</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/tsuki.html"><img src="/assets/images/hero-cards/tsuki.jpg" /></a>
+				<p class="card-title">Tsuki</p>
+			</li>
+
+			<li class="hero-card mid-hero">
+				<a href="heroes/tut.html"><img src="/assets/images/hero-cards/tut.jpg" /></a>
+				<p class="card-title">Tut</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/ulfang.html"><img src="/assets/images/hero-cards/ulfang.jpg" /></a>
+				<p class="card-title">Ulfang</p>
+			</li>
+
+			<li class="hero-card back-hero">
+				<a href="heroes/urestag.html"><img src="/assets/images/hero-cards/urestag.jpg" /></a>
+				<p class="card-title">Urestag</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/valan.html"><img src="/assets/images/hero-cards/valan.jpg" /></a>
+				<p class="card-title">Valan</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/vernos.html"><img src="/assets/images/hero-cards/vernos.jpg" /></a>
+				<p class="card-title">Vernos</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/vespix.html"><img src="/assets/images/hero-cards/vespix.jpg" /></a>
+				<p class="card-title">Vespix</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/vincent.html"><img src="/assets/images/hero-cards/vincent.jpg" /></a>
+				<p class="card-title">Vincent</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/volt.html"><img src="/assets/images/hero-cards/volt.jpg" /></a>
+				<p class="card-title">Volt</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/vulko.html"><img src="/assets/images/hero-cards/vulko.jpg" /></a>
+				<p class="card-title">Vulko</p>
+			</li>
+
+			<li class="hero-card back-hero">
+				<a href="heroes/wraxius.html"><img src="/assets/images/hero-cards/wraxius.jpg" /></a>
+				<p class="card-title">Wraxius</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/xanos.html"><img src="/assets/images/hero-cards/xanos.jpg" /></a>
+				<p class="card-title">Xanos</p>
+			</li>
+
+			<li class="hero-card front-hero">
+				<a href="heroes/zem.html"><img src="/assets/images/hero-cards/zem.jpg" /></a>
+				<p class="card-title">Zem</p>
+			</li>
+
+		</ul>
+
+	</section>
+
+	<footer>
+		<p>Copyright 2020 The Last Sentinel™ -- All Rights Reserved</p>
+	</footer>
+
+	<script src="/assets/scripts/nav-menus.js"></script>
+	<script src="/assets/scripts/filter-btn.js"></script>
+</body>
+
+</html>

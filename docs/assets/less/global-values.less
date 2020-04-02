@@ -1,0 +1,134 @@
+/********************** General Styles ************************/
+body {
+    position: relative;
+    padding: 5%;
+    font-family: @main-font;
+    background: @white;
+    color: @black;
+    font-size: 1.6rem;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    margin: 10% 0 0 0;
+
+    @media @desktop {
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: @heading-font;
+}
+
+h2 {
+    width: 100%;
+    margin: 0 0 2% 0;
+    border-bottom: 1px solid @black;
+    padding: 1%;
+}
+
+h4 {
+    width: 100%;
+    margin: 0 0 2% 0;
+    border-bottom: 1px solid @black;
+    padding: 1%;
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+ul {
+    list-style-type: none;
+    .flexBox(row wrap, start, center);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.2rem;
+    line-height: 2;
+
+    th {
+        border-bottom: 1px solid @black;
+        padding: 1%;
+        text-align: center;
+    }
+
+    tr {
+        td {
+            padding: 1%;
+            text-align: left;
+        }
+
+        &:nth-child(even) {
+            background: @lite-grey;
+        }
+    }
+    
+}
+
+.wrapper{
+    margin: 0 0 10% 0;
+
+    @media @desktop {
+        padding-left: 15%;
+    }
+}
+
+//Colored Text spans
+.grn-txt{
+    color: @grn-txt;
+}
+
+.blu-txt{
+    color: @blu-txt;
+}
+
+.prp-txt{
+    color: @prp-txt;
+}
+
+.org-txt{
+    color: @org-txt;
+}
+
+.red-txt{
+    color: @red-txt;
+}
+
+//Hero Card Artwork 
+.hero-card {
+    .card(30%, 1.66%, 7px);
+
+    @media @desktop {
+        width: 20%;
+        border-radius: 15px;
+    }
+
+    .card-back {
+        position: absolute;
+        z-index: 1;
+    }
+}
+
+.front-page .hero-card,
+.hero-page .hero-card {
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+        transform: scale(1.1, 1.1);
+
+        img{
+            box-shadow: 5px 5px 15px @black;
+        }
+    }
+}

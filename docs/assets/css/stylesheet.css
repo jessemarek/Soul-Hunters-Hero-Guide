@@ -1,0 +1,1034 @@
+/* Custom Button */
+/*   HTML Structure
+            
+<label>
+    <input type="checkbox">
+    <span></span>
+</label>
+
+*/
+/* Nav Links Animation */
+/************************ Reset ************************/
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+/********************** General Styles ************************/
+body {
+  position: relative;
+  padding: 5%;
+  font-family: 'Open Sans', sans-serif;
+  background: #efefef;
+  color: #101010;
+  font-size: 1.6rem;
+}
+header {
+  width: 100%;
+  text-align: center;
+  margin: 10% 0 0 0;
+}
+@media (min-width: 1000px) {
+  header {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Noto Sans', sans-serif;
+}
+h2 {
+  width: 100%;
+  margin: 0 0 2% 0;
+  border-bottom: 1px solid #101010;
+  padding: 1%;
+}
+h4 {
+  width: 100%;
+  margin: 0 0 2% 0;
+  border-bottom: 1px solid #101010;
+  padding: 1%;
+  font-size: 2rem;
+}
+a {
+  text-decoration: none;
+}
+a:focus {
+  outline: none;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: start;
+  align-content: center;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.2rem;
+  line-height: 2;
+}
+table th {
+  border-bottom: 1px solid #101010;
+  padding: 1%;
+  text-align: center;
+}
+table tr td {
+  padding: 1%;
+  text-align: left;
+}
+table tr:nth-child(even) {
+  background: #c7c7c7;
+}
+.wrapper {
+  margin: 0 0 10% 0;
+}
+@media (min-width: 1000px) {
+  .wrapper {
+    padding-left: 15%;
+  }
+}
+.grn-txt {
+  color: #228b22;
+}
+.blu-txt {
+  color: #4169e1;
+}
+.prp-txt {
+  color: #8a2be2;
+}
+.org-txt {
+  color: #ff8c00;
+}
+.red-txt {
+  color: #ff0000;
+}
+.hero-card {
+  position: relative;
+  width: 30%;
+  margin: 1.66%;
+  border-radius: 7px;
+}
+.hero-card img {
+  border-radius: 7px;
+}
+.hero-card .card-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #332412;
+  color: #efefef;
+  border-radius: 0 0 7px 7px;
+  padding: 1%;
+  text-align: center;
+}
+.hero-card .cardback-title {
+  bottom: 1rem;
+  background: transparent;
+}
+@media (min-width: 1000px) {
+  .hero-card {
+    width: 20%;
+    border-radius: 15px;
+  }
+}
+.hero-card .card-back {
+  position: absolute;
+  z-index: 1;
+}
+.front-page .hero-card,
+.hero-page .hero-card {
+  transition: all 0.3s ease 0s;
+}
+.front-page .hero-card:hover,
+.hero-page .hero-card:hover {
+  transform: scale(1.1, 1.1);
+}
+.front-page .hero-card:hover img,
+.hero-page .hero-card:hover img {
+  box-shadow: 5px 5px 15px #101010;
+}
+/********************** Navigation Styles ************************/
+.navbar .menubar {
+  width: 100%;
+  height: 4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: linear-gradient(to right, #ffa500, #ff4500);
+  color: #efefef;
+}
+.navbar .menubar.shadowbox {
+  z-index: 4;
+  box-shadow: 1rem 1rem 3rem 1rem #efefef;
+}
+.navbar .mobile-menu-btn {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-content: initial;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 0 0 2%;
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 100;
+}
+@media (min-width: 1000px) {
+  .navbar .mobile-menu-btn {
+    display: none;
+  }
+}
+.navbar .mobile-menu-btn:hover {
+  cursor: pointer;
+}
+.navbar .mobile-menu-btn .menu-bar {
+  width: 100%;
+  background: #efefef;
+  height: 0.5rem;
+  transition: all 0.5s ease;
+}
+.navbar #bookmarks-btn.mobile-menu-btn {
+  right: 6rem;
+  left: initial;
+  margin: 0 2% 0 0;
+}
+@media (min-width: 1000px) {
+  .navbar #bookmarks-btn.mobile-menu-btn {
+    display: none;
+  }
+}
+.navbar #bookmarks-btn.mobile-menu-btn img:nth-child(1) {
+  position: absolute;
+  transition: all 0.5s ease;
+}
+.navbar #bookmarks-btn.mobile-menu-btn img:nth-child(2) {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.navbar #settings-btn.mobile-menu-btn {
+  display: block;
+  right: 0;
+  left: initial;
+  margin: 0 2% 0 0;
+}
+.navbar #settings-btn.mobile-menu-btn img:nth-child(1) {
+  position: absolute;
+  transition: all 0.5s ease;
+}
+.navbar #settings-btn.mobile-menu-btn img:nth-child(2) {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.navbar #bar-one.change {
+  width: 85%;
+  border-radius: 7px;
+  transform: rotate(-45deg) translate(-5px, 9px);
+}
+.navbar #bar-two.change {
+  opacity: 0;
+}
+.navbar #bar-three.change {
+  width: 85%;
+  border-radius: 7px;
+  transform: rotate(45deg) translate(-3px, -8px);
+}
+.navbar .nav-links {
+  flex-flow: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 66%;
+  position: fixed;
+  bottom: 100%;
+  left: 0;
+  z-index: 5;
+  border-right: 1px solid #444444;
+  border-bottom: 1px solid #444444;
+  border-radius: 7px 0;
+  padding: 10% 3% 3% 3%;
+  background: #101010;
+  opacity: 0.9;
+  transition: all 0.5s ease;
+}
+@media (min-width: 1000px) {
+  .navbar .nav-links {
+    flex-flow: row;
+    height: 4rem;
+    top: 0;
+    left: 20%;
+    z-index: 500;
+    border: none;
+    padding: 0;
+    background: transparent;
+    opacity: 1;
+  }
+}
+.navbar .nav-links li {
+  width: 80%;
+  margin: 5% auto;
+}
+@media (min-width: 1000px) {
+  .navbar .nav-links li {
+    width: 15%;
+    margin: 0;
+  }
+}
+.navbar .nav-links a {
+  color: #efefef;
+}
+@media (min-width: 1000px) {
+  .navbar .nav-links a {
+    position: relative;
+  }
+  .navbar .nav-links a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0.2rem;
+    position: absolute;
+    left: 0;
+    bottom: -0.25rem;
+    background: #efefef;
+    transition: width 0.5s ease 0s;
+  }
+  .navbar .nav-links a:hover::after {
+    width: 100%;
+  }
+}
+.navbar .nav-links .nav-dropdown {
+  position: relative;
+  color: #efefef;
+}
+.navbar .nav-links .nav-dropdown:hover {
+  cursor: pointer;
+}
+.navbar .nav-links .nav-dropdown:hover p::after {
+  width: 100%;
+}
+.navbar .nav-links .nav-dropdown:hover .down-arrow {
+  opacity: 0;
+}
+.navbar .nav-links .nav-dropdown:hover .sub-links {
+  height: 15rem;
+}
+.navbar .nav-links .nav-dropdown p {
+  position: relative;
+}
+.navbar .nav-links .nav-dropdown p::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0.2rem;
+  position: absolute;
+  left: 0;
+  bottom: -0.25rem;
+  background: #efefef;
+  transition: width 0.5s ease 0s;
+}
+.navbar .nav-links .nav-dropdown p:hover::after {
+  width: 100%;
+}
+.navbar .nav-links .nav-dropdown .down-arrow {
+  font-weight: bold;
+  transition: all 0.5s ease;
+}
+.navbar .nav-links .sub-links {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+@media (min-width: 1000px) {
+  .navbar .nav-links .sub-links {
+    width: 100%;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 3.1rem;
+    border-radius: 0 0 7px 7px;
+    background: linear-gradient(to bottom right, #202020, #909090);
+  }
+  .navbar .nav-links .sub-links li {
+    width: 100%;
+  }
+  .navbar .nav-links .sub-links li a {
+    display: inline-block;
+    width: 100%;
+    padding: 5% 10%;
+    transition: all 0.5s ease;
+  }
+  .navbar .nav-links .sub-links li a:hover {
+    background: #101010;
+    padding: 5% 5% 5% 15%;
+  }
+  .navbar .nav-links .sub-links li a:hover::after {
+    width: 0;
+  }
+}
+.navbar .nav-links.change {
+  transform: translate(0, 100%);
+}
+.navbar #bookmarks-btn.mobile-menu-btn.change img:nth-child(1) {
+  opacity: 0;
+}
+.navbar #bookmarks-btn.mobile-menu-btn.change img:nth-child(2) {
+  opacity: 1;
+}
+.navbar #settings-btn.mobile-menu-btn.change img:nth-child(1) {
+  opacity: 0;
+}
+.navbar #settings-btn.mobile-menu-btn.change img:nth-child(2) {
+  opacity: 1;
+}
+.navbar aside {
+  width: 66%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: fixed;
+  bottom: 100%;
+  right: 0;
+  z-index: 5;
+  padding: 3%;
+  border-bottom: 1px solid #444444;
+  border-left: 1px solid #444444;
+  border-radius: 0 7px;
+  background: #101010;
+  opacity: 0.9;
+  transition: all 0.5s ease;
+}
+@media (min-width: 1000px) {
+  .navbar aside {
+    width: 15%;
+    max-height: 100vh;
+    height: 100vh;
+    overflow-x: hidden;
+    top: 0;
+    right: initial;
+    bottom: initial;
+    left: 0;
+    border-right: 1px solid #efefef;
+    border-bottom: none;
+    border-left: none;
+    border-radius: 0;
+    padding: 5rem 0 0 0;
+    opacity: 1;
+    transition: none;
+  }
+}
+.navbar aside h4 {
+  margin: 13% 0 0 0;
+  border-color: #efefef;
+  color: #efefef;
+  font-size: 1.6rem;
+  text-align: center;
+}
+@media (min-width: 1000px) {
+  .navbar aside h4 {
+    margin: 4%;
+  }
+}
+.navbar aside .bookmark-list {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-content: initial;
+}
+@media (min-width: 1000px) {
+  .navbar aside .bookmark-list {
+    flex-flow: row wrap;
+    justify-content: flex-end;
+  }
+}
+.navbar aside .bookmark-list a {
+  width: 80%;
+  margin: 3% auto;
+  padding: 3%;
+  color: #efefef;
+}
+@media (min-width: 1000px) {
+  .navbar aside .bookmark-list a {
+    margin: 3% 0;
+    border: 2px solid #efefef;
+    border-right: none;
+    border-radius: 12px 0 0 12px;
+    text-align: center;
+  }
+  .navbar aside .bookmark-list a:hover {
+    background: #efefef;
+    color: #101010;
+  }
+}
+.navbar aside.change {
+  transform: translate(0, 100%);
+}
+.navbar .settings-menu {
+  width: 66%;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 100%;
+  right: 0;
+  z-index: 5;
+  padding: 5%;
+  border-bottom: 1px solid #444444;
+  border-left: 1px solid #444444;
+  border-radius: 0 7px;
+  background: #101010;
+  color: #efefef;
+  opacity: 0.9;
+  transition: all 0.5s ease;
+}
+@media (min-width: 1000px) {
+  .navbar .settings-menu {
+    width: 20%;
+    padding: 2%;
+  }
+}
+.navbar .settings-menu h4 {
+  border-bottom: 1px solid #efefef;
+  font-size: 1.6rem;
+  text-align: center;
+}
+.navbar .settings-menu .slider-switch {
+  display: inline-block;
+  width: 3rem;
+  height: 1.5rem;
+  position: relative;
+}
+.navbar .settings-menu .slider-switch input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.navbar .settings-menu .slider-switch input:checked + span {
+  background: #ffa500;
+}
+.navbar .settings-menu .slider-switch input:checked + span::before {
+  transform: translateX(1.5rem);
+}
+.navbar .settings-menu .slider-switch span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 1.5rem;
+  background: #444444;
+  transition: 0.4s;
+}
+.navbar .settings-menu .slider-switch span::before {
+  content: "";
+  width: 1.2rem;
+  height: 1.2rem;
+  position: absolute;
+  left: 0.15rem;
+  bottom: 0.15rem;
+  border-radius: 50%;
+  background: #efefef;
+  transition: 0.4s;
+}
+.navbar .settings-menu .slider-switch:hover {
+  cursor: pointer;
+}
+.navbar .settings-menu li {
+  margin: 2% 0;
+}
+.navbar .settings-menu.change {
+  transform: translate(0, 120%);
+}
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid #efefef;
+  padding: 2%;
+  background: #101010;
+  color: #efefef;
+  text-align: center;
+  font-size: 1.2rem;
+}
+@media (min-width: 1000px) {
+  footer {
+    padding: 1%;
+  }
+}
+@media (min-width: 1000px) {
+  .side-footer {
+    width: 15%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    border-top: none;
+    border-right: 1px solid #efefef;
+  }
+}
+/********************** Front Page Styles ************************/
+.logo {
+  width: 100%;
+}
+@media (min-width: 1000px) {
+  .logo {
+    width: 33%;
+    margin: 0 auto;
+  }
+}
+.logo img {
+  width: 50%;
+}
+@media (min-width: 1000px) {
+  .front-page.wrapper {
+    padding: 0;
+  }
+}
+@media (min-width: 1000px) {
+  .front-page {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    margin: 0 0 3% 0;
+  }
+}
+.front-page section {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: start;
+  align-content: center;
+  margin: 2% 0;
+}
+@media (min-width: 1000px) {
+  .front-page section {
+    width: 45%;
+    justify-content: space-evenly;
+    margin: 2%;
+  }
+}
+@media (min-width: 1000px) {
+  .front-page section h4 {
+    text-align: center;
+  }
+}
+.front-page section .date-updated {
+  width: 100%;
+  margin: 2%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+@media (min-width: 1000px) {
+  .front-page section ul {
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 1000px) {
+  .front-page .menu-box {
+    width: 100%;
+    margin: 0 2%;
+  }
+}
+/********************** Heroes Page Styles ************************/
+header h3 {
+  margin: 0 0 2% 0;
+  border-bottom: 1px solid #101010;
+  padding: 1%;
+  font-size: 2.4rem;
+  text-align: center;
+}
+header h4 {
+  margin: 0 0 1% 0;
+}
+header .filter-btns {
+  margin: 2% 0 0 0;
+}
+@media (min-width: 1000px) {
+  header .filter-btns {
+    width: 70%;
+    margin: 2% auto;
+  }
+}
+header .filter-btns .filter-btn {
+  width: 22%;
+  border: 2px solid;
+  border-radius: 7px;
+  padding: 1% 2%;
+  color: #efefef;
+  font-size: 1.6rem;
+  background: radial-gradient(#909090, #202020);
+  border-color: #202020;
+  margin: 1%;
+}
+header .filter-btns .filter-btn:focus {
+  outline: none;
+}
+header .filter-btns .filter-btn:active {
+  outline: none;
+}
+header .filter-btns .filter-btn:hover {
+  cursor: pointer;
+}
+header .filter-btns .filter-btn:hover {
+  border-color: #ffa500;
+}
+header .filter-btns .active-btn {
+  width: 22%;
+  border: 2px solid;
+  border-radius: 7px;
+  padding: 1% 2%;
+  color: #efefef;
+  font-size: 1.6rem;
+  background: radial-gradient(#ffa500, #ff4500);
+  border-color: #ffa500;
+}
+header .filter-btns .active-btn:focus {
+  outline: none;
+}
+header .filter-btns .active-btn:active {
+  outline: none;
+}
+header .filter-btns .active-btn:hover {
+  cursor: pointer;
+}
+header .filter-btns .filter-form {
+  width: 50%;
+  margin: 3% auto;
+}
+header .filter-btns .filter-form input {
+  width: 100%;
+  text-align: center;
+}
+@media (min-width: 1000px) {
+  header .filter-btns .filter-form input {
+    width: 60%;
+  }
+}
+.hero-page {
+  margin: 0 0 10% 0;
+}
+@media (min-width: 1000px) {
+  .hero-page .hero-card {
+    width: 13%;
+  }
+}
+.hero-page .hidden {
+  display: none;
+}
+/********************** Forge Page Styles ************************/
+.intro-text {
+  width: 95%;
+  margin: 3% auto 5%;
+}
+@media (min-width: 1000px) {
+  .intro-text {
+    margin: 0;
+  }
+}
+.guide-section {
+  padding: 5rem 0 0 0;
+}
+@media (min-width: 1000px) {
+  .example-image-box {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+.example-image-box .example-image {
+  width: fit-content;
+  margin: 8% auto;
+}
+.example-image-box .example-image img {
+  margin: 0 auto;
+  border: 4px solid #332412;
+  border-radius: 8px;
+}
+.example-image-box .example-image .image-note {
+  font-size: 1.2rem;
+  font-style: italic;
+  text-align: center;
+}
+#forge-bonus-example,
+.forge-table,
+.forge-upgrade-table,
+.forge-type-table {
+  width: 75%;
+  margin: 2% auto 8%;
+}
+#forge-bonus-example h5,
+.forge-table h5,
+.forge-upgrade-table h5,
+.forge-type-table h5 {
+  border-bottom: 1px solid #101010;
+  text-align: center;
+}
+@media (min-width: 1000px) {
+  #forge-bonus-example {
+    width: 35%;
+  }
+}
+.forge-table {
+  width: 75%;
+}
+@media (min-width: 1000px) {
+  .forge-table {
+    width: 35%;
+  }
+}
+.forge-table table tr td {
+  text-align: center;
+}
+.forge-upgrade-table {
+  width: 95%;
+}
+@media (min-width: 1000px) {
+  .forge-upgrade-table {
+    width: 60%;
+  }
+}
+.forge-upgrade-table table tr td:nth-child(1),
+.forge-upgrade-table table tr td:nth-child(2),
+.forge-upgrade-table table tr td:nth-child(3) {
+  padding-right: 4%;
+  text-align: right;
+}
+@media (min-width: 1000px) {
+  .forge-upgrade-table table tr td:nth-child(1),
+  .forge-upgrade-table table tr td:nth-child(2),
+  .forge-upgrade-table table tr td:nth-child(3) {
+    padding-right: 8%;
+  }
+}
+.forge-upgrade-table table tr td:nth-child(4) {
+  padding-left: 4%;
+  text-align: left;
+}
+@media (min-width: 1000px) {
+  .forge-upgrade-table table tr td:nth-child(4) {
+    padding-left: 8%;
+  }
+}
+@media (min-width: 1000px) {
+  .intro-table {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-content: center;
+  }
+}
+.intro-table .forge-type-table {
+  width: 95%;
+}
+@media (min-width: 1000px) {
+  .intro-table .forge-type-table {
+    width: 48%;
+  }
+}
+.intro-table .forge-type-table table tr td:nth-child(1) {
+  padding-left: 4%;
+  text-align: left;
+}
+.intro-table .forge-type-table table tr td:nth-child(2),
+.intro-table .forge-type-table table tr td:nth-child(3) {
+  padding-right: 4%;
+  text-align: right;
+}
+@media (min-width: 1000px) {
+  .intro-table .forge-type-table table tr td:nth-child(2),
+  .intro-table .forge-type-table table tr td:nth-child(3) {
+    padding-right: 8%;
+  }
+}
+.intro-table .forge-type-table table tr td:nth-child(4) {
+  padding-left: 10%;
+  text-align: left;
+}
+.intro-table .forge-range-table {
+  width: 95%;
+}
+@media (min-width: 1000px) {
+  .intro-table .forge-range-table {
+    width: 48%;
+  }
+}
+.intro-table .forge-range-table table tr td:nth-child(1) {
+  padding-left: 4%;
+  text-align: left;
+}
+.intro-table .forge-range-table table tr td:nth-child(2),
+.intro-table .forge-range-table table tr td:nth-child(3),
+.intro-table .forge-range-table table tr td:nth-child(4) {
+  padding-right: 10%;
+  text-align: right;
+}
+@media (min-width: 1000px) {
+  .intro-table .forge-range-table table tr td:nth-child(4) {
+    padding-left: 2%;
+  }
+}
+/********************** Runestone Page Styles ************************/
+.runestone-triad {
+  display: grid;
+  grid-auto-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 1.5fr 1fr 1fr;
+  grid-template-areas: "... top ..." "lft ... rgt" "txt txt txt";
+  margin: 10% 0 0 0;
+}
+@media (min-width: 1000px) {
+  .runestone-triad {
+    width: 60%;
+    grid-auto-rows: 2fr 1fr 1fr;
+    margin: 3% auto 0;
+  }
+}
+.runestone-triad > :nth-child(1) {
+  grid-area: top;
+}
+.runestone-triad > :nth-child(2) {
+  grid-area: lft;
+}
+.runestone-triad > :nth-child(3) {
+  grid-area: rgt;
+}
+.runestone-triad > :nth-child(4) {
+  grid-area: txt;
+}
+.runestone-triad .reward-runestone {
+  margin: 2%;
+  text-align: center;
+}
+.runestone-triad .reward-note {
+  margin: 5%;
+  text-align: center;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+@media (min-width: 1000px) {
+  .runestone-crafting-cost,
+  .runestone-dissolve-refund,
+  .runestone-polish-cost,
+  .runestone-equip-stars {
+    width: 35%;
+    margin: 5% auto;
+  }
+}
+.runestone-crafting-cost h5,
+.runestone-dissolve-refund h5,
+.runestone-polish-cost h5,
+.runestone-equip-stars h5 {
+  border-bottom: 1px solid #101010;
+  text-align: center;
+}
+.stat-table-box {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content: initial;
+  margin: 5% auto 0;
+}
+@media (min-width: 1000px) {
+  .stat-table-box {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+.stat-table-box .runestone-stat-table {
+  width: 95%;
+  margin: 5% auto;
+}
+.stat-table-box .runestone-stat-table table tr td:nth-child(2),
+.stat-table-box .runestone-stat-table table tr td:nth-child(3),
+.stat-table-box .runestone-stat-table table tr td:nth-child(4) {
+  text-align: right;
+  padding-right: 6%;
+}
+@media (min-width: 1000px) {
+  .stat-table-box .runestone-stat-table {
+    width: 30%;
+    margin: 0;
+  }
+}
+/********************** Credits Page Styles ************************/
+.credits-page {
+  background: #101010;
+  color: #efefef;
+}
+.credits-page h4 {
+  border-color: #efefef;
+}
+.credits-page section {
+  margin: 8% 0 8%;
+}
+@media (min-width: 1000px) {
+  .credits-page section {
+    margin: 0 0 5% 0;
+  }
+}
+.credits-page section p {
+  padding: 3%;
+  font-size: 1.4rem;
+}
+@media (min-width: 1000px) {
+  .credits-page section p {
+    padding: 0;
+  }
+}
+.credits-page .tiny-text {
+  display: block;
+  font-size: 1.2rem;
+}
+.credits-page footer {
+  border-top: 1px solid #444444;
+}
+/********************** Dark Mode Styles ************************/
+body.dark-mode {
+  background: #101010;
+  color: #efefef;
+}
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  border-color: #efefef;
+}
+body.dark-mode .grn-txt {
+  color: #adff2f;
+}
+body.dark-mode .blu-txt {
+  color: #00adff;
+}
+body.dark-mode .prp-txt {
+  color: #c42be0;
+}
+body.dark-mode .org-txt {
+  color: #ffb100;
+}
+body.dark-mode .red-txt {
+  color: #ff522b;
+}
+body.dark-mode table th,
+body.dark-mode #forge-bonus-example th {
+  border-color: #efefef;
+}
+body.dark-mode table tr:nth-child(even),
+body.dark-mode #forge-bonus-example tr:nth-child(even) {
+  background: #444444;
+}
+body.dark-mode .menubar.shadowbox {
+  box-shadow: 1rem 1rem 3rem 1rem #101010;
+}

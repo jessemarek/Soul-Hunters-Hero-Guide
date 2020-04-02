@@ -1,0 +1,50 @@
+/********************** Dark Mode Styles ************************/
+
+//Dark Mode color changes
+body.dark-mode {
+    background: @black;
+    color: @white;
+
+    h1, h2, h3, h4, h5, h6 {
+        border-color: @white;
+    }
+
+    .grn-txt {
+        color: @grn-txt-dm;
+    }
+
+    .blu-txt {
+        color: @blu-txt-dm;
+    }
+
+    .prp-txt {
+        color: @prp-txt-dm;
+    }
+
+    .org-txt {
+        color: @org-txt-dm;
+    }
+
+    .red-txt {
+        color: @red-txt-dm;
+    }
+
+    table, #forge-bonus-example {
+
+        th {
+            border-color: @white;
+        }
+
+        tr {
+
+            &:nth-child(even) {
+                background: @dark-grey;
+            }
+        }
+        
+    }
+
+    .menubar.shadowbox {
+        box-shadow: 1rem 1rem 3rem 1rem @black;
+    }
+}

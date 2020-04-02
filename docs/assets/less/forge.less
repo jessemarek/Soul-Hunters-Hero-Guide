@@ -1,0 +1,178 @@
+/********************** Forge Page Styles ************************/
+.intro-text {
+    width: 95%;
+    margin: 3% auto 5%;
+
+    @media @desktop {
+        margin: 0;
+    }
+}
+
+.guide-section {
+    padding: 5rem 0 0 0;
+}
+
+.example-image-box {
+
+    @media @desktop {
+        .flexBox(row nowrap, center, center);
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .example-image {
+        width: fit-content;
+        margin: 8% auto;
+
+        img {
+            margin:0 auto;
+            border: 4px solid @brown;
+            border-radius: 8px;
+        }
+
+        .image-note {
+            font-size: 1.2rem;
+            font-style: italic;
+            text-align: center;
+        }
+    }
+}
+
+#forge-bonus-example, 
+.forge-table, 
+.forge-upgrade-table, 
+.forge-type-table {
+    width: 75%;
+    margin: 2% auto 8%;
+  
+    h5 {
+        border-bottom: 1px solid @black;
+        text-align: center;
+    }
+}
+
+#forge-bonus-example {
+
+    @media @desktop {
+        width: 35%;
+    }
+}
+
+.forge-table {
+    width: 75%;
+
+    @media @desktop {
+        width: 35%;
+    }
+
+    table {
+        tr {
+            td {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.forge-upgrade-table {
+    width: 95%;
+
+    @media @desktop {
+        width: 60%;
+    }
+
+    table {
+        tr {
+            td {
+                &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+                    padding-right: 4%;
+                    text-align: right;
+
+                    @media @desktop {
+                        padding-right: 8%;
+                    }
+                }
+
+                &:nth-child(4) {
+                    padding-left: 4%;
+                    text-align: left;
+
+                    @media @desktop {
+                        padding-left: 8%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.intro-table{
+
+    @media @desktop {
+        .flexBox(row nowrap, space-evenly, center);
+    }
+
+    .forge-type-table {
+        width: 95%;
+
+        @media @desktop {
+            width: 48%;
+        }
+    
+        table {
+            tr {
+                td {
+                    &:nth-child(1) {
+                        padding-left: 4%;
+                        text-align: left;
+                    }
+    
+                    &:nth-child(2), &:nth-child(3) {
+                        padding-right: 4%;
+                        text-align: right;
+
+                        @media @desktop {
+                            padding-right: 8%;
+                        }
+                    }
+    
+                    &:nth-child(4) {
+                        padding-left: 10%;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+    
+    .forge-range-table {
+        width: 95%;
+
+        @media @desktop {
+            width: 48%;
+        }
+    
+        table {
+            tr {
+                td {
+                    &:nth-child(1) {
+                        padding-left: 4%;
+                        text-align: left;
+                    }
+    
+                    &:nth-child(2), &:nth-child(3), &:nth-child(4) {
+                        padding-right: 10%;
+                        text-align: right;
+                    }
+
+                    &:nth-child(4) {
+
+                        @media @desktop {
+                            padding-left: 2%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

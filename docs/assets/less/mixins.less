@@ -1,0 +1,145 @@
+//FlexBox Mixin
+.flexBox(@flow, @justify, @align) {
+    display: flex;
+    flex-flow: @flow;
+    justify-content: @justify;
+    align-content: @align;
+}
+
+//Mixin Hero card Styles
+.card (@width, @margin, @corner){
+    position: relative;
+    width: @width;
+    margin: @margin;
+    border-radius: @corner;
+
+    img {
+        border-radius: @corner;
+    }
+    
+    .card-title {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: @brown;
+        color: @white;
+        border-radius: 0 0 @corner @corner;
+        padding: 1%;
+        text-align: center;
+    }
+
+    .cardback-title {
+        bottom: 1rem;
+        background: transparent;
+    }
+}
+
+/* Custom Button */
+.custom-btn(@width) {
+    width: @width;
+    border: 2px solid;
+    border-radius: 7px;
+    padding: 1% 2%;
+    color: @white;
+    font-size: 1.6rem;
+
+
+    &:focus {
+        outline: none;
+    }
+
+    &:active {
+        outline: none;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+//Sliding Toggle Switch
+
+/*   HTML Structure
+            
+<label>
+    <input type="checkbox">
+    <span></span>
+</label>
+
+*/
+
+.toggle-switch(@width, @bg-off, @bg-on, @color) {
+    @height: @width / 2;
+    display: inline-block;
+    width: @width;
+    height: @height;
+    position: relative;
+
+    //Stores position on/off
+    input {
+        width: 0;
+        height: 0;
+        opacity: 0;
+
+        &:checked {
+            
+            + span {
+                background: @bg-on;
+
+                 &::before {
+                    transform: translateX(@height);
+                }
+            }
+            
+        }
+    }
+    
+    //The switch body
+    span {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: @height;
+        background: @bg-off;
+        transition: 0.4s;
+
+        //The toggle
+        &::before {
+            content: "";
+            width: @height * 0.8;
+            height: @height * 0.8;
+            position: absolute;
+            left: @height * 0.1;
+            bottom: @height * 0.1;
+            border-radius: 50%;
+            background: @color;
+            transition: 0.4s;
+        }
+    }
+}
+
+/* Nav Links Animation */
+.link-animation(@color, @speed) {
+    position: relative;
+ 
+     &::after { 
+        content: ""; 
+        display: block;  
+        width: 0;
+        height: 0.2rem;
+        position: absolute;
+        left: 0;
+        bottom: -0.25rem;
+        background: @color;
+        transition: width @speed ease 0s,;
+     }
+ 
+     &:hover {
+
+        &::after {
+            width: 100%; 
+        }
+     }
+ }

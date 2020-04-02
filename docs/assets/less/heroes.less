@@ -1,0 +1,70 @@
+/********************** Heroes Page Styles ************************/
+header {
+    h3 {
+        margin: 0 0 2% 0;
+        border-bottom: 1px solid @black;
+        padding: 1%;
+        font-size: 2.4rem;
+        text-align: center;
+    }
+
+    h4 {
+        margin: 0 0 1% 0;
+    }
+
+    .filter-btns {
+
+        margin: 2% 0 0 0;
+
+        @media @desktop {
+            width: 70%;
+            margin: 2% auto;
+        }
+
+        .filter-btn {
+            .custom-btn(22%);
+            background: radial-gradient(@grey, @lite-black);
+            border-color: @lite-black;
+            margin: 1%;
+    
+            &:hover {
+                border-color: @orange;
+            }
+        }
+    
+        .active-btn {
+            .custom-btn(22%);
+            background: radial-gradient(@orange, @red-orange);
+            border-color: @orange;
+        }
+    
+        .filter-form {
+            width: 50%;
+            margin: 3% auto;
+    
+            input {
+                width: 100%;
+                text-align: center;
+
+                @media @desktop {
+                    width: 60%;
+                }
+            }
+        }
+    }
+}
+
+.hero-page {
+    margin: 0 0 10% 0;
+
+    .hero-card {
+
+        @media @desktop {
+            width: 13%;
+        }
+    }
+
+    .hidden {
+        display: none;
+    }
+}

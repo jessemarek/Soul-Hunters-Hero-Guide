@@ -1,0 +1,366 @@
+/********************** Navigation Styles ************************/
+.navbar {
+    
+
+    .menubar {
+        width: 100%;
+        height: 4rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        background: linear-gradient(to right, @orange, @red-orange);
+        color: @white;
+    }
+
+    .menubar.shadowbox {
+        z-index: 4;
+        box-shadow: 1rem 1rem 3rem 1rem @white;
+    }
+
+    .mobile-menu-btn {
+        .flexBox(column nowrap, space-evenly, initial);
+        width: 3rem;
+        height: 3rem;
+        margin: 0 0 0 2%;
+        position: fixed;
+        top: 0.5rem;
+        left: 0.5rem;
+        z-index: 100;
+
+        @media @desktop {
+            display: none;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        .menu-bar {
+            width: 100%;
+            background: @white;
+            height: 0.5rem;
+            transition: all 0.5s ease;
+        }
+    }
+
+    #bookmarks-btn.mobile-menu-btn {
+        right: 6rem;
+        left: initial;
+        margin: 0 2% 0 0;
+
+        @media @desktop {
+            display: none;
+        }
+
+        img:nth-child(1) {
+            position: absolute;
+            transition: all 0.5s ease;
+        }
+
+        img:nth-child(2) {
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+    }
+
+    #settings-btn.mobile-menu-btn {
+        display: block;
+        right: 0;
+        left: initial;
+        margin: 0 2% 0 0;
+
+        img:nth-child(1) {
+            position: absolute;
+            transition: all 0.5s ease;
+        }
+
+        img:nth-child(2) {
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+    }
+
+    #bar-one.change {
+        width: 85%;
+        border-radius: 7px;
+        transform: rotate(-45deg) translate(-5px, 9px);
+    }
+    
+    #bar-two.change {
+        opacity: 0;
+    }
+
+    #bar-three.change {
+        width: 85%;
+        border-radius: 7px;
+        transform: rotate(45deg) translate(-3px, -8px);
+    }
+
+    .nav-links {
+        flex-flow: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 66%;
+        position: fixed;
+        bottom: 100%;
+        left: 0;
+        z-index: 5;
+        border-right: 1px solid @dark-grey;
+        border-bottom: 1px solid @dark-grey;
+        border-radius: 7px 0;
+        padding: 10% 3% 3% 3%;
+        background: @black;
+        opacity: 0.9;
+        transition: all 0.5s ease;
+
+        @media @desktop {
+            flex-flow: row;
+            height: 4rem;
+            top: 0;
+            left: 20%;
+            z-index: 500;
+            border: none;
+            padding: 0;
+            background: transparent;
+            opacity: 1;
+        }
+
+        li {
+            width: 80%;
+            margin: 5% auto;
+
+            @media @desktop {
+                width: 15%;
+                margin: 0;
+            }
+        }
+
+        a {
+            color: @white;
+
+            @media @desktop {
+                .link-animation(@white, 0.5s);
+            }
+        }
+
+        .nav-dropdown{
+            position: relative;
+            color: @white;
+           
+            &:hover{
+                cursor: pointer;
+
+                p{
+                    &::after {
+                        width: 100%;
+                    }
+                }
+
+                .down-arrow {
+                    opacity: 0;
+                }
+
+                .sub-links {
+                    height: 15rem;
+                }
+            }
+
+            p {
+                .link-animation(@white, 0.5s);
+            }
+
+            .down-arrow {
+                font-weight: bold;
+                transition: all 0.5s ease;
+            }
+        }
+
+        .sub-links {
+            height: 0;
+            overflow: hidden;
+            transition: height 0.5s ease;
+
+            @media @desktop {
+                width: 100%;
+                justify-content: space-evenly;
+                position: absolute;
+                top: 3.1rem;
+                border-radius: 0 0 7px 7px;
+                background: linear-gradient(to bottom right, @lite-black, @grey);
+
+                li {
+                    width: 100%;
+    
+                    a {
+                        display: inline-block;
+                        width: 100%;
+                        padding: 5% 10%;
+                        transition: all 0.5s ease;
+    
+                        &:hover {
+                            background: @black;
+                            padding: 5% 5% 5% 15%; 
+    
+                            &::after {
+                                width: 0;
+                            }
+                        }
+                    }
+                }
+            }
+           
+        }
+    }
+
+    .nav-links.change {
+        transform: translate(0, 100%);
+    }
+
+    #bookmarks-btn.mobile-menu-btn.change {
+
+        img:nth-child(1) {
+            opacity: 0;
+        }
+
+        img:nth-child(2) {
+            opacity: 1;
+        }
+    }
+
+    #settings-btn.mobile-menu-btn.change {
+
+        img:nth-child(1) {
+            opacity: 0;
+        }
+
+        img:nth-child(2) {
+            opacity: 1;
+        }
+    }
+
+    aside {
+        width: 66%;
+        max-height: 90vh;
+        overflow-y: auto;
+        position: fixed;
+        bottom: 100%;
+        right: 0;
+        z-index: 5;
+        padding: 3%;
+        border-bottom: 1px solid @dark-grey;
+        border-left: 1px solid @dark-grey;
+        border-radius: 0 7px;
+        background: @black;
+        opacity: 0.9;
+        transition: all 0.5s ease;
+
+        @media @desktop {
+            width: 15%;
+            max-height: 100vh;
+            height: 100vh;
+            overflow-x: hidden;
+            top: 0;
+            right: initial;
+            bottom: initial;
+            left: 0;
+            border-right: 1px solid @white;
+            border-bottom: none;
+            border-left: none;
+            border-radius: 0;
+            padding: 5rem 0 0 0;
+            opacity: 1;
+            transition: none;
+        }
+    
+        h4 {
+            margin: 13% 0 0 0;
+            border-color: @white;
+            color: @white;
+            font-size: 1.6rem;
+            text-align: center;
+
+            @media @desktop {
+                margin: 4%;
+            }
+        }
+    
+        .bookmark-list {
+            .flexBox(column nowrap, space-evenly, initial);
+
+            
+            @media @desktop {
+                flex-flow: row wrap;
+                justify-content: flex-end;
+            }
+        
+            a {
+                width: 80%;
+                margin: 3% auto;
+                padding: 3%;
+                color: @white;
+
+                @media @desktop {
+                    margin: 3% 0;
+                    border: 2px solid @white;
+                    border-right: none;
+                    border-radius: 12px 0 0 12px;
+                    text-align: center;
+
+                    &:hover {
+                        background: @white;
+                        color: @black;
+                    }
+                }
+            }
+        }
+    }
+    
+    aside.change {
+        transform: translate(0, 100%);
+    }
+
+    .settings-menu {
+        width: 66%;
+        justify-content: space-between;
+        position: fixed;
+        bottom: 100%;
+        right: 0;
+        z-index: 5;
+        padding: 5%;
+        border-bottom: 1px solid @dark-grey;
+        border-left: 1px solid @dark-grey;
+        border-radius: 0 7px;
+        background: @black;
+        color: @white;
+        opacity: 0.9;
+        transition: all 0.5s ease;
+
+        @media @desktop {
+            width: 20%;
+            padding: 2%;
+        }
+
+        h4 {
+            border-bottom: 1px solid @white;
+            font-size: 1.6rem;
+            text-align: center;
+        }
+
+        .slider-switch{
+            .toggle-switch(3rem, @dark-grey, @orange, @white);
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        li {
+            margin: 2% 0;
+        }
+    }
+
+    .settings-menu.change {
+        transform: translate(0, 120%);
+    }
+}

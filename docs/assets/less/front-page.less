@@ -1,0 +1,70 @@
+/********************** Front Page Styles ************************/
+.logo {
+    width: 100%;
+
+    @media @desktop {
+        width: 33%;
+        margin: 0 auto;
+    }
+
+    img {
+        width: 50%;
+    }
+}
+
+.front-page.wrapper {
+    @media @desktop {
+        padding: 0;
+    }
+}
+
+.front-page {
+
+    @media @desktop {
+        .flexBox(row wrap, space-evenly, center);
+        margin: 0 0 3% 0;
+    }
+
+    section {
+        width: 100%;
+        .flexBox(row wrap, start, center);
+        margin: 2% 0;
+
+        @media @desktop {
+            width: 45%;
+            justify-content: space-evenly;
+            margin: 2%;
+        }
+
+        h4 {
+
+            @media @desktop {
+                text-align: center;
+            }
+        }
+
+        .date-updated {
+            width: 100%;
+            margin: 2%;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        ul {
+
+            @media @desktop {
+                flex-wrap: nowrap;
+                justify-content: space-evenly;
+            }
+        }
+    }
+
+    .menu-box {
+
+        @media @desktop {
+            width: 100%;
+            margin: 0 2%;
+        }
+
+    }
+}
