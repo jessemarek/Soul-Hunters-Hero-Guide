@@ -129,19 +129,17 @@ function setDarkMode(option) {
 
     if(option) {
         body.classList.add("dark-mode");
-        darkMode.checked = true;
         setCookie("darkMode", true);
     }
     else {
         body.classList.remove("dark-mode");
-        darkMode.checked = false;
         setCookie("darkMode", false);
     }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const darkMode = getCookie("darkMode");
-    if(darkMode) {
-        setDarkMode(darkMode);
+    const cookie = getCookie("darkMode");
+    if(cookie) {
+        darkMode.checked = true;
     }
 });
