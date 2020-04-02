@@ -35,7 +35,7 @@ const backBtn = document.getElementById("filter-back").addEventListener("click",
 
 //Functions
 
-//Remove hidden status from any filtered Heroe Cards
+//Remove hidden status from any filtered Hero Cards
 function filterAll(){
 
     for(let i = 0; i < allHeroes.length; i++){

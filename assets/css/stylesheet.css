@@ -171,7 +171,7 @@ table tr:nth-child(even) {
 }
 .navbar .menubar.shadowbox {
   z-index: 4;
-  box-shadow: 10px 10px 30px 10px #efefef;
+  box-shadow: 1rem 1rem 3rem 1rem #efefef;
 }
 .navbar .mobile-menu-btn {
   display: flex;
@@ -1030,5 +1030,5 @@ body.dark-mode #forge-bonus-example tr:nth-child(even) {
   background: #444444;
 }
 body.dark-mode .menubar.shadowbox {
-  box-shadow: 10px 10px 30px 10px #101010;
+  box-shadow: 1rem 1rem 3rem 1rem #101010;
 }
