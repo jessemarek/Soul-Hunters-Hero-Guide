@@ -92,10 +92,10 @@ for(let i = 0; i < settingsCheckbox.length; i++) {
 //Dark Mode On/Off
 darkMode.addEventListener("change", function() {
     if(this.checked) {
-        body.classList.add("dark-mode");
+        setDarkMode(this.checked);
     } 
     else {
-        body.classList.remove("dark-mode");
+        setDarkMode(false);
     }
 });
 
