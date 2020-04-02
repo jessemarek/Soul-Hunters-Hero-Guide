@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Soul Hunters Hero Guide - Awakenings</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans&display=swap" rel="stylesheet">
+
+	<link rel="icon" href="/assets/images/icons/equipment/lost-epic.png">
+	<link rel="stylesheet" href="/assets/css/stylesheet.css" >
+</head>
+<body>
+    <nav class="navbar">
+         <div class="menubar"></div>
+        <div class="menubar shadowbox"></div>
+
+        <div id="mobile-nav-btn" class="mobile-menu-btn">
+            <div id="bar-one" class="menu-bar"></div>
+            <div id="bar-two" class="menu-bar"></div>
+            <div id="bar-three" class="menu-bar"></div>
+        </div>
+
+        <div id="settings-btn" class="mobile-menu-btn">
+            <img src="/assets/images/icons/cog-icon.png"/>
+            <img src="/assets/images/icons/x-icon.png">
+        </div>
+
+        <ul class="nav-links">
+            <li>
+                <a href="/index.html">Home</a>
+            </li>
+            <li  class="nav-dropdown" onclick="">
+                <p>Heroes <span class="down-arrow">+</span></p>
+                <ul class="sub-links">
+                    <li><a href="/guides/heroes.html">Heroes</a></li>
+                    <li><a href="/guides/awakenings.html">Awakenings</a></li>
+                    <li><a href="/guides/skins.html">Skins</a></li>
+                </ul>
+            </li>
+            <li  class="nav-dropdown" onclick="">
+                <p>The Forge <span class="down-arrow">+</span></p>
+                <ul class="sub-links">
+                    <li><a href="/guides/soulstones.html">Soulstones</a></li>
+                    <li><a href="/guides/forge.html">Forge</a></li>
+                    <li><a href="/guides/runestones.html">Runestones</a></li>
+                </ul>
+            </li>
+            <li  class="nav-dropdown" onclick="">
+                <p>Heroes Village <span class="down-arrow">+</span></p>
+                <ul class="sub-links">
+                    <li><a href="/guides/furnace.html">Furnace</a></li>
+                    <li><a href="/guides/academy.html">Academy</a></li>
+                    <li><a href="/guides/workshop.html">Workshop</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="/credits.html">Credits</a>
+            </li>
+		</ul>
+		
+        <ul class="settings-menu">
+            <h4>Settings</h4>
+            <li>
+                <p>Dark Mode</p>
+            </li>
+            <li>
+                <label class="slider-switch"><input id="darkMode" class="settingsCheckbox" name="dark mode toggle" type="checkbox"><span></span></label>
+            </li>
+            <li>
+                <p>Awakening Spoilers</p>
+            </li>
+            <li>
+                <label class="slider-switch"><input id="spoilerMode" class="settingsCheckbox" name="awakening spoiler toggle" type="checkbox" checked><span></span></label>
+            </li>
+        </ul>
+    </nav>
+	
+	<header>
+		<h3>Awakening Quests</h3>
+
+		<h5>Select a Hero</h5>
+
+		<div id="hero-filters" class="filter-btns">
+			<button id="filter-all" class="filter-btn active-btn" type="button">All</button>
+
+			<button id="filter-front" class="filter-btn" type="button">Front</button>
+
+			<button id="filter-mid" class="filter-btn" type="button">Mid</button>
+
+			<button id="filter-back" class="filter-btn" type="button">Back</button>
+
+			<form class="filter-form" action="#">
+				<input id="searchInput" class="filter-input" type="text" placeholder="Enter Hero Name" onkeyup="searchByName()">
+			</form>
+		</div>
+
+	</header>
+
+	<section class="hero-page">
+	
+		<ul id="hero-list" class="hero-menus" style="list-style-type: none;">
+	
+			<li class="hero-card mid-hero">
+				<a href="heroes/alana.html#awakening"><img src="/assets/images/hero-cards-aw/alana-aw.jpg" /></a><p class="card-title">Alana</p>
+			</li>
+	
+			<li class="hero-card front-hero">
+				<a href="heroes/alice.html#awakening"><img src="/assets/images/hero-cards-aw/alice-aw.jpg" /></a><p class="card-title">Alice</p>
+			</li>
+	
+			<li class="hero-card mid-hero">
+				<a href="heroes/aqua.html#awakening"><img src="/assets/images/hero-cards-aw/aqua-aw.jpg" /></a><p class="card-title">Aqua</p>
+			</li>
+	
+			<li class="hero-card mid-hero">
+				<a href="heroes/arachna.html#awakening"><img src="/assets/images/hero-cards-aw/arachna-aw.jpg" /></a><p class="card-title">Arachna</p>
+			</li>
+	
+			<li class="hero-card back-hero">
+				<a href="heroes/arcturus.html#awakening"><img src="/assets/images/hero-cards-aw/arcturus-aw.jpg" /></a><p class="card-title">Arcturus</p>
+			</li>
+	
+			<li class="hero-card mid-hero">
+				<a href="heroes/ariel.html#awakening"><img src="/assets/images/hero-cards-aw/ariel-aw.jpg" /></a><p class="card-title">Ariel</p>
+			</li>
+	
+			<li class="hero-card mid-hero">
+				<a href="heroes/avior.html#awakening"><img src="/assets/images/hero-cards-aw/avior-aw.jpg" /></a><p class="card-title">Avior</p>
+			</li>
+	
+			<li class="hero-card back-hero">
+				<a href="heroes/baltor.html#awakening"><img src="/assets/images/hero-cards-aw/baltor-aw.jpg" /></a><p class="card-title">Baltor</p>
+			</li>
+	
+			<li class="hero-card mid-hero">
+				<a href="heroes/cara.html#awakening"><img src="/assets/images/hero-cards-aw/cara-aw.jpg" /></a><p class="card-title">Cara</p>
+			</li>
+	
+			<li class="hero-card mid-hero">
+				<a href="heroes/cyana.html#awakening"><img src="/assets/images/hero-cards-aw/cyana-aw.jpg" /></a><p class="card-title">Cyana</p>
+			</li>
+	
+			<li class="hero-card back-hero">
+				<a href="heroes/dalton.html#awakening"><img src="/assets/images/hero-cards-aw/dalton-aw.jpg" /></a><p class="card-title">Dalton</p>
+			</li>
+	
+			<li class="hero-card mid-hero">
+				<a href="heroes/daphne.html#awakening"><img src="/assets/images/hero-cards-aw/daphne-aw.jpg" /></a><p class="card-title">Daphne</p>
+			</li>
+	
+			<li class="hero-card mid-hero">
+				<a href="heroes/desmond.html#awakening"><img src="/assets/images/hero-cards-aw/desmond-aw.jpg" /></a><p class="card-title">Desmond</p>
+			</li>
+	
+			<li class="hero-card mid-hero">
+				<a href="heroes/dokras.html#awakening"><img src="/assets/images/hero-cards-aw/dokras-aw.jpg" /></a><p class="card-title">Dokras</p>
+			</li>
+	
+			<li class="hero-card mid-hero">
+				<a href="heroes/dr-zeno.html#awakening"><img src="/assets/images/hero-cards-aw/dr-zeno-aw.jpg" /></a><p class="card-title">Dr Zeno</p>
+			</li>
+	
+			<li class="hero-card front-hero">
+				<a href="heroes/elric.html#awakening"><img src="/assets/images/hero-cards-aw/elric-aw.jpg" /></a><p class="card-title">Elric</p>
+			</li>
+	
+			<li class="hero-card back-hero">
+				<a href="heroes/embrael.html#awakening"><img src="/assets/images/hero-cards-aw/embrael-aw.jpg" /></a><p class="card-title">Embrael</p>
+			</li>
+	
+			<li class="hero-card mid-hero">
+				<a href="heroes/enrique.html#awakening"><img src="/assets/images/hero-cards-aw/enrique-aw.jpg" /></a><p class="card-title">Enrique</p>
+			</li>
+	
+			<li class="hero-card mid-hero">
+				<a href="heroes/ethera.html#awakening"><img src="/assets/images/hero-cards-aw/ethera-aw.jpg" /></a><p class="card-title">Ethera</p>
+			</li>
+	
+			<li class="hero-card front-hero">
+				<a href="heroes/ezio.html#awakening"><img src="/assets/images/hero-cards-aw/ezio-aw.jpg" /></a><p class="card-title">Ezio</p>
+			</li>
+	
+			<li class="hero-card mid-hero">
+				<a href="heroes/garrick.html#awakening"><img src="/assets/images/hero-cards-aw/garrick-aw.jpg" /></a><p class="card-title">Garrick</p>
+			</li>
+	
+			<li class="hero-card front-hero">
+				<a href="heroes/goram.html#awakening"><img src="/assets/images/hero-cards-aw/goram-aw.jpg" /></a><p class="card-title">Goram</p>
+			</li>
+	
+			<li class="hero-card mid-hero">
+				<a href="heroes/havoc.html#awakening"><img src="/assets/images/hero-cards-aw/havoc-aw.jpg" /></a><p class="card-title">Havoc</p>
+			</li>
+	
+			<li class="hero-card mid-hero">
+				<a href="heroes/kaneq.html#awakening"><img src="/assets/images/hero-cards-aw/kaneq-aw.jpg" /></a><p class="card-title">Kaneq</p>
+			</li>
+	
+			<li class="hero-card front-hero">
+				<a href="heroes/kasar.html#awakening"><img src="/assets/images/hero-cards-aw/kasar-aw.jpg" /></a><p class="card-title">Kasar</p>
+			</li>
+	
+			<li class="hero-card front-hero">
+				<a href="heroes/killjoy.html#awakening"><img src="/assets/images/hero-cards-aw/killjoy-aw.jpg" /></a><p class="card-title">Killjoy</p>
+			</li>
+	
+			<li class="hero-card front-hero">
+				<a href="heroes/konrad.html#awakening"><img src="/assets/images/hero-cards-aw/konrad-aw.jpg" /></a><p class="card-title">Konrad</p>
+			</li>
+	
+			<li class="hero-card front-hero">
+				<a href="heroes/lars.html#awakening"><img src="/assets/images/hero-cards-aw/lars-aw.jpg" /></a><p class="card-title">Lars</p>
+			</li>
+	
+			<li class="hero-card back-hero">
+				<a href="heroes/li-twins.html#awakening"><img src="/assets/images/hero-cards-aw/li-twins-aw.jpg" /></a><p class="card-title">Li Twins</p>
+			</li>
+	
+			<li class="hero-card back-hero">
+				<a href="heroes/magnus.html#awakening"><img src="/assets/images/hero-cards-aw/magnus-aw.jpg" /></a><p class="card-title">Magnus</p>
+			</li>
+	
+			<li class="hero-card front-hero">
+				<a href="heroes/malrath.html#awakening"><img src="/assets/images/hero-cards-aw/malrath-aw.jpg" /></a><p class="card-title">Malrath</p>
+			</li>
+	
+			<li class="hero-card back-hero">
+				<a href="heroes/mazir.html#awakening"><img src="/assets/images/hero-cards-aw/mazir-aw.jpg" /></a><p class="card-title">Mazir</p>
+			</li>
+	
+			<li class="hero-card front-hero">
+				<a href="heroes/mirielle.html#awakening"><img src="/assets/images/hero-cards-aw/mirielle-aw.jpg" /></a><p class="card-title">Mirielle</p>
+			</li>
+	
+			<li class="hero-card mid-hero">
+				<a href="heroes/mog.html#awakening"><img src="/assets/images/hero-cards-aw/mog-aw.jpg" /></a><p class="card-title">Mog</p>
+			</li>
+	
+			<li class="hero-card front-hero">
+				<a href="heroes/morfir.html#awakening"><img src="/assets/images/hero-cards-aw/morfir-aw.jpg" /></a><p class="card-title">Morfir</p>
+			</li>
+	
+			<li class="hero-card mid-hero">
+				<a href="heroes/mortus.html#awakening"><img src="/assets/images/hero-cards-aw/mortus-aw.jpg" /></a><p class="card-title">Mortus</p>
+			</li>
+	
+			<li class="hero-card front-hero">
+				<a href="heroes/namtar.html#awakening"><img src="/assets/images/hero-cards-aw/namtar-aw.jpg" /></a><p class="card-title">Namtar</p>
+			</li>
+	
+			<li class="hero-card mid-hero">
+				<a href="heroes/nightshade.html#awakening"><img src="/assets/images/hero-cards-aw/nightshade-aw.jpg" /></a><p class="card-title">Nightshade</p>
+			</li>
+	
+			<li class="hero-card front-hero">
+				<a href="heroes/octo.html#awakening"><img src="/assets/images/hero-cards-aw/octo-aw.jpg" /></a><p class="card-title">Octo</p>
+			</li>
+	
+			<li class="hero-card front-hero">
+				<a href="heroes/orkon.html#awakening"><img src="/assets/images/hero-cards-aw/orkon-aw.jpg" /></a><p class="card-title">Orkon</p>
+			</li>
+	
+			<li class="hero-card mid-hero">
+				<a href="heroes/osiris.html#awakening"><img src="/assets/images/hero-cards-aw/osiris-aw.jpg" /></a><p class="card-title">Osiris</p>
+			</li>
+	
+			<li class="hero-card front-hero">
+				<a href="heroes/petros.html#awakening"><img src="/assets/images/hero-cards-aw/petros-aw.jpg" /></a><p class="card-title">Petros</p>
+			</li>
+	
+			<li class="hero-card front-hero">
+				<a href="heroes/prince-of-persia.html#awakening"><img src="/assets/images/hero-cards-aw/prince-of-persia-aw.jpg" /></a><p class="card-title">Prince</p>
+			</li>
+	
+			<li class="hero-card front-hero">
+				<a href="heroes/rayman.html#awakening"><img src="/assets/images/hero-cards-aw/rayman-aw.jpg" /></a><p class="card-title">Rayman</p>
+			</li>
+	
+			<li class="hero-card front-hero">
+				<a href="heroes/salus.html#awakening"><img src="/assets/images/hero-cards-aw/salus-aw.jpg" /></a><p class="card-title">Salus</p>
+			</li>
+	
+			<li class="hero-card back-hero">
+				<a href="heroes/sagar.html#awakening"><img src="/assets/images/hero-cards-aw/sagar-aw.jpg" /></a><p class="card-title">Sagar</p>
+			</li>
+	
+			<li class="hero-card mid-hero">
+				<a href="heroes/selene.html#awakening"><img src="/assets/images/hero-cards-aw/selene-aw.jpg" /></a><p class="card-title">Selene</p>
+			</li>
+	
+			<li class="hero-card mid-hero">
+				<a href="heroes/serafine.html#awakening"><img src="/assets/images/hero-cards-aw/serafine-aw.jpg" /></a><p class="card-title">Serafine</p>
+			</li>
+	
+			<li class="hero-card front-hero">
+				<a href="heroes/shirley.html#awakening"><img src="/assets/images/hero-cards-aw/shirley-aw.jpg" /></a><p class="card-title">Shirley</p>
+			</li>
+	
+			<li class="hero-card back-hero">
+				<a href="heroes/slim.html#awakening"><img src="/assets/images/hero-cards-aw/slim-aw.jpg" /></a><p class="card-title">Slim</p>
+			</li>
+	
+			<li class="hero-card back-hero">
+				<a href="heroes/solomon.html#awakening"><img src="/assets/images/hero-cards-aw/solomon-aw.jpg" /></a><p class="card-title">Solomon</p>
+			</li>
+	
+			<li class="hero-card mid-hero">
+				<a href="heroes/sumiko.html#awakening"><img src="/assets/images/hero-cards-aw/sumiko-aw.jpg" /></a><p class="card-title">Sumiko</p>
+			</li>
+	
+			<li class="hero-card mid-hero">
+				<a href="heroes/sylphi.html#awakening"><img src="/assets/images/hero-cards-aw/sylphi-aw.jpg" /></a><p class="card-title">Sylphi</p>
+			</li>
+	
+			<li class="hero-card front-hero">
+				<a href="heroes/tanya.html#awakening"><img src="/assets/images/hero-cards-aw/tanya-aw.jpg" /></a><p class="card-title">Tanya</p>
+			</li>
+	
+			<li class="hero-card front-hero">
+				<a href="heroes/tholin.html#awakening"><img src="/assets/images/hero-cards-aw/tholin-aw.jpg" /></a><p class="card-title">Tholin</p>
+			</li>
+	
+			<li class="hero-card mid-hero">
+				<a href="heroes/tut.html#awakening"><img src="/assets/images/hero-cards-aw/tut-aw.jpg" /></a><p class="card-title">Tut</p>
+			</li>
+	
+			<li class="hero-card front-hero">
+				<a href="heroes/vernos.html#awakening"><img src="/assets/images/hero-cards-aw/vernos-aw.jpg" /></a><p class="card-title">Vernos</p>
+			</li>
+	
+			<li class="hero-card front-hero">
+				<a href="heroes/vespix.html#awakening"><img src="/assets/images/hero-cards-aw/vespix-aw.jpg" /></a><p class="card-title">Vespix</p>
+			</li>
+	
+			<li class="hero-card front-hero">
+				<a href="heroes/vincent.html#awakening"><img src="/assets/images/hero-cards-aw/vincent-aw.jpg" /></a><p class="card-title">Vincent</p>
+			</li>
+	
+			<li class="hero-card front-hero">
+				<a href="heroes/volt.html#awakening"><img src="/assets/images/hero-cards-aw/volt-aw.jpg" /></a><p class="card-title">Volt</p>
+			</li>
+	
+			<li class="hero-card front-hero">
+				<a href="heroes/vulko.html#awakening"><img src="/assets/images/hero-cards-aw/vulko-aw.jpg" /></a><p class="card-title">Vulko</p>
+			</li>
+	
+		</ul>
+	</section>
+
+	<footer>
+		<p>Copyright 2020 The Last Sentinel™ -- All Rights Reserved</p>
+	</footer>
+
+	<script src="/assets/scripts/nav-menus.js"></script>
+	<script src="/assets/scripts/filter-btn.js"></script>
+</body>
+</html>
