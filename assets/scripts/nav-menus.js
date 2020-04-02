@@ -148,12 +148,12 @@ function setMode(mname, mvalue) {
             
             if(mvalue){
                for(let i = 0; i < spoilers.length; i++){
-                   spoilers[i].style.display = "";
+                   spoilers[i].classList.remove("spoiler-off");//style.display = "";
                }
             }
             else {
                 for(let i = 0; i < spoilers.length; i++){
-                    spoilers[i].style.display = "none";
+                    spoilers[i].classList.add("spoiler-off");//style.display = "none";
                 }
             }
         } 
