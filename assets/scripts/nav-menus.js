@@ -129,6 +129,7 @@ function getCookie(cname) {
 
 function setMode(mname, mvalue) {
     const mode = document.getElementById(mname);
+
     switch(mname) {
         case "darkMode": {
             mode.checked = mvalue;
@@ -142,6 +143,19 @@ function setMode(mname, mvalue) {
 
         case "spoilerMode": {
             mode.checked = mvalue;
+            console.log(`spoilerMode: ${mvalue}`);
+            const spoilers = document.getElementsByClassName("spoiler-card");
+            
+            if(mvalue){
+               for(let i = 0; i < spoilers.length; i++){
+                   spoilers[i].style.display = "";
+               }
+            }
+            else {
+                for(let i = 0; i < spoilers.length; i++){
+                    spoilers[i].style.display = "none";
+                }
+            }
         } 
         break;
     }
