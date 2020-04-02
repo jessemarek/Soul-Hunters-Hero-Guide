@@ -96,7 +96,7 @@ function setCookie(cname, cvalue) {
     const expires = `expires=${date.toUTCString()};`;
 
     //Sets the cookie value and expiration
-    document.cookie = `${cname}=${cvalue}; ${expires}; path=/`;
+    document.cookie = `${cname}=${cvalue}; ${expires}; path=/; samesite=strict`;
 }
 
 //Gets the cookies for the site if any exist
@@ -147,12 +147,12 @@ function setMode(mname, mvalue) {
             
             if(mvalue){
                for(let i = 0; i < spoilers.length; i++){
-                   spoilers[i].classList.remove("spoiler-off");//style.display = "";
+                   spoilers[i].classList.remove("spoiler-off");
                }
             }
             else {
                 for(let i = 0; i < spoilers.length; i++){
-                    spoilers[i].classList.add("spoiler-off");//style.display = "none";
+                    spoilers[i].classList.add("spoiler-off");
                 }
             }
         } 
