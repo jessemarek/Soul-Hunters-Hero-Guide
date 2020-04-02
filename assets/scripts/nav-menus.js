@@ -92,7 +92,7 @@ for(let i = 0; i < settingsCheckbox.length; i++) {
 //Dark Mode On/Off
 darkMode.addEventListener("change", function() {
     if(this.checked) {
-        setDarkMode(this.checked);
+        setDarkMode(true);
     } 
     else {
         setDarkMode(false);
@@ -152,6 +152,6 @@ function setDarkMode(option) {
 document.addEventListener("DOMContentLoaded", () => {
     const cookie = getCookie("darkMode");
     if(cookie === true) {
-       setDarkMode(cookie);
+       setDarkMode(true);
     }
 });
