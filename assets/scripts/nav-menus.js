@@ -85,19 +85,9 @@ settingsBtn.addEventListener("click", () => {
 //Settings Toggle Switch Listeners
 for(let i = 0; i < settingsCheckbox.length; i++) {
     settingsCheckbox[i].addEventListener("change", function() {
-        console.log(`The value of ${this.id} has changed to ${this.checked}`);
+        setMode(this.id, this.checked);
     });
 }
-
-//Dark Mode On/Off
-darkMode.addEventListener("change", function() {
-    if(this.checked) {
-        setDarkMode(true);
-    } 
-    else {
-        setDarkMode(false);
-    }
-});
 
 function setCookie(cname, cvalue) {
     //Create the expiration date
@@ -137,21 +127,62 @@ function getCookie(cname) {
     return "";
 }
 
-function setDarkMode(option) {
+function setMode(mname, mvalue) {
+    const mode = document.getElementById(mname);
+    switch(mname) {
+        case "darkMode": {
+            mode.checked = mvalue;
+            
+            if(mvalue){
+                body.classList.add("dark-mode");
+            }
+            else body.classList.remove("dark-mode");
+        } 
+        break;
 
-    if(option) {
-        body.classList.add("dark-mode");
-        setCookie("darkMode", true);
+        case "spoilerMode": {
+            mode.checked = mvalue;
+        } 
+        break;
     }
-    else {
-        body.classList.remove("dark-mode");
-        setCookie("darkMode", false);
-    }
+    setPrefs(mname, mvalue);
+}
+
+function setPrefs(key, value) {
+    //Get the prefs from the cookie
+    const cvalue = getCookie("userPrefs");
+
+    //Convert cvalue from str to obj
+    const newPrefs = JSON.parse(`${cvalue}`);
+    newPrefs[key] = value;
+    //Convert obj back to str
+    const newCookie = JSON.stringify(newPrefs);
+
+    //Store new prefs in cookie
+    setCookie("userPrefs", `${newCookie}`);
+}
+
+function loadPrefs(cvalue){
+    const userPrefs = JSON.parse(`${cvalue}`);
+    
+    const settings = Object.entries(userPrefs);
+    settings.forEach(item => {
+        document.getElementById(item[0]).checked = item[1];
+        setMode(item[0], item[1]);
+    });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const cookie = getCookie("darkMode");
-    if(cookie === true) {
-       setDarkMode(true);
+    console.log(`The Document is loaded!`);
+    
+    const cvalue = getCookie("userPrefs");
+    
+    //If cookie exists load it else create a new cookie with default prefs
+    if(cvalue != ""){
+        loadPrefs(cvalue);
     }
+    else {
+        cvalue = '{"darkMode": false, "spoilerMode": true}';
+    }
+    setCookie("userPrefs", `${cvalue}`);
 });
