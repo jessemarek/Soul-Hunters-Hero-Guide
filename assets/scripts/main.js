@@ -210,7 +210,7 @@ const searchInput = document.getElementById("searchInput");
 const activeBtn = document.getElementsByClassName("active-btn");
 
 //Listeners for each filter button
-const allBtn = document.getElementById("filter-all")
+const allBtn = document.getElementById("filter-all");
 
 if(allBtn) {
     allBtn.addEventListener("click", function() {
