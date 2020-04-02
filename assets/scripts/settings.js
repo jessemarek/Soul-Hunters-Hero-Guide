@@ -50,10 +50,6 @@ function setDarkMode() {
         body.classList.remove("dark-mode");
         setCookie("darkMode", false);
     }
-    /* if(!darkModeToggle.checked) {
-        document.getElementsByTagName("body")[0].classList.remove("dark-mode");
-        setCookie("darkMode", false);
-    } */
 }
 
 function setSpoilerMode() {
@@ -61,7 +57,9 @@ function setSpoilerMode() {
     if(spoilerToggle.checked) {
         setCookie("spoilers", true);
     }
-    else setCookie("spoilers", false);
+    else {
+        setCookie("spoilers", false);
+    }
 }
 
 //Checks cookies for stored User preferences

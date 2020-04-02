@@ -15,6 +15,8 @@ const sideFooter = document.getElementsByTagName("footer");
 const body = document.getElementsByTagName("body")[0];
 const settingsBtn = document.getElementById("settings-btn");
 const settingsMenu = document.getElementsByClassName("settings-menu");
+
+const settingsCheckbox = document.getElementsByClassName("settingsCheckbox");
 const darkMode = document.getElementById("darkMode");
 const spoilerMode = document.getElementById("spoilerMode");
 
@@ -79,8 +81,11 @@ settingsBtn.addEventListener("click", () => {
     }
 });
 
+
 //Dark Mode On/Off
-darkMode.addEventListener("change", setDarkMode());
+darkMode.addEventListener("click", () => {
+    setDarkMode(darkMode.checked);
+});
 
 function setCookie(cname, cvalue) {
     //Create the expiration date
@@ -120,9 +125,9 @@ function getCookie(cname) {
     return "";
 }
 
-function setDarkMode() {
+function setDarkMode(option) {
 
-    if(darkMode.checked) {
+    if(option) {
         body.classList.add("dark-mode");
         setCookie("darkMode", true);
     }
@@ -130,8 +135,4 @@ function setDarkMode() {
         body.classList.remove("dark-mode");
         setCookie("darkMode", false);
     }
-    /* if(!darkModeToggle.checked) {
-        document.getElementsByTagName("body")[0].classList.remove("dark-mode");
-        setCookie("darkMode", false);
-    } */
 }
