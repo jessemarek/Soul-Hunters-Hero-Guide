@@ -83,8 +83,13 @@ settingsBtn.addEventListener("click", () => {
 
 
 //Dark Mode On/Off
-darkMode.addEventListener("click", () => {
-    setDarkMode(darkMode.checked);
+darkMode.addEventListener("change", function() {
+    if(this.checked) {
+        body.classList.add("dark-mode");
+    } 
+    else {
+        body.classList.remove("dark-mode");
+    }
 });
 
 function setCookie(cname, cvalue) {
@@ -139,7 +144,7 @@ function setDarkMode(option) {
 
 document.addEventListener("DOMContentLoaded", () => {
     const cookie = getCookie("darkMode");
-    if(cookie) {
+    if(cookie === true) {
         darkMode.checked = true;
     }
 });
