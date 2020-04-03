@@ -170,8 +170,9 @@ table tr:nth-child(even) {
   color: #efefef;
 }
 .navbar .menubar.shadowbox {
+  height: 3.5rem;
   z-index: 4;
-  box-shadow: 1rem 1rem 2rem 1rem #efefef;
+  box-shadow: 1rem 1rem 3rem 1rem #efefef;
 }
 .navbar .mobile-menu-btn {
   display: flex;
@@ -974,7 +975,7 @@ header .filter-btns .filter-form input {
 }
 .credits-page .navbar .menubar.shadowbox {
   z-index: 4;
-  box-shadow: 1rem 1rem 2rem 1rem #101010;
+  box-shadow: 1rem 1rem 3rem 1rem #101010;
 }
 .credits-page h4 {
   border-color: #efefef;
