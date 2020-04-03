@@ -282,7 +282,13 @@ table tr:nth-child(even) {
 @media (min-width: 1000px) {
   .navbar .nav-links li {
     width: 15%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
     margin: 0;
+  }
+  .navbar .nav-links li:hover {
+    background: #101010;
   }
 }
 .navbar .nav-links a {
@@ -290,21 +296,8 @@ table tr:nth-child(even) {
 }
 @media (min-width: 1000px) {
   .navbar .nav-links a {
-    position: relative;
-  }
-  .navbar .nav-links a::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0.2rem;
-    position: absolute;
-    left: 0;
-    bottom: -0.25rem;
-    background: #efefef;
-    transition: width 0.5s ease 0s;
-  }
-  .navbar .nav-links a:hover::after {
     width: 100%;
+    text-align: center;
   }
 }
 .navbar .nav-links .nav-dropdown {
@@ -313,9 +306,6 @@ table tr:nth-child(even) {
 }
 .navbar .nav-links .nav-dropdown:hover {
   cursor: pointer;
-}
-.navbar .nav-links .nav-dropdown:hover p::after {
-  width: 100%;
 }
 .navbar .nav-links .nav-dropdown:hover .down-arrow {
   opacity: 0;
@@ -340,6 +330,15 @@ table tr:nth-child(even) {
 .navbar .nav-links .nav-dropdown p:hover::after {
   width: 100%;
 }
+@media (min-width: 1000px) {
+  .navbar .nav-links .nav-dropdown p {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar .nav-links .nav-dropdown p:hover::after {
+    width: 0;
+  }
+}
 .navbar .nav-links .nav-dropdown .down-arrow {
   font-weight: bold;
   transition: all 0.5s ease;
@@ -354,7 +353,7 @@ table tr:nth-child(even) {
     width: 100%;
     justify-content: space-evenly;
     position: absolute;
-    top: 3.1rem;
+    top: 4rem;
     border-radius: 0 0 7px 7px;
     background: linear-gradient(to bottom right, #202020, #909090);
   }
@@ -365,6 +364,7 @@ table tr:nth-child(even) {
     display: inline-block;
     width: 100%;
     padding: 5% 10%;
+    text-align: left;
     transition: all 0.5s ease;
   }
   .navbar .nav-links .sub-links li a:hover {
@@ -1016,16 +1016,16 @@ body.dark-mode .grn-txt {
   color: #adff2f;
 }
 body.dark-mode .blu-txt {
-  color: #00adff;
+  color: #61CDFF;
 }
 body.dark-mode .prp-txt {
-  color: #c42be0;
+  color: #E6A1F2;
 }
 body.dark-mode .org-txt {
   color: #ffb100;
 }
 body.dark-mode .red-txt {
-  color: #ff522b;
+  color: #FF7E61;
 }
 body.dark-mode table th,
 body.dark-mode #forge-bonus-example th {
