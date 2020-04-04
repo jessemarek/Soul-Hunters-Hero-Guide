@@ -1,704 +1,1070 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" type="text/css" href="../../stylesheet.css">
-</head>
-<body>
-	<aside class="section-bookmarks">
+	<title>Soul Hunters Hero Guide - Desmond</title>
 
-		<h4>Guide Bookmarks</h4>
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans&display=swap" rel="stylesheet">
+
+	<link rel="icon" href="../../assets/images/icons/equipment/lost-epic.png">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/stylesheet.css">
+</head>
+
+<body>
+	<nav class="navbar">
+		<div class="menubar"></div>
+		<div class="menubar shadowbox"></div>
+
+		<div id="mobile-nav-btn" class="mobile-menu-btn">
+			<div id="bar-one" class="menu-bar"></div>
+			<div id="bar-two" class="menu-bar"></div>
+			<div id="bar-three" class="menu-bar"></div>
+		</div>
+
+		<div id="bookmarks-btn" class="mobile-menu-btn">
+			<img src="../../assets/images/icons/bookmark-icon.png">
+			<img src="../../assets/images/icons/x-icon.png">
+		</div>
+
+		<div id="settings-btn" class="mobile-menu-btn">
+			<img src="../../assets/images/icons/cog-icon.png" />
+			<img src="../../assets/images/icons/x-icon.png">
+		</div>
+
+		<ul class="nav-links">
+			<li>
+				<a href="../../index.html">Home</a>
+			</li>
+			<li class="nav-dropdown" onclick="">
+				<p>Heroes <span class="down-arrow">+</span></p>
+				<ul class="sub-links">
+					<li><a href="../../guides/heroes.html">Heroes</a></li>
+					<li><a href="../../guides/awakenings.html">Awakenings</a></li>
+					<li><a href="../../guides/skins.html">Skins</a></li>
+				</ul>
+			</li>
+			<li class="nav-dropdown" onclick="">
+				<p>The Forge <span class="down-arrow">+</span></p>
+				<ul class="sub-links">
+					<li><a href="../../guides/soulstones.html">Soulstones</a></li>
+					<li><a href="../../guides/forge.html">Forge</a></li>
+					<li><a href="../../guides/runestones.html">Runestones</a></li>
+				</ul>
+			</li>
+			<li class="nav-dropdown" onclick="">
+				<p>Heroes Village <span class="down-arrow">+</span></p>
+				<ul class="sub-links">
+					<li><a href="../../guides/furnace.html">Furnace</a></li>
+					<li><a href="../../guides/academy.html">Academy</a></li>
+					<li><a href="../../guides/workshop.html">Workshop</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="../../credits.html">Credits</a>
+			</li>
+		</ul>
+
+		<ul class="settings-menu">
+			<h4>Settings</h4>
+			<li>
+				<p>Dark Mode</p>
+			</li>
+			<li>
+				<label class="slider-switch"><input id="darkMode" class="settingsCheckbox" name="dark mode toggle"
+						type="checkbox"><span></span></label>
+			</li>
+			<li>
+				<p>Awakening Spoilers</p>
+			</li>
+			<li>
+				<label class="slider-switch"><input id="spoilerMode" class="settingsCheckbox" name="spoiler mode toggle"
+						type="checkbox" checked><span></span></label>
+			</li>
+		</ul>
+
+		<aside class="section-bookmarks">
+
+			<h4>Guide Bookmarks</h4>
+
+			<div class="bookmark-list">
+				<a class="bookmark-link" href="#hero-info">Hero Info</a>
+				<a class="bookmark-link" href="#abilities">Abilities</a>
+				<a class="bookmark-link" href="#fusion-items">Fusions</a>
+				<a class="bookmark-link" href="#key-items">Key Fusion Items</a>
+				<a class="bookmark-link" href="#academy">Heroic Academy Trees</a>
+				<a class="bookmark-link" href="#awakening">Awakening Quest</a>
+			</div>
+
+		</aside>
+	</nav>
+
+	<div class="wrapper">
+		<section id="hero-info" class="guide-section">
+			<!-- Hero Info Section of Guide -->
+
+			<div class="section-header">
+				<h2>Desmond - Bionic Bat</h2>
+			</div>
+
+			<div class="section-body">
+
+				<div class="hero-art">
+					<div class="hero-card">
+						<img src="../../assets/images/hero-cards/desmond.jpg" />
+					</div>
+
+					<div class="hero-portrait">
+						<img src="../../assets/images/icons/portraits/desmond.png" />
+					</div>
+
+					<p class="hero-quote">"Weapons fully charged!"</p>
+				</div>
+
+				<div class="hero-details">
+					<div class="hero-role">
+						<h4>Hero Info and Role</h4>
+						<p><b>Middle Line DPS:</b> Flies on a hoverboard and uses burning oil to deal Damage-over-Time
+							to his enemies</p>
+					</div>
+
+					<div class="hero-ss-details">
+						<div class="hero-details-icon">
+							<h4>First Appeared</h4>
+							<img src="../../assets/images/icons/shops/conjuring-stone.png" width="86" height="86" />
+							<p>Conjuring Stone</p>
+						</div>
+
+						<div class="card-details">
+							<h4><img src="../../assets/images/icons/hero-info/star.png" width="16" height="16" /><img
+									src="../../assets/images/icons/hero-info/star.png" width="16" height="16" /><img
+									src="../../assets/images/icons/hero-info/star.png" width="16" height="16" /> Hero
+								Card</h4>
+							<ul>
+								<li>Requires 80 <img src="../../assets/images/icons/hero-info/ss.png" width="12"
+										height="12" /> to summon</li>
+								<li>Additional Cards grant 30 <img src="../../assets/images/icons/hero-info/ss.png"
+										width="12" height="12" /></li>
+								<li><img src="../../assets/images/icons/shops/diamond-chest.png" width="30"
+										height="30" /> Drops in Diamond Chest</li>
+							</ul>
+						</div>
+
+						<div class="hero-details-icon">
+							<h4><img src="../../assets/images/icons/hero-info/ss.png" width="12" height="12" />
+								Available In</h4>
+							<img src="../../assets/images/icons/shops/unknown.png" width="86" height="86" />
+							<p>Not Released</p>
+						</div>
+
+					</div>
+
+					<div class="hero-growth-box">
+						<div class="stat-growth">
+							<h4>Stat Growth Rates</h4>
+
+							<table>
+								<tr>
+									<th colspan=2><img src="../../assets/images/icons/hero-info/star.png" width="12"
+											height="12" /><img src="../../assets/images/icons/hero-info/star.png"
+											width="12" height="12" /><img
+											src="../../assets/images/icons/hero-info/star.png" width="12" height="12" />
+									</th>
+									<th><img src="../../assets/images/icons/hero-info/stat-growth-arrow.png" width="24"
+											height="12" /></th>
+									<th colspan=2><img src="../../assets/images/icons/hero-info/star.png" width="12"
+											height="12" /><img src="../../assets/images/icons/hero-info/star.png"
+											width="12" height="12" /><img
+											src="../../assets/images/icons/hero-info/star.png" width="12"
+											height="12" /><img src="../../assets/images/icons/hero-info/star.png"
+											width="12" height="12" /><img
+											src="../../assets/images/icons/hero-info/star.png" width="12"
+											height="12" /><img src="../../assets/images/icons/hero-info/star.png"
+											width="12" height="12" /><img
+											src="../../assets/images/icons/hero-info/star.png" width="12" height="12" />
+									</th>
+								</tr>
+
+								<tr>
+									<td>Health</td>
+									<td><b>78</b></td>
+									<td></td>
+									<td>Health</td>
+									<td><b>141</b></td>
+								</tr>
+								<tr>
+									<td>Physical Attack</td>
+									<td><b>6</b></td>
+									<td></td>
+									<td>Physical Attack</td>
+									<td><b>10.8</b></td>
+								</tr>
+								<tr>
+									<td>Magic Attack</td>
+									<td><b>6.7</b></td>
+									<td></td>
+									<td>Magic Attack</td>
+									<td><b>12</b></td>
+								</tr>
+								<tr>
+									<td>Physical Armor</td>
+									<td><b>2.5</b></td>
+									<td></td>
+									<td>Physical Armor</td>
+									<td><b>4.5</b></td>
+								</tr>
+								<tr>
+									<td>Magic Armor</td>
+									<td><b>2.5</b></td>
+									<td></td>
+									<td>Magic Armor</td>
+									<td><b>4.5</b></td>
+								</tr>
+							</table>
+						</div>
+
+						<div class="hero-medallion">
+							<h4>Hero Medallions</h4>
+							<p class="grn-txt">None</p>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</section>
+
+		<section id="abilities" class="guide-section">
+			<!-- Abilities Section of Guide -->
+
+			<div class="section-header">
+				<h2>Abilities</h2>
+			</div>
+
+			<div class="section-body">
+
+				<div class="ability-box">
+					<h4>Fireball Volley - Ultimate Ability</h4>
+
+					<div class="ability-details">
+						<div class="ability-icon">
+							<img src="../../assets/images/icons/abilities/desmond-ability1.png" />
+						</div>
+
+						<div class="ability-text">
+							<h4>Ability Description</h4>
+							<p class="grn-txt">Desmond elevates his hoverboard to a higher altitude, increasing his Dodge rating. Then
+								he dives at the enemy formation, shooting fireballs that deal Magic Damage to random
+								enemies. As Desmond is returning to his side of the battlefield, he will drag an enemy
+								that direction with him. After being released, the affected enemy will be Stunned</p>
+						</div>
+
+						<div class="ability-stats">
+							<h4>Ability Stats</h4>
+							<ul class="grn-txt">
+								<li>(+ 20 Damage, + 4 Dodge Rating per Ability Point)</li>
+								<li>Level 100: Fireballs deal 2000 Damage<br>Increases Dodge Rating by 400<br>Stun
+									Success Rate increases with ability level. Enemies under level 100 will be Stunned
+									every time</li>
+								<li>Attributes: <img class="attribute-icon"
+										src="../../assets/images/icons/attributes/fire.png" width="24" height="24" />
+								</li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="ability-box">
+					<h4>Flamethrower - Unlocks with <span class="grn-txt">Green Fusion</span></h4>
+
+					<div class="ability-details">
+						<div class="ability-icon">
+							<img src="../../assets/images/icons/abilities/desmond-ability2.png" />
+						</div>
+
+						<div class="ability-text">
+							<h4>Ability Description</h4>
+							<p class="grn-txt">Desmond uses his flamethrower to unleash a blast of green flame at the enemy party,
+								dealing AoE Magic Damage</p>
+						</div>
+
+						<div class="ability-stats">
+							<h4>Ability Stats</h4>
+							<ul class="grn-txt">
+								<li>(+ 17 Damage per Ability Point)</li>
+								<li>Level 100: Flame deals 1700 Damage</li>
+								<li>Attributes: <img class="attribute-icon"
+										src="../../assets/images/icons/attributes/fire.png" width="24" height="24" />
+								</li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="ability-box">
+					<h4>Oil Drum - Unlocks with <span class="blu-txt">Blue Fusion</span></h4>
+
+					<div class="ability-details">
+						<div class="ability-icon">
+							<img src="../../assets/images/icons/abilities/desmond-ability3.png" />
+						</div>
+
+						<div class="ability-text">
+							<h4>Ability Description</h4>
+							<p class="grn-txt">Desmond throws an oil drum at his enemies, who become covered in sticky oil. When struck
+								by Desmond's other attacks, affected enemies will take additional Damage-over-Time due
+								to the oil burning. Enemies can be struck by oil multiple times, and the effects are
+								cumulative.</p>
+						</div>
+
+						<div class="ability-stats">
+							<h4>Ability Stats</h4>
+							<ul class="grn-txt">
+								<li>(Base 124 + 6 Damage per Ability Point)</li>
+								<li>Level 80: Burning oil deals 604 Damage per second for 6 seconds</li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="ability-box">
+					<h4>Remote Detonation - Unlocks with <span class="prp-txt">Purple Fusion</span></h4>
+
+					<div class="ability-details">
+						<div class="ability-icon">
+							<img src="../../assets/images/icons/abilities/desmond-ability4.png" />
+						</div>
+
+						<div class="ability-text">
+							<h4>Ability Description</h4>
+							<p class="grn-txt">Desmond flies a remote-control explosive device into the midst of the enemy party, which
+								explodes and deals AoE Magic Damage. The blast can interrupt enemy abilities and
+								scatters enemy units</p>
+						</div>
+
+						<div class="ability-stats">
+							<h4>Ability Stats</h4>
+							<ul class="grn-txt">
+								<li>(Base 600 + 15 Damage per Ability Point)</li>
+								<li>Level 60: Explosion deals a base of 1500 Damage<br>Interrupt Success Rate increases
+									with ability level. Enemies under level 100 will be Interrupted every time</li>
+								<li>Attributes: <img class="attribute-icon"
+										src="../../assets/images/icons/attributes/fire.png" width="24" height="24" />
+								</li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="ability-box">
+					<h4>Drone Strike - Unlocks with <span class="org-txt">Awakening</span></h4>
+
+					<div class="ability-details">
+						<div class="ability-icon">
+							<img src="../../assets/images/icons/abilities/desmond-ability5.png" />
+						</div>
+
+						<div class="ability-text">
+							<h4>Ability Description</h4>
+							<p class="grn-txt">Desmond summons a bat-drone which assists him in battle. One type of drone can increase
+								his Magic Attack, while another type sprays flammable liquid on enemy units, causing
+								them to be more susceptible to Damage-over-Time dealt by Desmond's other abilities</p>
+						</div>
+
+						<div class="ability-stats">
+							<h4>Ability Stats</h4>
+							<ul class="grn-txt">
+								<li>(Base 600 + 10 Magic Attack per Ability Point)</li>
+								<li>Level 40: Increases Magic Attack by 1000</li>
+							</ul>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</section>
+
+		<section id="fusion-items" class="guide-section">
+			<!-- Fusions Section of Guide -->
+
+			<div class="section-header">
+				<h2>Fusions</h2>
+			</div>
+
+			<div class="section-body">
+
+
+				<div class="purple-fusions">
+					<div class="fusion-box">
+						<h4><span class="prp-txt">Purple</span></h4> <!-- Purple Fusion -->
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/phantom-jar"]
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/crystal-staff"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/ancient-royal-sword"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/bulwark-of-vitality"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/heavy-breastplate"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/dwarvish-chestplate"]
+
+
+						</div>
+					</div>
+
+					<div class="fusion-box">
+						<h4><span class="prp-txt">Purple+1</span></h4> <!-- Purple+1 Fusion -->
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/tri-spirit-orb"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/wellspring-water"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/sage-wand"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/phantom-jar"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/crystal-staff"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/charger-boots"]
+
+
+						</div>
+					</div>
+
+					<div class="fusion-box">
+						<h4><span class="prp-txt">Purple+2</span></h4> <!-- Purple+2 Fusion -->
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/grand-staff"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/scepter-of-the-abyss"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/voodoo-manuscript"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/tri-spirit-orb"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/ice-smasher"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/tribal-battleaxe"]
+
+
+						</div>
+					</div>
+
+					<div class="fusion-box">
+						<h4><span class="prp-txt">Purple+3</span></h4> <!-- Purple+3 Fusion -->
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/frozen-teardrop"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/art-of-war"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/shuriken"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/scepter-of-time"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/voodoo-manuscript"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/lilith-staff"]
+
+
+						</div>
+					</div>
+
+					<div class="fusion-box">
+						<h4><span class="prp-txt">Purple+4</span></h4> <!-- Purple+4 Fusion -->
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/thunderbolt"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/sword-of-olympus"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/torch-of-destruction"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/art-of-war"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/dark-wizard's-figurine"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/athena's-blessing"]
+
+
+						</div>
+					</div>
+
+				</div>
+
+				<div class="orange-fusions">
+					<div class="fusion-box">
+						<h4><span class="org-txt">Orange</span></h4> <!-- Orange Fusion -->
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/unknown"]
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/caduceus"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/book-of-mysteries"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/victory's-scepter"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/midnight-dream"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/chain-pendant"]
+
+
+						</div>
+					</div>
+
+					<div class="fusion-box">
+						<h4><span class="org-txt">Orange+1</span></h4> <!-- Orange+1 Fusion -->
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/unknown"]
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/priestly-scepter"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/angelic-fan"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/staff-of-illumination"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/book-of-mysteries"]
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/victory's-scepter"]
+
+
+						</div>
+					</div>
+
+					<div class="fusion-box">
+						<h4><span class="org-txt">Orange+2</span></h4> <!-- Orange+2 Fusion -->
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/unknown"]
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/crescent-staff"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/pure-jade-chest"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/lost-epic"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/transforming-mask"]
+
+
+						</div>
+
+						<div class="fusion-item">
+							[template_part path="../../shhg-templates/fusion-items/beastly-guardian"]
+
+
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</section>
+
+		<section id="key-items" class="guide-section">
+			<!-- Key Fusion Items Section -->
+
+			<div class="section-header">
+				<h2>Key Fusion Items</h2>
+			</div>
+
+			<div class="section-body">
+				<!-- max of 18 items for the section -->
+
+				<div class="key-item-box">
+
+					<div class="key-item-icon">
+						<img src="../../assets/images/icons/equipment/staff-of-illumination.png" />
+						<!-- Item image and the quantity needed -->
+						<p><span class="item-quantity">5</span></p>
+					</div>
+
+					<div class="key-item-icon">
+						<img src="../../assets/images/icons/equipment/scepter-of-truth.png" />
+						<p><span class="item-quantity">4</span></p>
+					</div>
+
+					<div class="key-item-icon">
+						<img src="../../assets/images/icons/equipment/lost-epic.png" />
+						<p><span class="item-quantity">3</span></p>
+					</div>
+
+					<div class="key-item-icon">
+						<img src="../../assets/images/icons/equipment/oracle's-robe.png" />
+						<p><span class="item-quantity">1</span></p>
+					</div>
+
+					<div class="key-item-icon">
+						<img src="../../assets/images/icons/equipment/primordial-stone.png" />
+						<p><span class="item-quantity">1</span></p>
+					</div>
+
+					<div class="key-item-icon">
+						<img src="../../assets/images/icons/equipment/commander's-blade.png" />
+						<p><span class="item-quantity">1</span></p>
+					</div>
+
+					<div class="key-item-icon">
+						<img src="../../assets/images/icons/equipment/torch-of-destruction.png" />
+						<p><span class="item-quantity">5</span></p>
+					</div>
+
+					<div class="key-item-icon">
+						<img src="../../assets/images/icons/equipment/ethereal-cloak.png" />
+						<p><span class="item-quantity">2</span></p>
+					</div>
+
+					<div class="key-item-icon">
+						<img src="../../assets/images/icons/equipment/sage-wand.png" />
+						<p><span class="item-quantity">12</span></p>
+					</div>
+
+					<div class="key-item-icon">
+						<img src="../../assets/images/icons/equipment/shuriken.png" />
+						<p><span class="item-quantity">5</span></p>
+					</div>
+
+					<div class="key-item-icon">
+						<img src="../../assets/images/icons/equipment/crystal-staff.png" />
+						<p><span class="item-quantity">5</span></p>
+					</div>
+
+					<div class="key-item-icon">
+						<img src="../../assets/images/icons/equipment/phantom-jar.png" />
+						<p><span class="item-quantity">3</span></p>
+					</div>
+
+					<div class="key-item-icon">
+						<img src="../../assets/images/icons/equipment/ghostly-mantle.png" />
+						<p><span class="item-quantity">2</span></p>
+					</div>
+
+					<div class="key-item-icon">
+						<img src="../../assets/images/icons/equipment/scepter-of-the-abyss.png" />
+						<p><span class="item-quantity">2</span></p>
+					</div>
+
+					<div class="key-item-icon">
+						<img src="../../assets/images/icons/equipment/wellspring-water.png" />
+						<p><span class="item-quantity">2</span></p>
+					</div>
+
+					<div class="key-item-icon">
+						<img src="../../assets/images/icons/equipment/clasp-of-life.png" />
+						<p><span class="item-quantity">2</span></p>
+					</div>
+
+					<div class="key-item-icon">
+						<img src="../../assets/images/icons/equipment/destruction.png" />
+						<p><span class="item-quantity">1</span></p>
+					</div>
+
+					<div class="key-item-icon">
+						<img src="../../assets/images/icons/equipment/natural-remedy.png" />
+						<p><span class="item-quantity">1</span></p>
+					</div>
+
+				</div>
+
+				<div class="key-item-note">
+					<p>*Key items required to fuse up to <span class="org-txt">Orange+2</span> and fully equip. Not all
+						items required for fusions listed. Signature Item not included.</p>
+				</div>
+
+			</div>
+
+		</section>
+
+		<section id="academy" class="guide-section">								<!-- Academy Talent Tree Section -->
 		
-		<div class="bookmark-list">
-			<a class="bookmark-link" href="#hero-info">Hero Info</a>
-			<a class="bookmark-link" href="#abilities">Abilities</a>
-			<a class="bookmark-link" href="#fusion-items">Fusions</a>
-			<a class="bookmark-link" href="#key-items">Key Fusion Items</a>
-			<a class="bookmark-link" href="#academy">Heroic Academy Trees</a>
-			<a class="bookmark-link" href="#awakening">Awakening Quest</a>
-		</div>
-	
-	</aside>
-	
-	<div id="hero-info" class="guide-section">									<!-- Hero Info Section of Guide -->
-	
-		<div class="section-header">
-			<h2>Desmond - Bionic Bat</h2>
-		</div>
-	
-		<div class="section-body">
-	
-			<div class="hero-art">										<!-- Portrait for mobile/tablet(vertical) and full card for tablet(landscape)/desktop -->
-				<div class="hero-portrait">
-					<img src="../../assets/images/icons/portraits/desmond.png" /><br>
-					<p>"Weapons fully charged!"</p>
+			<div class="tree-one section-body">						<!-- First of Two Talent Trees -->
+
+				<div class="section-header">
+					<h2>Heroic Academy - Mysticism</h2>
 				</div>
-	
-				<div class="hero-card">
-					<img src="../../assets/images/hero-cards/desmond.jpg" width="300" height="600" /><br>
-					<p>"Weapons fully charged!"</p>
+
+				<div class="talent-tree">
+		
+					<div class="tree-tier-column col-type-1">
+						<h4 class="tier-title">Basic</h4>
+						<div class="talent-item">
+							<img src="/assets/images/icons/heroic-academy/talents/mystic-arts.png" />
+							<h4>Mystic Arts</h4>
+							<p class="grn-txt">Magic Armor<br>Lvl 5 +40</p>
+						</div>
+		
+						<div>
+						</div>
+		
+						<div class="talent-item">
+							<img src="/assets/images/icons/heroic-academy/talents/armor-crafting.png" />
+							<h4>Armor Crafting</h4>
+							<p class="grn-txt">Physical Armor<br>Level 5 +40</p>
+						</div>
+					</div>
+		
+					<div class="tree-tier-column col-type-3">
+						<h4 class="tier-title">Intermediate 1</h4>
+						<div class="talent-item">
+							<img src="/assets/images/icons/heroic-academy/talents/healing-potions.png" />
+							<h4>Healing Potions</h4>
+							<p class="grn-txt">Healing Ratio<br>Lvl 5 +6%</p>
+						</div>
+		
+						<div class="talent-item">
+							<img src="/assets/images/icons/heroic-academy/talents/spell-resistance.png" />
+							<h4>Spell Resistance</h4>
+							<p class="grn-txt">Spell Recovery Time<br>Level 5 +12%</p>
+						</div>
+						
+						<div class="talent-item">
+							<img src="/assets/images/icons/heroic-academy/talents/poison-preparation.png" />
+							<h4>Poison Preparation</h4>
+							<p class="grn-txt">DoT Bonus<br>Lvl 5 +8%</p>
+						</div>
+					</div>
+		
+					<div class="tree-tier-column col-type-2">
+						<h4 class="tier-title">Intermediate 2</h4>
+		
+						<div class="talent-item">
+							<img src="/assets/images/icons/heroic-academy/talents/evasive-maneuvers.png" />
+							<h4>Evasive Maneuvers</h4>
+							<p class="grn-txt">Dodge Rating<br>Lvl 5 +20</p>
+						</div>
+		
+						<div class="talent-item">
+							<img src="/assets/images/icons/heroic-academy/talents/forcefields.png" />
+							<h4>Forcefields</h4>
+							<p class="grn-txt">Hit Recovery Time<br>Level 5 +12.5%</p>
+						</div>
+					</div>
+		
+					<div class="tree-tier-column col-type-1">
+						<h4 class="tier-title">Advanced</h4>
+						<div class="talent-item">
+							<img src="/assets/images/icons/heroic-academy/talents/energy-regeneration.png" />
+							<h4>Energy Regeneration</h4>
+							<p class="grn-txt">Energy Bonus<br>Lvl 5 +11%</p>
+						</div>
+		
+						<div>
+						</div>
+		
+						<div class="talent-item">
+							<img src="/assets/images/icons/heroic-academy/talents/elemental-mastery.png" />
+							<h4>Elemental Mastery</h4>
+							<p class="grn-txt">Energy Efficiency<br>Level 5 +5%</p>
+						</div>
+					</div>
+		
+					<div class="tree-tier-column col-type-3">
+						<h4 class="tier-title">Expert</h4>
+						<div class="talent-item">
+							<img src="/assets/images/icons/heroic-academy/talents/general-tactics.png" />
+							<h4>General Tactics</h4>
+							<p class="grn-txt">Ability Level<br>Lvl 5 +5</p>
+						</div>
+		
+						<div class="talent-item">
+							<img src="/assets/images/icons/heroic-academy/talents/explosive-magic.png" />
+							<h4>Explosive Magic</h4>
+							<p class="grn-txt">Magic Pierce Rating<br>Level 5 +30.5</p>
+						</div>
+		
+						<div class="talent-item">
+							<img src="/assets/images/icons/heroic-academy/talents/offensive-spells.png" />
+							<h4>Offensive Spells</h4>
+							<p class="grn-txt">Magic Attack<br>Level 5 +175.5</p>
+						</div>
+					</div>
+		
 				</div>
+		
 			</div>
-	
-			<div class="hero-details">
-				<div class="hero-role">
-					<h4>Hero Info and Role</h4>
-					<p><b>Middle Line DPS:</b> Flies on a hoverboard and uses burning oil to deal Damage-over-Time to his enemies</p>
+
+			<div class="tree-two section-body">
+				
+				<div class="section-header">
+					<h2>Heroic Academy - Elemental Magic</h2>
 				</div>
-	
-				<div class="hero-ss-details">
-					<div class="hero-details-icon">
-						<h4>First Appeared</h4>
-						<img src="../../assets/images/icons/shops/conjuring-stone.png" width="86" height="86" /><p>Conjuring Stone</p>
+
+				<div class="talent-tree">
+
+					<div class="tree-tier-column col-type-1">
+						<h4 class="tier-title">Basic</h4>
+						<div class="talent-item">
+							<img src="/assets/images/icons/heroic-academy/talents/damage-resistance.png" />
+							<h4>Damage Resistance</h4>
+							<p class="grn-txt">Physical Resistance<br>Lvl 5 +3%</p>
+						</div>
+		
+						<div>
+						</div>
+		
+						<div class="talent-item">
+							<img src="/assets/images/icons/heroic-academy/talents/stealth.png" />
+							<h4>Stealth</h4>
+							<p class="grn-txt">Magic Resistance<br>Level 5 +3%</p>
+						</div>
 					</div>
-	
-					<div class="card-details">
-						<h4><img src="../../assets/images/icons/hero-info/star.png" width="16" height="16" /><img src="../../assets/images/icons/hero-info/star.png" width="16" height="16" /><img src="../../assets/images/icons/hero-info/star.png" width="16" height="16" /> Hero Card</h4>
-						<ul>
-							<li>Requires 80 <img src="../../assets/images/icons/hero-info/ss.png" width="12" height="12" /> to summon</li>
-							<li>Additional Cards grant 30 <img src="../../assets/images/icons/hero-info/ss.png" width="12" height="12" /></li>
-							<li><img src="../../assets/images/icons/shops/diamond-chest.png" width="30" height="30" /> Drops in Diamond Chest</li>
-						</ul>
+		
+					<div class="tree-tier-column col-type-2">
+						<h4 class="tier-title">Intermediate 1</h4>
+
+						<div class="talent-item">
+							<img src="/assets/images/icons/heroic-academy/talents/physical-conditioning.png" />
+							<h4>Physical Conditioning</h4>
+							<p class="grn-txt">Max Health<br>Lvl 5 +1500</p>
+						</div>
+		
+						<div class="talent-item">
+							<img src="/assets/images/icons/heroic-academy/talents/healing-spells.png" />
+							<h4>Healing Spells</h4>
+							<p class="grn-txt">Health Recovery<br>Level 5 +1000</p>
+						</div>
 					</div>
-	
-					<div class="hero-details-icon">
-						<h4><img src="../../assets/images/icons/hero-info/ss.png" width="12" height="12" /> Available In</h4>
-						<img src="../../assets/images/icons/shops/unknown.png" width="86" height="86" /><p>Not Released</p>
+		
+					<div class="tree-tier-column col-type-3">
+						<h4 class="tier-title">Intermediate 2</h4>
+						<div class="talent-item">
+							<img src="/assets/images/icons/heroic-academy/talents/spell-mastery.png" />
+							<h4>Spell Mastery</h4>
+							<p class="grn-txt">Energy Recovery<br>Lvl 5 +120</p>
+						</div>
+		
+						<div class="talent-item">
+							<img src="/assets/images/icons/heroic-academy/talents/silence-resistance.png" />
+							<h4>Silence Resistance</h4>
+							<p class="grn-txt">Resist Chance<br>Lvl 5 +6%</p>
+						</div>
+		
+						<div class="talent-item">
+							<img src="/assets/images/icons/heroic-academy/talents/final-struggle.png" />
+							<h4>Final Struggle</h4>
+							<p class="grn-txt">Kill Bonus Resistance<br>Level 5 +11%</p>
+						</div>
 					</div>
-	
+		
+					<div class="tree-tier-column col-type-2">
+						<h4 class="tier-title">Advanced</h4>
+
+						<div class="talent-item">
+							<img src="/assets/images/icons/heroic-academy/talents/defensive-tactics.png" />
+							<h4>Defensive Tactics</h4>
+							<p class="grn-txt">Physical Toughness<br>Lvl 5 +16%</p>
+						</div>
+		
+						<div class="talent-item">
+							<img src="/assets/images/icons/heroic-academy/talents/blessing.png" />
+							<h4>Blessing</h4>
+							<p class="grn-txt">Magic Toughness<br>Level 5 +16%</p>
+						</div>
+					</div>
+		
+					<div class="tree-tier-column col-type-1">
+						<h4 class="tier-title">Expert</h4>
+						<div class="talent-item">
+							<img src="/assets/images/icons/heroic-academy/talents/dark-magic.png" />
+							<h4>Dark Magic</h4>
+							<p class="grn-txt">Magic Crit Damage<br>Lvl 5 +21%</p>
+						</div>
+		
+						<div>
+						</div>
+		
+						<div class="talent-item">
+							<img src="/assets/images/icons/heroic-academy/talents/battle-sorcery.png" />
+							<h4>Battle Sorcery</h4>
+							<p class="grn-txt">Magic Crit Rating<br>Level 5 +42</p>
+						</div>
+					</div>
+		
 				</div>
-	
-				<div class="hero-growth-box">
-					<div class="stat-growth">
-						<h4>Stat Growth Rates</h4>
-	
-						<table>
-							<tr>
-								<th colspan= 2><img src="../../assets/images/icons/hero-info/star.png" width="12" height="12" /><img src="../../assets/images/icons/hero-info/star.png" width="12" height="12" /><img src="../../assets/images/icons/hero-info/star.png" width="12" height="12" /></th>
-								<th><img src="../../assets/images/icons/hero-info/stat-growth-arrow.png" width="24" height="12" /></th>
-								<th colspan= 2><img src="../../assets/images/icons/hero-info/star.png" width="12" height="12" /><img src="../../assets/images/icons/hero-info/star.png" width="12" height="12" /><img src="../../assets/images/icons/hero-info/star.png" width="12" height="12" /><img src="../../assets/images/icons/hero-info/star.png" width="12" height="12" /><img src="../../assets/images/icons/hero-info/star.png" width="12" height="12" /><img src="../../assets/images/icons/hero-info/star.png" width="12" height="12" /><img src="../../assets/images/icons/hero-info/star.png" width="12" height="12" /></th>
-							</tr>
-	
-							<tr>
-								<td>Health</td><td><b>78</b></td><td></td><td>Health</td><td><b>141</b></td>
-							</tr>
-							<tr>
-								<td>Physical Attack</td><td><b>6</b></td><td></td><td>Physical Attack</td><td><b>10.8</b></td>
-							</tr>
-							<tr>
-								<td>Magic Attack</td><td><b>6.7</b></td><td></td><td>Magic Attack</td><td><b>12</b></td>
-							</tr>
-							<tr>
-								<td>Physical Armor</td><td><b>2.5</b></td><td></td><td>Physical Armor</td><td><b>4.5</b></td>
-							</tr>
-							<tr>
-								<td>Magic Armor</td><td><b>2.5</b></td><td></td><td>Magic Armor</td><td><b>4.5</b></td>
-							</tr>
-						</table>
-					</div>
-	
-					<div class="hero-medallion">
-						<h4>Hero Medallions</h4>
-						<p>None</p>
-					</div>
-				</div>
-	
 			</div>
 		
-		</div>
-	
-	</div>
-	
-	<div id="abilities" class="guide-section">									<!-- Abilities Section of Guide -->
-	
-		<div class="section-header">
-			<h2>Abilities</h2>
-		</div>
-	
-		<div class="section-body">
-	
-			<div class="ability-box">
-				<h4>Fireball Volley - Ultimate Ability</h4>
-	
-				<div class="ability-details">
-					<div class="ability-icon">
-						<img src="../../assets/images/icons/abilities/desmond-ability1.png" />
-					</div>
-	
-					<div class="ability-text">
-						<h4>Ability Description</h4>
-						<p>Desmond elevates his hoverboard to a higher altitude, increasing his Dodge rating. Then he dives at the enemy formation, shooting fireballs that deal Magic Damage to random enemies. As Desmond is returning to his side of the battlefield, he will drag an enemy that direction with him. After being released, the affected enemy will be Stunned</p>
-					</div>
-	
-					<div class="ability-stats">
-						<h4>Ability Stats</h4>
-						<ul>
-							<li>(+ 20 Damage, + 4 Dodge Rating per Ability Point)</li>
-							<li>Level 100: Fireballs deal 2000 Damage<br>Increases Dodge Rating by 400<br>Stun Success Rate increases with ability level. Enemies under level 100 will be Stunned every time</li>
-							<li>Attributes: <img class="attribute-icon" src="../../assets/images/icons/attributes/fire.png" width="24" height="24" /></li>
-						</ul>
-					</div>
-	
-				</div>
-	
-			</div>
-	
-			<div class="ability-box">
-				<h4>Flamethrower - Unlocks with <span class="grn-txt">Green Fusion</span></h4>
-					
-				<div class="ability-details">
-					<div class="ability-icon">
-						<img src="../../assets/images/icons/abilities/desmond-ability2.png" />
-					</div>
-	
-					<div class="ability-text">
-						<h4>Ability Description</h4>
-						<p>Desmond uses his flamethrower to unleash a blast of green flame at the enemy party, dealing AoE Magic Damage</p>
-					</div>
-	
-					<div class="ability-stats">
-						<h4>Ability Stats</h4>
-						<ul>
-							<li>(+ 17 Damage per Ability Point)</li>
-							<li>Level 100: Flame deals 1700 Damage</li>
-							<li>Attributes: <img class="attribute-icon" src="../../assets/images/icons/attributes/fire.png" width="24" height="24" /></li>
-						</ul>
-					</div>
-				
-				</div>
-	
-			</div>
-	
-			<div class="ability-box">
-				<h4>Oil Drum - Unlocks with <span class="blu-txt">Blue Fusion</span></h4>
-	
-				<div class="ability-details">
-					<div class="ability-icon">
-						<img src="../../assets/images/icons/abilities/desmond-ability3.png" />
-					</div>
-	
-					<div class="ability-text">
-						<h4>Ability Description</h4>
-						<p>Desmond throws an oil drum at his enemies, who become covered in sticky oil. When struck by Desmond's other attacks, affected enemies will take additional Damage-over-Time due to the oil burning. Enemies can be struck by oil multiple times, and the effects are cumulative.</p>
-					</div>
-	
-					<div class="ability-stats">
-						<h4>Ability Stats</h4>
-						<ul>
-							<li>(Base 124 + 6 Damage per Ability Point)</li>
-							<li>Level 80: Burning oil deals 604 Damage per second for 6 seconds</li>
-						</ul>
-					</div>
-	
-				</div>
-	
-			</div>
-	
-			<div class="ability-box">
-				<h4>Remote Detonation - Unlocks with <span class="prp-txt">Purple Fusion</span></h4>
-	
-				<div class="ability-details">
-					<div class="ability-icon">
-						<img src="../../assets/images/icons/abilities/desmond-ability4.png" />
-					</div>
-	
-					<div class="ability-text">
-						<h4>Ability Description</h4>
-						<p>Desmond flies a remote-control explosive device into the midst of the enemy party, which explodes and deals AoE Magic Damage. The blast can interrupt enemy abilities and scatters enemy units</p>
-					</div>
-	
-					<div class="ability-stats">
-						<h4>Ability Stats</h4>
-						<ul>
-							<li>(Base 600 + 15 Damage per Ability Point)</li>
-							<li>Level 60: Explosion deals a base of 1500 Damage<br>Interrupt Success Rate increases with ability level. Enemies under level 100 will be Interrupted every time</li>
-							<li>Attributes: <img class="attribute-icon" src="../../assets/images/icons/attributes/fire.png" width="24" height="24" /></li>
-						</ul>
-					</div>
-	
-				</div>
-	
-			</div>
-	
-			<div class="ability-box">
-				<h4>Drone Strike - Unlocks with <span class="org-txt">Awakening</span></h4>
-	
-				<div class="ability-details">
-					<div class="ability-icon">
-						<img src="../../assets/images/icons/abilities/desmond-ability5.png" />
-					</div>
-	
-					<div class="ability-text">
-						<h4>Ability Description</h4>
-						<p>Desmond summons a bat-drone which assists him in battle. One type of drone can increase his Magic Attack, while another type sprays flammable liquid on enemy units, causing them to be more susceptible to Damage-over-Time dealt by Desmond's other abilities</p>
-					</div>
-	
-					<div class="ability-stats">
-						<h4>Ability Stats</h4>
-						<ul>
-							<li>(Base 600 + 10 Magic Attack per Ability Point)</li>
-							<li>Level 40: Increases Magic Attack by 1000</li>
-						</ul>
-					</div>
-	
-				</div>
-			
-			</div>
-	
-		</div>
-	
-	</div>
-	
-	<div id="fusion-items" class="guide-section">										<!-- Fusions Section of Guide -->
-		
-		<div class="section-header">
-			<h2>Fusions</h2>
-		</div>
-	
-		<div class="section-body">
-			
-	
-			<div class="purple-fusions">
-				<div class="fusion-box">	
-					<h4><span class="prp-txt">Purple</span></h4>								<!-- Purple Fusion -->
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/phantom-jar"]
-							
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/crystal-staff"]
-							
-						
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/ancient-royal-sword"]
-							
-						
-					</div>
-			
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/bulwark-of-vitality"]
-							
-						
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/heavy-breastplate"]
-							
-						
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/dwarvish-chestplate"]
-							
-						
-					</div>
-				</div>
-	
-				<div class="fusion-box">
-					<h4><span class="prp-txt">Purple+1</span></h4>								<!-- Purple+1 Fusion -->
-						
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/tri-spirit-orb"]
-							
-						
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/wellspring-water"]
-							
-						
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/sage-wand"]
-							
-						
-					</div>
-			
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/phantom-jar"]
-							
-						
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/crystal-staff"]
-							
-						
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/charger-boots"]
-							
-						
-					</div>
-				</div>
-	
-				<div class="fusion-box">
-					<h4><span class="prp-txt">Purple+2</span></h4>								<!-- Purple+2 Fusion -->
-						
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/grand-staff"]
-							
-						
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/scepter-of-the-abyss"]
-							
-						
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/voodoo-manuscript"]
-							
-						
-					</div>
-			
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/tri-spirit-orb"]
-							
-						
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/ice-smasher"]
-							
-						
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/tribal-battleaxe"]
-							
-						
-					</div>
-				</div>
-	
-				<div class="fusion-box">
-					<h4><span class="prp-txt">Purple+3</span></h4>								<!-- Purple+3 Fusion -->
-						
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/frozen-teardrop"]
-							
-						
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/art-of-war"]
-							
-						
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/shuriken"]
-							
-						
-					</div>
-			
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/scepter-of-time"]
-							
-						
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/voodoo-manuscript"]
-							
-						
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/lilith-staff"]
-							
-						
-					</div>
-				</div>
-	
-				<div class="fusion-box">
-					<h4><span class="prp-txt">Purple+4</span></h4>								<!-- Purple+4 Fusion -->
-						
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/thunderbolt"]
-							
-						
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/sword-of-olympus"]
-							
-						
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/torch-of-destruction"]
-							
-						
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/art-of-war"]
-							
-						
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/dark-wizard's-figurine"]
-							
-						
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/athena's-blessing"]
-							
-						
-					</div>
-				</div>
-	
-			</div>
-	
-			<div class="orange-fusions">
-				<div class="fusion-box">
-					<h4><span class="org-txt">Orange</span></h4>								<!-- Orange Fusion -->
-						
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/unknown"]
-							
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/caduceus"]
-							
-						
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/book-of-mysteries"]
-							
-						
-					</div>
-			
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/victory's-scepter"]
-							
-						
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/midnight-dream"]
-							
-	
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/chain-pendant"]
-							
-						
-					</div>
-				</div>
-	
-				<div class="fusion-box">
-					<h4><span class="org-txt">Orange+1</span></h4>								<!-- Orange+1 Fusion -->
-						
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/unknown"]
-							
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/priestly-scepter"]
-							
-						
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/angelic-fan"]
-							
-						
-					</div>
-			
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/staff-of-illumination"]
-							
-						
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/book-of-mysteries"]
-							
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/victory's-scepter"]
-							
-						
-					</div>
-				</div>
-	
-				<div class="fusion-box">
-					<h4><span class="org-txt">Orange+2</span></h4>								<!-- Orange+2 Fusion -->
-	
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/unknown"]
-							
-					</div>
-	
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/crescent-staff"]
-							
-						
-					</div>
-	
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/pure-jade-chest"]
-							
-						
-					</div>
-	
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/lost-epic"]
-							
-						
-					</div>
-				
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/transforming-mask"]
-							
-						
-					</div>
-	
-					<div class="fusion-item">
-						[template_part path="../../shhg-templates/fusion-items/beastly-guardian"]
-							
-						
-					</div>
-				</div>
-	
-			</div>
-	
-		</div>
-	
-	</div>
-	
-	<div id="key-items" class="guide-section">							<!-- Key Fusion Items Section -->
-	
-		<div class="section-header">
-			<h2>Key Fusion Items</h2>
-		</div>
-	
-		<div class="section-body">							<!-- max of 18 items for the section -->
-	
-			<div class="key-item-box">
-	
-				<div class="key-item-icon">
-					<img src="../../assets/images/icons/equipment/staff-of-illumination.png" />		<!-- Item image and the quantity needed -->
-					<p><span class="item-quantity">5</span></p>
-				</div>
-	
-				<div class="key-item-icon">
-					<img src="../../assets/images/icons/equipment/scepter-of-truth.png" />
-					<p><span class="item-quantity">4</span></p>
-				</div>
-	
-				<div class="key-item-icon">
-					<img src="../../assets/images/icons/equipment/lost-epic.png" />
-					<p><span class="item-quantity">3</span></p>
-				</div>
-	
-				<div class="key-item-icon">
-					<img src="../../assets/images/icons/equipment/oracle's-robe.png" />
-					<p><span class="item-quantity">1</span></p>
-				</div>
-	
-				<div class="key-item-icon">
-					<img src="../../assets/images/icons/equipment/primordial-stone.png" />
-					<p><span class="item-quantity">1</span></p>
-				</div>
-	
-				<div class="key-item-icon">
-					<img src="../../assets/images/icons/equipment/commander's-blade.png" />
-					<p><span class="item-quantity">1</span></p>
-				</div>
-	
-				<div class="key-item-icon">
-					<img src="../../assets/images/icons/equipment/torch-of-destruction.png" />
-					<p><span class="item-quantity">5</span></p>
-				</div>
-	
-				<div class="key-item-icon">
-					<img src="../../assets/images/icons/equipment/ethereal-cloak.png" />
-					<p><span class="item-quantity">2</span></p>
-				</div>
-	
-				<div class="key-item-icon">
-					<img src="../../assets/images/icons/equipment/sage-wand.png" />
-					<p><span class="item-quantity">12</span></p>
-				</div>
-	
-				<div class="key-item-icon">
-					<img src="../../assets/images/icons/equipment/shuriken.png" />
-					<p><span class="item-quantity">5</span></p>
-				</div>
-	
-				<div class="key-item-icon">
-					<img src="../../assets/images/icons/equipment/crystal-staff.png" />
-					<p><span class="item-quantity">5</span></p>
-				</div>
-	
-				<div class="key-item-icon">
-					<img src="../../assets/images/icons/equipment/phantom-jar.png" />
-					<p><span class="item-quantity">3</span></p>
-				</div>
-	
-				<div class="key-item-icon">
-					<img src="../../assets/images/icons/equipment/ghostly-mantle.png" />
-					<p><span class="item-quantity">2</span></p>
-				</div>
-	
-				<div class="key-item-icon">
-					<img src="../../assets/images/icons/equipment/scepter-of-the-abyss.png" />
-					<p><span class="item-quantity">2</span></p>
-				</div>
-	
-				<div class="key-item-icon">
-					<img src="../../assets/images/icons/equipment/wellspring-water.png" />
-					<p><span class="item-quantity">2</span></p>
-				</div>
-	
-				<div class="key-item-icon">
-					<img src="../../assets/images/icons/equipment/clasp-of-life.png" />
-					<p><span class="item-quantity">2</span></p>
-				</div>
-	
-				<div class="key-item-icon">
-					<img src="../../assets/images/icons/equipment/destruction.png" />
-					<p><span class="item-quantity">1</span></p>
-				</div>
-	
-				<div class="key-item-icon">
-					<img src="../../assets/images/icons/equipment/natural-remedy.png" />
-					<p><span class="item-quantity">1</span></p>
-				</div>
-	
-			</div>
-	
-			<div class="key-item-note">
-				<p>*Key items required to fuse up to <span class="org-txt">Orange+2</span> and fully equip. Not all items required for fusions listed. Signature Item not included.</p>
-			</div>
-	
-		</div>
-	
-	</div>
-	
-	[template_part path="../../shhg-templates/academy-trees/mysticism-dot"]
-	
-	[template_part path="../../shhg-templates/academy-trees/elemental-magic"]
-	
-	[template_part path="../../shhg-templates/awakening-quests/desmond-awakening"]
+		</section>
+
+		[template_part path="../../shhg-templates/awakening-quests/desmond-awakening"]
+
+	</div class="wrapper">
+
+	<footer>
+		<p>Copyright 2020 The Last Sentinel™ -- All Rights Reserved</p>
+	</footer>
+
+	<script src="../../assets/scripts/main.js"></script>
 </body>
+
 </html>

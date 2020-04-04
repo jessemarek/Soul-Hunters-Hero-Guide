@@ -1031,6 +1031,14 @@ header .filter-btns .filter-form input {
 .ability-details div {
   margin: 4% auto;
 }
+.fusion-box {
+  display: grid;
+  grid-template-areas: "title title title" "item1 item2 item3" "item4 item5 item6";
+  grid-gap: 1.5rem;
+}
+.fusion-box h4 {
+  grid-area: title;
+}
 .key-item-box {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -1062,6 +1070,107 @@ header .filter-btns .filter-form input {
   margin: 4% auto;
   font-size: 1.2rem;
   text-align: center;
+}
+.tree-one,
+.tree-two {
+  margin-bottom: 12%;
+}
+@media (min-width: 1000px) {
+  .talent-tree {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+  }
+}
+.talent-tree .col-type-1,
+.talent-tree .col-type-3 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: center;
+}
+@media (min-width: 1000px) {
+  .talent-tree .col-type-1,
+  .talent-tree .col-type-3 {
+    width: 20%;
+    display: grid;
+    grid-auto-rows: 0.25fr 1fr 1fr 1fr;
+    justify-content: initial;
+  }
+}
+.talent-tree .col-type-2 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+}
+@media (min-width: 1000px) {
+  .talent-tree .col-type-2 {
+    width: 20%;
+    display: grid;
+    grid-auto-rows: 0.25fr 1.5fr 1.5fr;
+    justify-content: initial;
+  }
+}
+@media (min-width: 1000px) {
+  .talent-tree .col-type-2 > :nth-child(2) {
+    align-self: flex-end;
+  }
+}
+.talent-tree .col-type-1 .talent-item,
+.talent-tree .col-type-2 .talent-item {
+  width: 33%;
+  margin: 1%;
+}
+@media (min-width: 1000px) {
+  .talent-tree .col-type-1 .talent-item,
+  .talent-tree .col-type-2 .talent-item {
+    width: 100%;
+    margin-top: 5%;
+  }
+}
+.talent-tree .col-type-3 .talent-item {
+  width: 33%;
+}
+@media (min-width: 1000px) {
+  .talent-tree .col-type-3 .talent-item {
+    width: 100%;
+    margin-top: 5%;
+  }
+}
+.talent-tree .col-type-1,
+.talent-tree .col-type-2,
+.talent-tree .col-type-3 {
+  margin: 4% 0;
+}
+@media (min-width: 1000px) {
+  .talent-tree .col-type-1,
+  .talent-tree .col-type-2,
+  .talent-tree .col-type-3 {
+    margin: 0;
+    padding: 0 1%;
+  }
+}
+.talent-tree .col-type-1 h4,
+.talent-tree .col-type-2 h4,
+.talent-tree .col-type-3 h4 {
+  text-align: center;
+}
+.talent-tree .talent-item img {
+  display: block;
+  margin: 0 auto;
+}
+@media (min-width: 1000px) {
+  .talent-tree .talent-item h4 {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+.talent-tree .talent-item h4,
+.talent-tree .talent-item p {
+  text-align: center;
+  font-size: 1.1rem;
 }
 /********************** Credits Page Styles ************************/
 .credits-page {
