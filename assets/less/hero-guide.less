@@ -69,6 +69,7 @@
         "item1 item2 item3"
         "item4 item5 item6";
     grid-gap: 1.5rem;
+    margin: 5% auto;
 
     @media @desktop {
         width: 30%;
@@ -78,6 +79,61 @@
     h4 {
         grid-area: title;
         text-align: center;
+    }
+}
+
+.fusion-item {
+    position: relative;
+
+    &:hover {
+        .tooltip {
+            visibility: visible;
+            opacity: 0.9;
+        }
+    }
+
+    .tooltip {
+        visibility: hidden;
+        max-width: 200%;
+        width: 200%;
+        position: absolute;
+        top: 100%;
+        left: -53%;
+        z-index: 3;
+        //border: 1px solid @dark-grey;
+        border-radius: 7px;
+        padding: 5%;
+        background: @black;
+        color: @white;
+        text-align: center;
+        font-size: 1.2rem;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+
+        @media @desktop {
+            left: -56%;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            border: 5px solid;
+            border-color: transparent transparent @black transparent;
+
+            @media @desktop {
+                left: 48%;
+            }
+        }
+
+        h3, p, img {
+            margin: 1%;
+        }
+
+        .grn-txt {
+            color: @grn-txt-dm;
+        }
     }
 }
 
