@@ -644,6 +644,9 @@ footer {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
+.card-back {
+  position: absolute;
+}
 .card-face {
   transform: rotateY(180deg);
 }
@@ -981,6 +984,27 @@ header .filter-btns .filter-form input {
 .section-header {
   margin-bottom: 5%;
 }
+#hero-info .hero-card,
+#awakening .hero-card {
+  display: none;
+}
+.hero-art {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+}
+.hero-art .hero-portrait {
+  position: relative;
+  align-self: center;
+  margin: 0 auto;
+}
+.hero-art .hero-quote {
+  width: 100%;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.4rem;
+}
 .hero-details {
   display: flex;
   flex-flow: row wrap;
@@ -1047,7 +1071,7 @@ header .filter-btns .filter-form input {
 @media (min-width: 1000px) {
   .fusion-box {
     width: 30%;
-    margin: 3% 1%;
+    margin: 0 1% 5%;
   }
 }
 .fusion-box h4 {
@@ -1236,6 +1260,34 @@ header .filter-btns .filter-form input {
 .talent-tree .talent-item p {
   text-align: center;
   font-size: 1.1rem;
+}
+.icon-column {
+  display: none;
+}
+.aw-quests .textbox {
+  margin: 5% auto;
+}
+.sig-item-recipe {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-content: initial;
+  margin: 5% auto;
+}
+.sig-item-recipe .item-icon {
+  width: 20%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.sig-item-stats #sig-item {
+  width: 25%;
+  margin: 5% auto;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.sig-item-stats .stat-tables {
+  width: 75%;
+  margin: 5% auto;
 }
 /********************** Credits Page Styles ************************/
 .credits-page {

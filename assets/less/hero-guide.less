@@ -3,6 +3,31 @@
     margin-bottom: 5%;
 }
 
+#hero-info,
+#awakening {
+    
+    .hero-card {
+        display: none;
+    }
+}
+
+.hero-art {
+    .flexBox(row wrap, center, center);
+
+    .hero-portrait {
+        position: relative;
+        align-self: center;
+        margin: 0 auto;
+    }
+
+    .hero-quote {
+        width: 100%;
+        text-align: center;
+        font-style: italic;
+        font-size: 1.4rem;
+    }
+}
+
 .hero-details {
     .flexBox(row wrap, center, center);
 
@@ -73,7 +98,7 @@
 
     @media @desktop {
         width: 30%;
-        margin: 3% 1%;
+        margin: 0 1% 5%;
     }
 
     h4 {
@@ -278,5 +303,43 @@
             text-align: center;
             font-size: 1.1rem;
         }
+    }
+}
+
+//Awakening Quest Styles
+
+.icon-column {
+    display: none;
+}
+
+.aw-quests {
+    .textbox {
+        margin: 5% auto;
+    }
+}
+
+.sig-item-recipe {
+    .flexBox(row wrap, space-evenly, initial);
+    margin: 5% auto;
+
+    .item-icon {
+        width: 20%;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}
+
+.sig-item-stats {
+
+    #sig-item {
+        width: 25%;
+        margin: 5% auto;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .stat-tables {
+        width: 75%;
+        margin: 5% auto;
     }
 }
