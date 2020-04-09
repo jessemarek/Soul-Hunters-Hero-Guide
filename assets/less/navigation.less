@@ -14,6 +14,7 @@
     }
 
     .menubar.shadowbox {
+        height: 3.5rem;
         z-index: 4;
         box-shadow: 1rem 1rem 3rem 1rem @white;
     }
@@ -132,7 +133,14 @@
 
             @media @desktop {
                 width: 15%;
+                height: 4rem;
+                display: flex;
+                align-items: center;
                 margin: 0;
+
+                &:hover {
+                    background: @black;
+                }
             }
         }
 
@@ -140,22 +148,17 @@
             color: @white;
 
             @media @desktop {
-                .link-animation(@white, 0.5s);
+                width: 100%;
+                text-align: center;
             }
         }
 
         .nav-dropdown{
             position: relative;
             color: @white;
-           
+
             &:hover{
                 cursor: pointer;
-
-                p{
-                    &::after {
-                        width: 100%;
-                    }
-                }
 
                 .down-arrow {
                     opacity: 0;
@@ -168,6 +171,17 @@
 
             p {
                 .link-animation(@white, 0.5s);
+
+                @media @desktop {
+                    width: 100%;
+                    text-align: center;
+
+                    &:hover {
+                        &::after {
+                            width: 0;
+                        }
+                    }
+                }
             }
 
             .down-arrow {
@@ -185,7 +199,7 @@
                 width: 100%;
                 justify-content: space-evenly;
                 position: absolute;
-                top: 3.1rem;
+                top: 4rem;
                 border-radius: 0 0 7px 7px;
                 background: linear-gradient(to bottom right, @lite-black, @grey);
 
@@ -196,6 +210,7 @@
                         display: inline-block;
                         width: 100%;
                         padding: 5% 10%;
+                        text-align: left;
                         transition: all 0.5s ease;
     
                         &:hover {

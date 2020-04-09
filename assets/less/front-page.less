@@ -68,3 +68,25 @@
 
     }
 }
+
+.card-face, .card-back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card-back {
+    position: absolute;
+}
+
+.card-face {
+    transform: rotateY(180deg);
+}
+
+.spoiler-card {
+    transition: 0.5s;
+    transform-style: preserve-3d;
+}
+
+.spoiler-card.spoiler-off {
+    transform: rotateY(180deg);
+}

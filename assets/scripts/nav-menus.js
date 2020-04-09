@@ -96,7 +96,7 @@ function setCookie(cname, cvalue) {
     const expires = `expires=${date.toUTCString()};`;
 
     //Sets the cookie value and expiration
-    document.cookie = `${cname}=${cvalue}; ${expires}; path=/`;
+    document.cookie = `${cname}=${cvalue}; ${expires}; path=/; samesite=strict`;
 }
 
 //Gets the cookies for the site if any exist
@@ -129,6 +129,7 @@ function getCookie(cname) {
 
 function setMode(mname, mvalue) {
     const mode = document.getElementById(mname);
+
     switch(mname) {
         case "darkMode": {
             mode.checked = mvalue;
@@ -142,6 +143,18 @@ function setMode(mname, mvalue) {
 
         case "spoilerMode": {
             mode.checked = mvalue;
+            const spoilers = document.getElementsByClassName("spoiler-card");
+            
+            if(mvalue){
+               for(let i = 0; i < spoilers.length; i++){
+                   spoilers[i].classList.remove("spoiler-off");
+               }
+            }
+            else {
+                for(let i = 0; i < spoilers.length; i++){
+                    spoilers[i].classList.add("spoiler-off");
+                }
+            }
         } 
         break;
     }
@@ -173,7 +186,6 @@ function loadPrefs(cvalue){
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    console.log(`The Document is loaded!`);
     
     let cvalue = getCookie("userPrefs");
     
